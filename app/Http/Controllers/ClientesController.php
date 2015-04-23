@@ -50,36 +50,31 @@ class ClientesController extends Controller {
         return redirect('clientes');
     }
 
-    public function show($id)
+    public function show(Cliente $cliente)
     {
         $nomeForm = 'Clientes';
-        $cliente = Cliente::findOrFail($id);
 
         return view('clientes.show', compact('nomeForm', 'cliente'));
     }
 
-    public function edit($id)
+    public function edit(Cliente $cliente)
     {
         $nomeForm = 'Clientes';
-        $cliente = Cliente::findOrFail($id);
 
         return view('clientes.edit', compact('nomeForm', 'cliente'));
     }
 
-    public function update($id, ClientesRequest $request)
+    public function update(Cliente $cliente, ClientesRequest $request)
     {
         $nomeForm = 'Clientes';
-        $cliente = Cliente::findOrFail($id);
 
         Cliente::update($request->all());
 
         return redirect('clientes');
     }
 
-    public function destroy($id)
+    public function destroy(Cliente $cliente)
     {
-        $cliente = Cliente::findOrFail($id);
-
         $usuario = User::findOrFail($cliente->id_user);
 
         $cliente->delete();
