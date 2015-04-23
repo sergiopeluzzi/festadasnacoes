@@ -32,6 +32,10 @@ class ClientesController extends Controller {
 
     public function store(ClientesRequest $request)
     {
+        /* Testar essa forma de store:
+           $cliente = new Cliente($request->all());
+        */
+
         $dados = $request->all();
 
         $usuario = [
@@ -47,6 +51,8 @@ class ClientesController extends Controller {
 
         Cliente::create($dados);
 
+        flash()->success('Cliente cadastrado com sucesso');
+
         return redirect('clientes');
     }
 
@@ -60,6 +66,8 @@ class ClientesController extends Controller {
     public function edit(Cliente $cliente)
     {
         $nomeForm = 'Clientes';
+
+        flash()->success('Cliente cadastrado com sucesso');
 
         return view('clientes.edit', compact('nomeForm', 'cliente'));
     }

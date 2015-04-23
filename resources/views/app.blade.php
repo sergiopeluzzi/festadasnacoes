@@ -53,6 +53,8 @@
         </section>
         <!-- Main content -->
         <section class="content">
+            @include('flash::message')
+
             @yield('content')
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
@@ -63,6 +65,10 @@
         <strong>Copyright &copy; 2014-2015 us.E Tecnologia.</strong> Todos os direitos reservados.
     </footer>
 </div><!-- ./wrapper -->
+
+<script>
+    $('#flash-overlay-modal').modal();
+</script>
 
 <!-- jQuery 2.1.3 -->
 <script src="{{ asset('/plugins/jQuery/jQuery-2.1.3.min.js') }}"></script>
