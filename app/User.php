@@ -40,18 +40,23 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasOne('App\Cliente');
     }
 
+    public function user_tipo()
+    {
+        return $this->belongsTo('App\UsersTipo');
+    }
+
     public function isAdministrador()
     {
-        return true;
+        return \Auth::user()->id_users_tipo == 1 ? true : false;
     }
 
     public function isFuncionario()
     {
-        return true;
+        return \Auth::user()->id_users_tipo == 2 ? true : false;
     }
 
     public function isCliente()
     {
-        return true;
+        return \Auth::user()->id_users_tipo == 3 ? true : false;
     }
 }

@@ -11,7 +11,7 @@ class ClientesController extends Controller {
 
     public function __construct()
     {
-        $this->middleware('administrador', ['except' => ['index', 'show']]);
+        $this->middleware('administrador', ['except' => ['show', 'index']]);
     }
     
     public function index()
@@ -60,14 +60,14 @@ class ClientesController extends Controller {
     {
         $nomeForm = 'Clientes';
 
-        return view('clientes.show', compact('nomeForm', 'cliente'));
+        $usuario = User::findOrFail($cliente->id_user);
+
+        return view('clientes.show', compact('nomeForm', 'cliente', 'usuario'));
     }
 
     public function edit(Cliente $cliente)
     {
         $nomeForm = 'Clientes';
-
-        flash()->success('Cliente cadastrado com sucesso');
 
         return view('clientes.edit', compact('nomeForm', 'cliente'));
     }
@@ -76,7 +76,9 @@ class ClientesController extends Controller {
     {
         $nomeForm = 'Clientes';
 
-        Cliente::update($request->all());
+        $cliente->update($request->all());
+
+        flash()->success('Cliente atualizado com sucesso');
 
         return redirect('clientes');
     }

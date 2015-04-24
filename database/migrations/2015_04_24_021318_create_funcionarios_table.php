@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientesTable extends Migration {
+class CreateFuncionariosTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,15 +12,15 @@ class CreateClientesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('clientes', function(Blueprint $table)
+		Schema::create('funcionarios', function(Blueprint $table)
 		{
-            $table->increments('id');
+			$table->increments('id');
             $table->string('nome');
             $table->string('cpf');
             $table->string('email')->unique();
             $table->string('telefone');
             $table->integer('id_user')->unsigned();
-            $table->timestamps();
+			$table->timestamps();
 
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
 		});
@@ -33,7 +33,7 @@ class CreateClientesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('clientes');
+		Schema::drop('funcionarios');
 	}
 
 }

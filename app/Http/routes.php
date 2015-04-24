@@ -17,6 +17,8 @@ Route::get('home', 'HomeController@index');
 
 Route::resource('clientes', 'ClientesController');
 
+Route::resource('funcionarios', 'FuncionariosController');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

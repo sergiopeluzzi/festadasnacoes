@@ -2,20 +2,20 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model {
+class Funcionario extends Model {
 
-    protected $table = 'clientes';
+    protected $table = 'funcionarios';
 
     protected $fillable = ['nome', 'cpf', 'telefone','id_user'];
 
     /**
-     * Relacionamento User com Cliente 1 : 1
+     * Relacionamento User com Funcionario 1 : 1
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function user()
     {
         return $this->hasOne('App\User');
     }
+	//
 
 }
-

@@ -13,7 +13,7 @@
                         <p><strong>Nome: </strong>{{ $cliente->nome }}</p>
                         <p><strong>Código: </strong>{{ $cliente->id }}</p>
                         <p><strong>CPF: </strong>{{ $cliente->cpf }}</p>
-                        <p><strong>Email: </strong>{{ $cliente->email }}</p>
+                        <p><strong>Email: </strong>{{ $usuario->email }}</p>
                         <p><strong>Data Cadastro: </strong>{{ $cliente->created_at }}</p>
                         <p><strong>Ultima Alteração: </strong>{{ $cliente->updated_at }}</p>
                         <p><strong>Código de Usuário: </strong>{{ $cliente->id_user }}</p>
