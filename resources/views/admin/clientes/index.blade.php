@@ -37,8 +37,6 @@
                                         {!! Form::submit('X', array('class' => 'btn bg-gray')) !!}
                                     {!! Form::close() !!}
                                     </a>
-                                    <!-- <a class="btn btn-sm" href="{{ URL::to('clientes/' . $cliente->id) }}"><i class="glyphicon glyphicon-remove"></i></a> -->
-
                                 </td>
                             </tr>
                         @endforeach

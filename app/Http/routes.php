@@ -21,6 +21,8 @@ Route::resource('admin/clientes', 'ClientesController');
 
 Route::resource('admin/funcionarios', 'FuncionariosController');
 
+Route::resource('admin/eventos', 'EventosController');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

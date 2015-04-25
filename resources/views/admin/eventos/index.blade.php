@@ -9,31 +9,27 @@
                         Lista de {{ $nomeForm }}
                     </div>
                     <div class="panel-body">
-                        <table id="tb_funcionarios" class="table table-bordered table-hover">
+                        <table id="tb_eventos" class="table table-bordered table-hover">
                             <thead class="bg-red">
                             <tr>
                                 <th class="text-center no-padding">Código</th>
-                                <th class="text-center no-padding">Nome</th>
-                                <th class="text-center no-padding">E-mail</th>
-                                <th class="text-center no-padding">CPF</th>
+                                <th class="text-center no-padding">Descrição</th>
                                 <th class="text-center no-padding">Ações</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($funcionarios as $funcionario)
+                            @foreach($eventos as $evento)
                                 <tr>
-                                    <td class="text-center">{{ $funcionario->id }}</td>
-                                    <td>{{ $funcionario->nome }}</td>
-                                    <td>{{ $funcionario->email }}</td>
-                                    <td class="text-center">{{ $funcionario->cpf }}</td>
+                                    <td class="text-center">{{ $evento->id }}</td>
+                                    <td>{{ $evento->descricao }}</td>
                                     <td class="text-center no-padding">
 
                                         <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/funcionarios/' . $funcionario->id) }}"><i class="glyphicon glyphicon-user"></i></a>
+                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/eventos/' . $evento->id) }}"><i class="glyphicon glyphicon-user"></i></a>
                                         <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/funcionarios/' . $funcionario->id . '/edit') }}"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/eventos/' . $evento->id . '/edit') }}"><i class="glyphicon glyphicon-edit"></i></a>
                                         <a>
-                                            {!! Form::open(array('class' => 'inline', 'method' => 'DELETE', 'route' => array('admin.funcionarios.destroy', $funcionario->id))) !!}
+                                            {!! Form::open(array('class' => 'inline', 'method' => 'DELETE', 'route' => array('admin.eventos.destroy', $evento->id))) !!}
                                             {!! Form::submit('X', array('class' => 'btn bg-gray')) !!}
                                             {!! Form::close() !!}
                                         </a>
@@ -46,7 +42,7 @@
                         </table>
                     </div>
                 </div>
-                <a class="btn btn-danger" href="{{ url('admin/funcionarios/create') }}">Adicionar</a>
+                <a class="btn btn-danger" href="{{ url('admin/eventos/create') }}">Adicionar</a>
             </div>
         </div>
     </div>
