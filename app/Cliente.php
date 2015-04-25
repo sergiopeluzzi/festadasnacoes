@@ -6,7 +6,7 @@ class Cliente extends Model {
 
     protected $table = 'clientes';
 
-    protected $fillable = ['nome', 'cpf', 'telefone','id_user'];
+    protected $fillable = ['nome', 'cpf', 'telefone', 'email', 'id_user'];
 
     /**
      * Relacionamento User com Cliente 1 : 1

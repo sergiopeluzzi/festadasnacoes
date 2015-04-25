@@ -15,7 +15,7 @@ class RedirectIfNotAdministrador {
 	{
         if (! $request->user()->isAdministrador())
         {
-            return redirect('clientes');
+            return redirect('admin/clientes');
         }
 
 		return $next($request);

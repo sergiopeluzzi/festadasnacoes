@@ -6,7 +6,7 @@ class Funcionario extends Model {
 
     protected $table = 'funcionarios';
 
-    protected $fillable = ['nome', 'cpf', 'telefone','id_user'];
+    protected $fillable = ['nome', 'cpf', 'telefone', 'email', 'id_user'];
 
     /**
      * Relacionamento User com Funcionario 1 : 1
@@ -16,6 +16,5 @@ class Funcionario extends Model {
     {
         return $this->hasOne('App\User');
     }
-	//
 
 }

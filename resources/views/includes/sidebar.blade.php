@@ -27,8 +27,8 @@
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
             <li class="header">PESSOAS</li>
-            <li><a href="/clientes"><i class="fa fa-male"></i>Clientes</a></li>
-            <li><a href="/funcionarios"><i class="fa fa-male"></i>Funcionários</a></li>
+            <li><a href="/admin/clientes"><i class="fa fa-male"></i>Clientes</a></li>
+            <li><a href="/admin/funcionarios"><i class="fa fa-male"></i>Funcionários</a></li>
 
             <li class="header">CADASTROS</li>
             <li class="treeview">

@@ -20,22 +20,18 @@ class ClientesController extends Controller {
 
         $clientes = Cliente::all();
 
-        return view('clientes.index', compact('nomeForm', 'clientes'));
+        return view('admin.clientes.index', compact('nomeForm', 'clientes'));
     }
 
     public function create()
     {
         $nomeForm = 'Clientes';
 
-        return view('clientes.create', compact('nomeForm'));
+        return view('admin.clientes.create', compact('nomeForm'));
     }
 
     public function store(ClientesRequest $request)
     {
-        /* Testar essa forma de store:
-           $cliente = new Cliente($request->all());
-        */
-
         $dados = $request->all();
 
         $usuario = [
@@ -53,7 +49,7 @@ class ClientesController extends Controller {
 
         flash()->success('Cliente cadastrado com sucesso');
 
-        return redirect('clientes');
+        return redirect('admin/clientes');
     }
 
     public function show(Cliente $cliente)
@@ -62,14 +58,14 @@ class ClientesController extends Controller {
 
         $usuario = User::findOrFail($cliente->id_user);
 
-        return view('clientes.show', compact('nomeForm', 'cliente', 'usuario'));
+        return view('admin.clientes.show', compact('nomeForm', 'cliente', 'usuario'));
     }
 
     public function edit(Cliente $cliente)
     {
         $nomeForm = 'Clientes';
 
-        return view('clientes.edit', compact('nomeForm', 'cliente'));
+        return view('admin.clientes.edit', compact('nomeForm', 'cliente'));
     }
 
     public function update(Cliente $cliente, ClientesRequest $request)
@@ -80,7 +76,7 @@ class ClientesController extends Controller {
 
         flash()->success('Cliente atualizado com sucesso');
 
-        return redirect('clientes');
+        return redirect('admin/clientes');
     }
 
     public function destroy(Cliente $cliente)
@@ -91,6 +87,8 @@ class ClientesController extends Controller {
 
         $usuario->delete();
 
-        return redirect('clientes');
+        flash()->success('Cliente excluído com sucesso');
+
+        return redirect('admin/clientes');
     }
 }
