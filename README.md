@@ -1,19 +1,31 @@
-# Festa das Nações
+#Projeto de TCC - Festa das Nações
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+###UNESC - Faculdades Integradas de Cacoal - Curso de Análise e Desenvolvimento de Sistemas
+Acadêmicos: Sergio Peluzzi e Diego Noronha
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+##Objetivo
+Desenvolver uma aplicação que gerencie um evento regional chamado Festa das Nações, vendendo vouchers de produtos alimentícios online e controlando as vendas e produção dos pratos para o dia da festa.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+##Requerimentos
+<li> [Git] (http://git-scm.com/downloads) 
+<li> [Composer] (https://getcomposer.org/)
+<li> [PHP 5.4+] (http://php.net/downloads.php)
+<li> [Laravel 5 Framework] (https://github.com/laravel/laravel)
+<li> [MySql Server] (https://www.mysql.com/)
 
-## Official Documentation
+##Modo de Instalação
+<p><li>Clone o repositorio [festadasnacoes] (https://github.com/sergiopeluzzi/festadasnacoes) no github em uma pasta qualquer.
+<p>git clone https://github.com/sergiopeluzzi/festadasnacoes.git
+<p>
+<p><li>Acesse a pasta e rode o composer:
+<p>composer install
+<p>
+<p><li>Ainda dentro da pasta, renomeie o arquivo .env.example para .env e configure a conexão com o banco MySql
+<p>DB_HOST, DB_USERNAME, DB_PASSWORD e DB_DATABASE
+<p>
+<p><li>Em seguida execute o comando php artisan migrate. Se ocorreu tudo OK, execute o comando php artisan serve
+<p>Se não houver algum sinistro, o acesso à aplicação está liberado no seu [Localhost](http://localhost:8000)
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
