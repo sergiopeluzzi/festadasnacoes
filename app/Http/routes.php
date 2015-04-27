@@ -12,15 +12,12 @@
 */
 
 Route::get('/', 'WelcomeController@index');
-
 Route::get('admin', 'WelcomeController@index');
-
 Route::get('home', 'HomeController@index');
+Route::get('site', 'SiteController@index');
 
 Route::resource('admin/clientes', 'ClientesController');
-
 Route::resource('admin/funcionarios', 'FuncionariosController');
-
 Route::resource('admin/eventos', 'EventosController');
 
 Route::controllers([
