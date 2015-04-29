@@ -48,7 +48,7 @@
                     <li><a href="#"><i class="fa"></i> Unidades</a></li>
                     <li><a href="#"><i class="fa"></i> Produtos</a></li>
                     <li><a href="#"><i class="fa"></i> Prato</a></li>
-                    <li><a href="#"><i class="fa"></i> Cardápio</a></li>
+                    <li><a href="/admin/cardapios"><i class="fa"></i> Cardápio</a></li>
                 </ul>
             </li>
 

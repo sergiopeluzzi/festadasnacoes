@@ -21,6 +21,8 @@ Route::resource('admin/clientes', 'ClientesController');
 Route::resource('admin/funcionarios', 'FuncionariosController');
 Route::resource('admin/eventos', 'EventosController');
 Route::resource('admin/nacoes', 'NacoesController');
+Route::resource('admin/cardapios', 'CardapiosController');
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

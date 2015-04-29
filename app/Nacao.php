@@ -8,4 +8,12 @@ class Nacao extends Model {
 
     protected $fillable = ['nome', 'descricao'];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function evento()
+    {
+        return $this->belongsToMany('App\Evento');
+    }
+
 }

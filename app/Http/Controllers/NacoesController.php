@@ -1,5 +1,7 @@
 <?php namespace App\Http\Controllers;
 
+use App\Evento;
+use App\EventoNacao;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -22,7 +24,14 @@ class NacoesController extends Controller {
     {
         $nomeForm = 'Nações';
 
-        return view('admin.nacoes.create', compact('nomeForm'));
+        $eventos = Evento::all()->toArray();
+
+        foreach($eventos as $key => $values)
+        {
+            $evento = [$values['id'] => $values['descricao']];
+        }
+
+        return view('admin.nacoes.create', compact('nomeForm', 'evento'));
     }
 
     public function store(NacoesRequest $request)
@@ -30,6 +39,10 @@ class NacoesController extends Controller {
         $dados = $request->all();
 
         Nacao::create($dados);
+
+        $dados['id_nacao'] = Nacao::latest()->first()->id;
+
+        EventoNacao::create($dados);
 
         flash()->success('Nação cadastrada com sucesso');
 
@@ -47,7 +60,14 @@ class NacoesController extends Controller {
     {
         $nomeForm = 'Nações';
 
-        return view('admin.nacoes.edit', compact('nomeForm', 'nacao'));
+        $eventos = Evento::all()->toArray();
+
+        foreach($eventos as $key => $values)
+        {
+            $evento = [$values['id'] => $values['descricao']];
+        }
+
+        return view('admin.nacoes.edit', compact('nomeForm', 'nacao', 'evento'));
     }
 
     public function update(Nacao $nacao, NacoesRequest $request)
@@ -63,6 +83,10 @@ class NacoesController extends Controller {
 
     public function destroy(Nacao $nacao)
     {
+        $eventonacao = EventoNacao::where('id_nacao', $nacao->id)->latest();
+
+        $eventonacao->delete();
+
         $nacao->delete();
 
         flash()->success('Nação excluída com sucesso');

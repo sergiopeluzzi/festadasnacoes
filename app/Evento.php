@@ -10,4 +10,12 @@ class Evento extends Model {
 
     protected $dates = ['dataInicial', 'dataFim', 'dataLimite'];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function nacao()
+    {
+        return $this->belongsToMany('App\Nacao');
+    }
+
 }
