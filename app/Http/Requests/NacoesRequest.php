@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class EventosRequest extends Request {
+class NacoesRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -22,9 +22,7 @@ class EventosRequest extends Request {
 	public function rules()
 	{
 		return [
-			'descricao' => 'required',
-            'dataInicial' => 'required|date',
-            'dataFim' => 'required|date'
+			'nome' => 'required'
 		];
 	}
 

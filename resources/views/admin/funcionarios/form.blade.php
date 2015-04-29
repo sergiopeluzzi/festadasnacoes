@@ -4,6 +4,11 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('arquivo', 'Carregar Fotografia') !!}
+    {!! Form::input('file', 'arquivo', null) !!}
+</div>
+
+<div class="form-group">
     {!! Form::label('id_users_tipo', 'Tipo de Funcionário') !!}
     {!! Form::select('id_users_tipo', ['1' => 'Administrador', '2' => 'Funcionário'], null, ['class' => 'form-control'] ) !!}
 </div>
@@ -15,7 +20,9 @@
 
 <div class="form-group">
     {!! Form::label('telefone', 'Telefone') !!}
-    {!! Form::text('telefone', null, ['class' => 'form-control']) !!}
+    <div class="input-group">
+        {!! Form::text('telefone', null, ['class' => 'form-control focus.inputmask', 'data-inputmask' => '"mask": "(99) 9999-9999"',  'data-mask' => '']) !!}
+    </div>
 </div>
 
 <div class="form-group">

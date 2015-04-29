@@ -37,7 +37,7 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="/admin/eventos"><i class="fa"></i> Evento</a></li>
-                    <li><a href="#"><i class="fa"></i> Nação</a></li>
+                    <li><a href="/admin/nacoes"><i class="fa"></i> Nação</a></li>
                 </ul>
             </li>
             <li class="treeview">

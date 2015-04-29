@@ -110,5 +110,8 @@
 <script src="{{ asset('/dist/js/demo.js') }}" type="text/javascript"></script>
 <!-- Scrip para as mascaras -->
 <script src="{{ asset('/dist/js/jquery.mask.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('plugins/input-mask/jquery.inputmask') }}"></script>
+<script src="{{ asset('plugins/input-mask/jquery.inputmask.date.extensions') }}"></script>
+<script src="{{ asset('plugins/input-mask/jquery.inputmask.extensions') }}"></script>
 </body>
 </html>

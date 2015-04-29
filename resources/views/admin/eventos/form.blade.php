@@ -5,17 +5,17 @@
 
 <div class="form-group">
     {!! Form::label('dataInicial', 'Data Inicial') !!}
-    {!! Form::input('dataInicial', 'date', null, ['class' => 'form-control', 'placeholder' => 'DD/MM/AAAA']) !!}
+    {!! Form::input('date', 'dataInicial', null, ['class' => 'form-control', 'placeholder' => 'DD/MM/AAAA']) !!}
 </div>
 
 <div class="form-group">
     {!! Form::label('dataFinal', 'Data Final') !!}
-    {!! Form::input('dataFinal', 'date', null, ['class' => 'form-control', 'placeholder' => 'DD/MM/AAAA']) !!}
+    {!! Form::input('date', 'dataFim', null, ['class' => 'form-control', 'placeholder' => 'DD/MM/AAAA']) !!}
 </div>
 
 <div class="form-group">
     {!! Form::label('dataLimite', 'Data Limite para Compras') !!}
-    {!! Form::input('dataLimite', 'date', null, ['class' => 'form-control', 'placeholder' => 'DD/MM/AAAA']) !!}
+    {!! Form::input('date', 'dataLimite', null, ['class' => 'form-control', 'placeholder' => 'DD/MM/AAAA']) !!}
 </div>
 
 <div class="form-group">
