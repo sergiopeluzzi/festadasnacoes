@@ -22,6 +22,9 @@ Route::resource('admin/funcionarios', 'FuncionariosController');
 Route::resource('admin/eventos', 'EventosController');
 Route::resource('admin/nacoes', 'NacoesController');
 Route::resource('admin/cardapios', 'CardapiosController');
+Route::resource('admin/pratos', 'PratosController');
+Route::resource('admin/unidades', 'UnidadesController');
+Route::resource('admin/produtos', 'ProdutosController');
 
 
 Route::controllers([

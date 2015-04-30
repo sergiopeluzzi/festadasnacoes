@@ -29,6 +29,9 @@ class RouteServiceProvider extends ServiceProvider {
         $router->model('eventos', 'App\Evento');
         $router->model('nacoes', 'App\Nacao');
         $router->model('cardapios', 'App\Cardapio');
+        $router->model('pratos', 'App\Prato');
+        $router->model('unidades', 'App\Unidade');
+        $router->model('produtos', 'App\Produto');
 	}
 
 	/**

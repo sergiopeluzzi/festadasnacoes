@@ -14,8 +14,8 @@
                         <p><strong>Nome: </strong>{{ $cliente->nome }}</p>
                         <p><strong>CPF: </strong>{{ $cliente->cpf }}</p>
                         <p><strong>Email: </strong>{{ $usuario->email }}</p>
-                        <p><strong>Data Cadastro: </strong>{{ $cliente->created_at->format('d/m/Y - H:i:s') }}</p>
-                        <p><strong>Ultima Alteração: </strong>{{ $cliente->updated_at->format('d/m/Y - H:i:s') }}</p>
+                        <p><strong>Data Cadastro: </strong>{{ $cliente->created_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Ultima Alteração: </strong>{{ $cliente->updated_at->format('d/m/Y à\s H:i:s') }}</p>
                         <p><strong>Código de Usuário: </strong>{{ $cliente->id_user }}</p>
 
                         <a href="/admin/clientes" class="btn btn-danger">Voltar</a>

@@ -28,7 +28,7 @@ class NacoesController extends Controller {
 
         foreach($eventos as $key => $values)
         {
-            $evento = [$values['id'] => $values['descricao']];
+            $evento[$values['id']] = $values['descricao'];
         }
 
         return view('admin.nacoes.create', compact('nomeForm', 'evento'));
@@ -64,7 +64,7 @@ class NacoesController extends Controller {
 
         foreach($eventos as $key => $values)
         {
-            $evento = [$values['id'] => $values['descricao']];
+            $evento[$values['id']] = $values['descricao'];
         }
 
         return view('admin.nacoes.edit', compact('nomeForm', 'nacao', 'evento'));
