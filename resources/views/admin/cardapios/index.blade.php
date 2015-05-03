@@ -11,19 +11,19 @@
                     <div class="panel-body">
                         <table id="tb_cardapios" class="table table-bordered table-hover">
                             <thead class="bg-red">
-                            <tr>
-                                <th class="text-center no-padding">Código</th>
-                                <th class="text-center no-padding">Descrição</th>
-                                <th class="text-center no-padding">Evento</th>
-                                <th class="text-center no-padding">Ações</th>
-                            </tr>
+                                <tr>
+                                    <th class="text-center no-padding">Código</th>
+                                    <th class="text-center no-padding">Descrição</th>
+                                    <th class="text-center no-padding">Evento</th>
+                                    <th class="text-center no-padding">Ações</th>
+                                </tr>
                             </thead>
                             <tbody>
                             @foreach($cardapios as $cardapio)
                                 <tr>
                                     <td class="text-center">{{ $cardapio->id }}</td>
                                     <td>{{ $cardapio->descricao }}</td>
-                                    <td>{{ $cardapio->id_evento }}</td>
+                                    <td>{{ $evento->find($cardapio->id_evento)->descricao }}</td>
                                     <td class="text-center no-padding">
 
                                         <!-- show the nerd (uses the show method found at GET /nerds/{id} -->

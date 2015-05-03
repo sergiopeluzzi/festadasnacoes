@@ -12,7 +12,10 @@
                     <div class="panel-body">
                         <p><strong>Código: </strong>{{ $cardapio->id }}</p>
                         <p><strong>Descrição: </strong>{{ $cardapio->descricao }}</p>
-                        <p><strong>Evento: </strong>{{ $cardapio->id_evento }}</p>
+                        <p><strong>Evento: </strong>{{ $evento->find($cardapio->id_evento)->descricao }}</p>
+                        <hr>
+                        <p><strong>Data Cadastro: </strong>{{ $cardapio->created_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Ultima Alteração: </strong>{{ $cardapio->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 
                         <a href="/admin/cardapios" class="btn btn-danger">Voltar</a>
                     </div>

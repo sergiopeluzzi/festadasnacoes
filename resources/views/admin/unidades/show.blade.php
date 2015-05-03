@@ -12,6 +12,7 @@
                         <p><strong>Código: </strong>{{ $unidade->id }}</p>
                         <p><strong>Sigla: </strong>{{ $unidade->sigla }}</p>
                         <p><strong>Descrição: </strong>{{ $unidade->descricao }}</p>
+                        <hr>
                         <p><strong>Data Cadastro: </strong>{{ $unidade->created_at->format('d/m/Y à\s H:i:s') }}</p>
                         <p><strong>Ultima Alteração: </strong>{{ $unidade->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 

@@ -2,44 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6178fa02-5c62-468d-a2a8-31ed74a8223b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_04_29_200626_create_pratos_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2015_04_29_211601_create_unidades_table.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Requests/CardapiosRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Prato.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/PratosController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Requests/PratosRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Unidade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/UnidadesController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Requests/UnidadesRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/cardapios/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/produtos/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/unidades/create.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/cardapios/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/produtos/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/unidades/edit.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/cardapios/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/produtos/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/unidades/form.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/unidades/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/cardapios/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/produtos/show.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/unidades/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Cardapio.php" afterPath="$PROJECT_DIR$/app/Cardapio.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/CardapiosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/CardapiosController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/NacoesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/NacoesController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/PratosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/PratosController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/ProdutosController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProdutosController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/cardapios/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/cardapios/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/cardapios/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/cardapios/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/clientes/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/clientes/show.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/eventos/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/eventos/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/funcionarios/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/funcionarios/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/nacoes/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/nacoes/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pratos/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pratos/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/produtos/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/produtos/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/unidades/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/unidades/show.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="festadasnacoes.iws" />
@@ -116,71 +95,61 @@
       <file leaf-file-name="MySQL - festadasnacoes@localhost" pinned="false" current-in-tab="false">
         <entry file="dbDummy://db-console:/97172def/6e4c49de-b003-4ba4-86ce-03ca5eca2f25/">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0" vertical-offset="30" max-vertical-offset="544">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="544">
               <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProdutosController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProdutosController.php">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21071428" vertical-offset="970" max-vertical-offset="1564">
-              <caret line="64" column="82" selection-start-line="64" selection-start-column="82" selection-end-line="64" selection-end-column="82" />
-              <folding>
-                <element signature="e#39#61#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="459">
-              <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1003">
-              <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="459">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.6892139" vertical-offset="711" max-vertical-offset="1275">
+              <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="form.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/form.blade.php">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="408">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state vertical-scroll-proportion="-16.307692" vertical-offset="341" max-vertical-offset="1054">
+              <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/show.blade.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="544">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state vertical-scroll-proportion="-14.346154" vertical-offset="188" max-vertical-offset="1003">
+              <caret line="33" column="165" selection-start-line="33" selection-start-column="141" selection-end-line="33" selection-end-column="165" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.5384617" vertical-offset="1038" max-vertical-offset="2108">
+              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PratosController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PratosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.153846" vertical-offset="272" max-vertical-offset="1768">
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
+              <folding>
+                <element signature="e#39#61#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -232,10 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/nacoes/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/nacoes/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/Evento.php" />
-        <option value="$PROJECT_DIR$/app/Nacao.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_04_29_001643_create_evento_nacao_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_04_29_001643_create_eventos_nacoes_table.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/nacoes/form.blade.php" />
@@ -243,17 +208,12 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_04_29_010016_create_cardapios_table.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/Cardapio.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/cardapios/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/cardapios/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/cardapios/form.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/CardapiosRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/cardapios/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/cardapios/edit.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_04_29_200626_create_pratos_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/PratosRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pratos/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/pratos/edit.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_04_29_211601_create_unidades_table.php" />
         <option value="$PROJECT_DIR$/app/Unidade.php" />
@@ -261,8 +221,6 @@
         <option value="$PROJECT_DIR$/resources/views/admin/unidades/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/unidades/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/unidades/form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/clientes/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/unidades/show.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/unidades/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UnidadesController.php" />
         <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
@@ -271,18 +229,29 @@
         <option value="$PROJECT_DIR$/database/migrations/2015_04_29_215521_create_produtos_table.php" />
         <option value="$PROJECT_DIR$/app/Produto.php" />
         <option value="$PROJECT_DIR$/app/Prato.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/produtos/create.blade.php" />
-        <option value="db-console:/97172def/6e4c49de-b003-4ba4-86ce-03ca5eca2f25/" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/NacoesController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/PratosController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/CardapiosController.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/ProdutosRequest.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/produtos/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/produtos/form.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/produtos/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/nacoes/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/eventos/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/unidades/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/funcionarios/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/clientes/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProdutosController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/produtos/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pratos/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/CardapiosController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/cardapios/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/produtos/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/PratosController.php" />
+        <option value="db-console:/97172def/6e4c49de-b003-4ba4-86ce-03ca5eca2f25/" />
+        <option value="$PROJECT_DIR$/resources/views/admin/cardapios/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php" />
       </list>
     </option>
   </component>
@@ -495,7 +464,7 @@
     <property name="options.lastSelected" value="web-ide.project.structure" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="edit&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/produtos/edit.blade.php&#10;show&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/produtos/show.blade.php&#10;form&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/produtos/form.blade.php&#10;index&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/pratos/index.blade.php&#10;Produ&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Requests/ProdutosRequest.php&#10;Carda&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/CardapiosController.php&#10;Pratos&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/PratosController.php&#10;Nacoes&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;NacoesContro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;Contro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/UnidadesController.php&#10;ProdutosRe&#9;null&#9;null&#10;ProdutoCon&#9;null&#9;null&#10;Prato&#9;null&#9;null&#10;Produt&#9;null&#9;null&#10;create prato&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_29_200626_create_pratos_table.php&#10;route&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/routes.php&#10;routes&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Providers/RouteServiceProvider.php&#10;side&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/includes/sidebar.blade.php&#10;create&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/unidades/create.blade.php&#10;index.bla&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/unidades/index.blade.php&#10;Control&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/CardapiosController.php&#10;UnidadesContro&#9;null&#9;null&#10;unidadeRe&#9;null&#9;null&#10;Unidade&#9;null&#9;null&#10;create_unidades&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_29_211601_create_unidades_table.php&#10;sidebar&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/includes/sidebar.blade.php&#10;PratosRe&#9;null&#9;null&#10;carda&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/CardapiosController.php&#10;PratosContro&#9;null&#9;null&#10;table&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_28_193934_create_nacoes_table.php&#10;create_pra&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_29_200626_create_pratos_table.php&#10;ro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/routes.php&#10;control&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;Funco&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/FuncionariosController.php&#10;NacoesCOn&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;create_cli&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_19_184141_create_clientes_table.php&#10;User&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/User.php&#10;Even&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Evento.php&#10;evento&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/EventosController.php&#10;fun&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/FuncionariosController.php&#10;funcionario&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/FuncionariosController.php&#10;UserT&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/UsersTipo.php&#10;nacoes&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_28_193934_create_nacoes_table.php&#10;Site&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/SiteController.php&#10;app&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/app.blade.php&#10;Evento&#9;null&#9;null&#10;ed&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/eventos/edit.blade.php&#10;crea&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/clientes/create.blade.php&#10;CREATE&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_25_003710_create_eventos_table.php&#10;funci&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/FuncionariosController.php" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/app.blade.php&#10;index&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/pratos/index.blade.php&#10;Pratos&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/PratosController.php&#10;form&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/pratos/form.blade.php&#10;show&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/pratos/show.blade.php&#10;create.blade&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/pratos/create.blade.php&#10;create&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/produtos/create.blade.php&#10;index.blade&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/cardapios/index.blade.php&#10;Cardapio&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/CardapiosController.php&#10;PratosContro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/PratosController.php&#10;nacoes\index.blade&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/nacoes/index.blade.php&#10;NacoesCon&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;funcion&#9;null&#9;null&#10;Pro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/ProdutosController.php&#10;show.blade&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/clientes/show.blade.php&#10;edit&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/produtos/edit.blade.php&#10;Produ&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Requests/ProdutosRequest.php&#10;Carda&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/CardapiosController.php&#10;Nacoes&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;NacoesContro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;Contro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/UnidadesController.php&#10;ProdutosRe&#9;null&#9;null&#10;ProdutoCon&#9;null&#9;null&#10;Prato&#9;null&#9;null&#10;Produt&#9;null&#9;null&#10;create prato&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_29_200626_create_pratos_table.php&#10;route&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/routes.php&#10;routes&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Providers/RouteServiceProvider.php&#10;side&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/includes/sidebar.blade.php&#10;index.bla&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/admin/unidades/index.blade.php&#10;Control&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/CardapiosController.php&#10;UnidadesContro&#9;null&#9;null&#10;unidadeRe&#9;null&#9;null&#10;Unidade&#9;null&#9;null&#10;create_unidades&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_29_211601_create_unidades_table.php&#10;sidebar&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/resources/views/includes/sidebar.blade.php&#10;PratosRe&#9;null&#9;null&#10;carda&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/CardapiosController.php&#10;table&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_28_193934_create_nacoes_table.php&#10;create_pra&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_29_200626_create_pratos_table.php&#10;ro&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/routes.php&#10;control&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;Funco&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/FuncionariosController.php&#10;NacoesCOn&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/NacoesController.php&#10;create_cli&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/database/migrations/2015_04_19_184141_create_clientes_table.php&#10;User&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/User.php&#10;Even&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Evento.php&#10;evento&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/EventosController.php&#10;fun&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/FuncionariosController.php&#10;funcionario&#9;FILE&#9;file://C:/Users/Blye/festadasnacoes/app/Http/Controllers/FuncionariosController.php" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -599,7 +568,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9559543" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="26" y="119" width="1322" height="551" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21406959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21406959" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25037822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -648,74 +617,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/EventoNacao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24329159" vertical-offset="0" max-vertical-offset="559">
-          <caret line="8" column="52" selection-start-line="8" selection-start-column="52" selection-end-line="8" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/nacoes/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_04_29_010016_create_cardapios_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="697">
-          <caret line="21" column="95" selection-start-line="21" selection-start-column="95" selection-end-line="21" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08717949" vertical-offset="0" max-vertical-offset="585">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4857143" vertical-offset="0" max-vertical-offset="560">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/cardapios/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5604396" vertical-offset="255" max-vertical-offset="969">
-          <caret line="33" column="141" selection-start-line="33" selection-start-column="141" selection-end-line="33" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/cardapios/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/cardapios/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="323">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/CardapiosRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7602862" vertical-offset="0" max-vertical-offset="612">
           <caret line="25" column="45" selection-start-line="25" selection-start-column="45" selection-end-line="25" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/cardapios/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48658317" vertical-offset="0" max-vertical-offset="559">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -730,7 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39534885" vertical-offset="0" max-vertical-offset="559">
           <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -762,20 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="544">
-          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="408">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
@@ -788,13 +678,6 @@
         <state vertical-scroll-proportion="0.7602862" vertical-offset="0" max-vertical-offset="612">
           <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
-          <caret line="12" column="47" selection-start-line="12" selection-start-column="47" selection-end-line="12" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -821,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24329159" vertical-offset="0" max-vertical-offset="289">
           <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -829,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7602862" vertical-offset="0" max-vertical-offset="612">
           <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -851,20 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3649374" vertical-offset="0" max-vertical-offset="559">
           <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/clientes/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51699466" vertical-offset="0" max-vertical-offset="595">
-          <caret line="17" column="104" selection-start-line="17" selection-start-column="104" selection-end-line="17" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/unidades/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="510">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -900,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45617172" vertical-offset="102" max-vertical-offset="714">
           <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -927,14 +793,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://db-console:/97172def/6e4c49de-b003-4ba4-86ce-03ca5eca2f25/">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0" vertical-offset="30" max-vertical-offset="544">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UnidadesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.615385" vertical-offset="784" max-vertical-offset="1343">
@@ -942,97 +800,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1003">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="459">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NacoesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27321428" vertical-offset="374" max-vertical-offset="1734">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-          <folding>
-            <element signature="e#39#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CardapiosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7285714" vertical-offset="544" max-vertical-offset="1496">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46617916" vertical-offset="204" max-vertical-offset="1003">
-          <caret line="27" column="62" selection-start-line="27" selection-start-column="62" selection-end-line="27" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProdutosRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.346153" vertical-offset="0" max-vertical-offset="612">
           <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/form.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="408">
+        <state vertical-scroll-proportion="0.3642857" vertical-offset="0" max-vertical-offset="560">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5303571" vertical-offset="6979" max-vertical-offset="11186">
+          <caret line="428" column="39" selection-start-line="428" selection-start-column="39" selection-end-line="429" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/clientes/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60714287" vertical-offset="0" max-vertical-offset="612">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/funcionarios/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54642856" vertical-offset="0" max-vertical-offset="629">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/unidades/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.425" vertical-offset="0" max-vertical-offset="560">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/eventos/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51607144" vertical-offset="0" max-vertical-offset="612">
           <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43510056" vertical-offset="204" max-vertical-offset="1020">
+          <caret line="26" column="106" selection-start-line="26" selection-start-column="106" selection-end-line="26" selection-end-column="106" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.115385" vertical-offset="0" max-vertical-offset="544">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.425" vertical-offset="0" max-vertical-offset="595">
+          <caret line="14" column="103" selection-start-line="14" selection-start-column="103" selection-end-line="14" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProdutosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60714287" vertical-offset="0" max-vertical-offset="1632">
+          <caret line="20" column="84" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FuncionariosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12142857" vertical-offset="0" max-vertical-offset="1649">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/nacoes/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="578">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NacoesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94107145" vertical-offset="0" max-vertical-offset="1734">
+          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/nacoes/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="0" column="24" selection-start-line="0" selection-start-column="24" selection-end-line="0" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27321428" vertical-offset="0" max-vertical-offset="560">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/cardapios/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.425" vertical-offset="0" max-vertical-offset="578">
+          <caret line="14" column="101" selection-start-line="14" selection-start-column="101" selection-end-line="14" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CardapiosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4571428" vertical-offset="0" max-vertical-offset="1564">
+          <caret line="54" column="87" selection-start-line="54" selection-start-column="87" selection-end-line="54" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45535713" vertical-offset="0" max-vertical-offset="595">
+          <caret line="15" column="90" selection-start-line="15" selection-start-column="90" selection-end-line="15" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/cardapios/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24862888" vertical-offset="153" max-vertical-offset="969">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/97172def/6e4c49de-b003-4ba4-86ce-03ca5eca2f25/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/PratosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81964284" vertical-offset="612" max-vertical-offset="1564">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.153846" vertical-offset="272" max-vertical-offset="1768">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
             <element signature="e#39#61#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/produtos/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="459">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        <state vertical-scroll-proportion="-4.5384617" vertical-offset="1038" max-vertical-offset="2108">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProdutosController.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/form.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21071428" vertical-offset="970" max-vertical-offset="1564">
-          <caret line="64" column="82" selection-start-line="64" selection-start-column="82" selection-end-line="64" selection-end-column="82" />
-          <folding>
-            <element signature="e#39#61#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-16.307692" vertical-offset="341" max-vertical-offset="1054">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.346154" vertical-offset="188" max-vertical-offset="1003">
+          <caret line="33" column="165" selection-start-line="33" selection-start-column="141" selection-end-line="33" selection-end-column="165" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pratos/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6892139" vertical-offset="711" max-vertical-offset="1275">
+          <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
+          <folding />
         </state>
       </provider>
     </entry>

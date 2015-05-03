@@ -16,7 +16,9 @@ class CardapiosController extends Controller {
 
         $cardapios = Cardapio::all();
 
-        return view('admin.cardapios.index', compact('nomeForm', 'cardapios'));
+        $evento = new Evento;
+
+        return view('admin.cardapios.index', compact('nomeForm', 'cardapios', 'evento'));
 	}
 
     public function create()
@@ -48,7 +50,9 @@ class CardapiosController extends Controller {
     {
         $nomeForm = 'Cardápios';
 
-        return view('admin.cardapios.show', compact('nomeForm', 'cardapio'));
+        $evento = new Evento;
+
+        return view('admin.cardapios.show', compact('nomeForm', 'cardapio', 'evento'));
     }
 
     public function edit(Cardapio $cardapio)

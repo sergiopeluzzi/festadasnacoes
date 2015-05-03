@@ -24,7 +24,7 @@
                                 <tr>
                                     <td class="text-center">{{ $produto->id }}</td>
                                     <td>{{ $produto->descricao }}</td>
-                                    <td class="text-center">{{ $produto->id_unidade }}</td>
+                                    <td class="text-center">{{ $unidade->find($produto->id_unidade)->sigla }}</td>
                                     <td class="text-right">R$ {{ $produto->valor }}</td>
                                     <td class="text-center no-padding">
 
@@ -32,6 +32,7 @@
                                         <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/produtos/' . $produto->id) }}"><i class="glyphicon glyphicon-user"></i></a>
                                         <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
                                         <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/produtos/' . $produto->id . '/edit') }}"><i class="glyphicon glyphicon-edit"></i></a>
+
                                         <a>
                                             {!! Form::open(array('class' => 'inline', 'method' => 'DELETE', 'route' => array('admin.produtos.destroy', $produto->id))) !!}
                                             {!! Form::submit('X', array('class' => 'btn bg-gray')) !!}

@@ -11,20 +11,20 @@
                     <div class="panel-body">
                         <table id="tb_pratos" class="table table-bordered table-hover">
                             <thead class="bg-red">
-                            <tr>
-                                <th class="text-center no-padding">Código</th>
-                                <th class="text-center no-padding">Descrição</th>
-                                <th class="text-center no-padding">Nação</th>
-                                <th class="text-center no-padding">Valor</th>
-                                <th class="text-center no-padding">Ações</th>
-                            </tr>
+                                <tr>
+                                    <th class="text-center no-padding">Código</th>
+                                    <th class="text-center no-padding">Descrição</th>
+                                    <th class="text-center no-padding">Nação</th>
+                                    <th class="text-center no-padding">Valor</th>
+                                    <th class="text-center no-padding">Ações</th>
+                                </tr>
                             </thead>
                             <tbody>
                             @foreach($pratos as $prato)
                                 <tr>
                                     <td class="text-center">{{ $prato->id }}</td>
                                     <td>{{ $prato->descricao }}</td>
-                                    <td class="text-center">{{ $prato->id_nacao }}</td>
+                                    <td class="text-center">{{ $nacao->find($prato->id_nacao)->nome }}</td>
                                     <td class="text-right">R$ {{ $prato->valor }}</td>
                                     <td class="text-center no-padding">
 

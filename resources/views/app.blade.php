@@ -66,6 +66,8 @@
     </footer>
 </div><!-- ./wrapper -->
 
+@yield('scripts')
+
 <script>
     $('#flash-overlay-modal').modal();
 </script>

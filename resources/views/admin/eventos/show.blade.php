@@ -15,6 +15,9 @@
                         <p><strong>Data Inicial: </strong>{{ $evento->dataInicial->format('d/m/Y') }}</p>
                         <p><strong>Data Final: </strong>{{ $evento->dataFim->format('d/m/Y') }}</p>
                         <p><strong>Data Limite: </strong>{{ $evento->dataLimite->format('d/m/Y') }}</p>
+                        <hr>
+                        <p><strong>Data Cadastro: </strong>{{ $evento->created_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Ultima Alteração: </strong>{{ $evento->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 
                         <a href="/admin/eventos" class="btn btn-danger">Voltar</a>
                     </div>

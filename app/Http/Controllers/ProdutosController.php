@@ -16,7 +16,9 @@ class ProdutosController extends Controller {
 
         $produtos = Produto::all();
 
-        return view('admin.produtos.index', compact('nomeForm', 'produtos'));
+        $unidade = new Unidade;
+
+        return view('admin.produtos.index', compact('nomeForm', 'produtos', 'unidade'));
     }
 
     public function create()
@@ -48,7 +50,9 @@ class ProdutosController extends Controller {
     {
         $nomeForm = 'Unidades';
 
-        return view('admin.produtos.show', compact('nomeForm', 'produto'));
+        $unidade = new Unidade;
+
+        return view('admin.produtos.show', compact('nomeForm', 'produto', 'unidade'));
     }
 
     public function edit(Produto $produto)

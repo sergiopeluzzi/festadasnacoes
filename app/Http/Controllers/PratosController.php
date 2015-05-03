@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PratosRequest;
 use App\Nacao;
 use App\Prato;
+use App\Produto;
 use Illuminate\Http\Request;
 
 class PratosController extends Controller {
@@ -16,7 +17,9 @@ class PratosController extends Controller {
 
         $pratos = Prato::all();
 
-        return view('admin.pratos.index', compact('nomeForm', 'pratos'));
+        $nacao = new Nacao;
+
+        return view('admin.pratos.index', compact('nomeForm', 'pratos', 'nacao'));
 	}
 
     public function create()
@@ -25,12 +28,19 @@ class PratosController extends Controller {
 
         $nacoes = Nacao::all()->toArray();
 
+        $produtos = Produto::all()->toArray();
+
         foreach($nacoes as $key => $values)
         {
             $nacao[$values['id']] = $values['nome'];
         }
 
-        return view('admin.pratos.create', compact('nomeForm', 'nacao'));
+        foreach($produtos as $key => $values)
+        {
+            $produto[$values['id']] = $values['descricao'];
+        }
+
+        return view('admin.pratos.create', compact('nomeForm', 'nacao', 'produto'));
     }
 
     public function store(PratosRequest $request)
@@ -48,7 +58,9 @@ class PratosController extends Controller {
     {
         $nomeForm = 'Pratos';
 
-        return view('admin.pratos.show', compact('nomeForm', 'prato'));
+        $nacao = new Nacao;
+
+        return view('admin.pratos.show', compact('nomeForm', 'prato', 'nacao'));
     }
 
     public function edit(Prato $prato)

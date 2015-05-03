@@ -12,8 +12,11 @@
                     <div class="panel-body">
                         <p><strong>Código: </strong>{{ $produto->id }}</p>
                         <p><strong>Descrição: </strong>{{ $produto->descricao }}</p>
-                        <p><strong>Unidade: </strong>{{ $produto->id_unidade }}</p>
+                        <p><strong>Unidade: </strong>{{ $unidade->find($produto->id_unidade)->descricao }}</p>
                         <p><strong>Valor: </strong>R$ {{ $produto->valor }}</p>
+                        <hr>
+                        <p><strong>Data Cadastro: </strong>{{ $produto->created_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Ultima Alteração: </strong>{{ $produto->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 
                         <a href="/admin/produtos" class="btn btn-danger">Voltar</a>
                     </div>

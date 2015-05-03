@@ -13,7 +13,10 @@
                         <p><strong>Código: </strong>{{ $prato->id }}</p>
                         <p><strong>Descrição: </strong>{{ $prato->descricao }}</p>
                         <p><strong>Valor: </strong>{{ $prato->valor }}</p>
-                        <p><strong>Nação: </strong>{{ $prato->id_nacao }}</p>
+                        <p><strong>Nação: </strong>{{ $nacao->find($prato->id_nacao)->nome }}</p>
+                        <hr>
+                        <p><strong>Data Cadastro: </strong>{{ $prato->created_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Ultima Alteração: </strong>{{ $prato->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 
                         <a href="/admin/pratos" class="btn btn-danger">Voltar</a>
                     </div>
