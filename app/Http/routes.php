@@ -11,12 +11,27 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+/**
+ * Rotas Básicas do Laravel
+ */
 Route::get('admin', 'HomeController@index');
 Route::get('home', 'HomeController@index');
 
+/**
+ * Rotas do Site Front-End
+ */
+Route::get('/', 'SiteController@index');
 Route::get('site', 'SiteController@index');
+Route::get('minhaconta', 'SiteController@minhaconta');
+Route::get('meuspedidos', 'SiteController@meuspedidos');
+Route::get('meucarrinho', 'SiteController@meucarrinho');
+Route::get('finalizar', 'SiteController@finalizar');
+Route::get('cadastrar', 'SiteController@cadastrar');
+Route::get('contato', 'SiteController@contato');
 
+/**
+ * Rotas do admin Back-End
+ */
 Route::resource('admin/clientes', 'ClientesController');
 Route::resource('admin/funcionarios', 'FuncionariosController');
 Route::resource('admin/eventos', 'EventosController');
@@ -27,6 +42,9 @@ Route::resource('admin/unidades', 'UnidadesController');
 Route::resource('admin/produtos', 'ProdutosController');
 
 
+/**
+ * Rotas de autenticação
+ */
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

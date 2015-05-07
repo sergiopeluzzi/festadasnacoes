@@ -47,7 +47,6 @@
 
             if(document.getElementById('item_'+idProd)){
                 alert('Este produto já está na lista');
-                removeElement('item_' + idProd);
                 return;
             }
 
@@ -63,6 +62,24 @@
 
             document.getElementById('qnt').value = 0;
             document.getElementById('id_produto').selectedIndex = 0;
+        }
+
+        function pegadados(hidden) {
+            var grid = document.getElementById('tb_ingredientes');
+            var linhas = grid.rows.length;
+            var ids = new Array();
+
+            for (var i = 0; i < linhas; i++) {
+                var reg = grid.rows[i];
+                var id = reg.childNodes[0];
+                var idProd = id.innerHTML;
+                var qnt = reg.childNodes[2];
+                var qntProd = qnt.innerHTML;
+                ids[idProd] = qntProd;
+            }
+
+            hidden.value = ids;
+
         }
 
     </script>

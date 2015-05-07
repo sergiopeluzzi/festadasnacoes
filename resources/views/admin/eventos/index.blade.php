@@ -13,6 +13,7 @@
                             <thead class="bg-red">
                             <tr>
                                 <th class="text-center no-padding">Código</th>
+                                <th class="text-center no-padding">Nome</th>
                                 <th class="text-center no-padding">Descrição</th>
                                 <th class="text-center no-padding">Ações</th>
                             </tr>
@@ -21,6 +22,7 @@
                             @foreach($eventos as $evento)
                                 <tr>
                                     <td class="text-center">{{ $evento->id }}</td>
+                                    <td>{{ $evento->nome }}</td>
                                     <td>{{ $evento->descricao }}</td>
                                     <td class="text-center no-padding">
 

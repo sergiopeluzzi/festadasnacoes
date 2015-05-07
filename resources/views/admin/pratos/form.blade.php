@@ -28,6 +28,7 @@
                 {!! Form::text('qnt', null, ['class' => 'form-control']) !!}
             </div>
             <div class="form-group col-md-2">
+                {!! Form::hidden('id_prods', null, ['class' => 'form-control']) !!}
                 {!! Form::input('button', 'add', 'Adicionar', ['class' => 'btn btn-danger', 'style' => 'margin-top:24px', 'onClick' => "adicionar('id_produto')"]) !!}
             </div>
 
@@ -52,6 +53,6 @@
 </div>
 
 <div class="form-group">
-    {!! Form::submit($botao, ['class' => 'btn btn-danger']) !!}
+    {!! Form::submit($botao, ['class' => 'btn btn-danger', 'onClick' => "pegadados(this.form.id_prods)"]) !!}
     <a href="/admin/pratos" class="btn btn-danger">Voltar</a>
 </div>

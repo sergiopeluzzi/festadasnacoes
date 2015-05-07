@@ -1,6 +1,11 @@
 <div class="form-group">
+    {!! Form::label('nome', 'Nome') !!}
+    {!! Form::text('nome', null, ['class' => 'form-control']) !!}
+</div>
+
+<div class="form-group">
     {!! Form::label('descricao', 'Descrição') !!}
-    {!! Form::text('descricao', null, ['class' => 'form-control']) !!}
+    {!! Form::textArea('descricao', null, ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">

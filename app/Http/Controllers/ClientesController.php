@@ -9,11 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class ClientesController extends Controller {
 
-    public function __construct()
-    {
-        $this->middleware('administrador', ['except' => ['show', 'index']]);
-    }
-    
     public function index()
     {
         $nomeForm = 'Clientes';
