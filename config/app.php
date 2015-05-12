@@ -146,7 +146,11 @@ return [
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
 
+        /*
+         * Service providers de terceiros
+         */
         'Laracasts\Flash\FlashServiceProvider',
+        'JulioBitencourt\Cart\CartServiceProvider',
 
 	],
 

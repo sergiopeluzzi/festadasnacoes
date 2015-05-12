@@ -20,9 +20,7 @@
 
 <div class="form-group">
     {!! Form::label('telefone', 'Telefone') !!}
-    <div class="input-group">
-        {!! Form::text('telefone', null, ['class' => 'form-control focus.inputmask', 'data-inputmask' => '"mask": "(99) 9999-9999"',  'data-mask' => '']) !!}
-    </div>
+    {!! Form::text('telefone', null, ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">

@@ -13,6 +13,7 @@
                         <p><strong>Código: </strong>{{ $cliente->id }}</p>
                         <p><strong>Nome: </strong>{{ $cliente->nome }}</p>
                         <p><strong>CPF: </strong>{{ $cliente->cpf }}</p>
+                        <p><strong>Telefone: </strong>{{ $cliente->telefone }}</p>
                         <p><strong>Email: </strong>{{ $usuario->email }}</p>
                         <p><strong>Código de Usuário: </strong>{{ $cliente->id_user }}</p>
                         <hr>

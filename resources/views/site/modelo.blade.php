@@ -165,7 +165,7 @@
                                     <li><a class="active" href="/"><i class="fa fa-home fa-lg"></i></a></li>
 
                                     <!--Menu cardápio -->
-                                    <li><a href="#">CARDÁPIO</a>
+                                    <li><a href="/#cardapio_principal">CARDÁPIO</a>
                                         <ul>
                                             <li>
                                                 <a href="produto_brasil.html">BRASIL - GOIÁS</a>
@@ -206,44 +206,46 @@
                                     <!-- div botão carrinho do sistema -->
                                     <div class="btn-group dropdown-cart">
                                         <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
-                                            <span class="cart-menu-icon"></span>2 item(s)<span class="drop-price"> - R$998,99</span>
+                                            <span class="cart-menu-icon"></span>{{$cart['count']}}<span class="drop-price"> - R$ {{ number_format($cart['total'],2) }}</span>
                                         </button>
 
                                         <!-- Rótulo dos itens carrinho -->
                                         <div class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu">
                                             <p class="dropdown-cart-description">Itens recente(s).</p>
                                             <ul class="dropdown-cart-product-list">
+                                                @foreach($carrinho as $item)
                                                 <li class="item clearfix">
-                                                    <a href="#" title="Delete item" class="delete-item">
+                                                    <a href="remover/{{ $item['id'] }}" title="Delete item" class="delete-item">
                                                         <i class="fa fa-times"></i>
                                                     </a>
                                                     <figure>
-                                                        <a href="product.html"><img src="images/products/thumbnails/item12.jpg" alt="phone 4"></a>
+                                                        <a href="product.html"><img src="{{ asset('/site/images/homeslider/prato'. $item['sku'] .'.png') }}" alt="{{ $item['description'] }}"></a>
                                                     </figure>
 
                                                     <!-- div do conteúdo carrinho cabeçalho -->
                                                     <div class="dropdown-cart-details">
                                                         <p class="item-name">
-                                                            <a href="product.html">Cam Optia AF Webcam</a>
+                                                            <a href="product.html">{{ $item['description'] }}</a>
                                                         </p>
 
                                                         <!-- conteúdo da div-->
-                                                        <p>1x<span class="item-price">R$499<span class="sub-price">.00</span></span></p>
+                                                        <p>1x <span class="item-price">R$ {{ number_format($item['price'],2) }}</span></p>
                                                     </div>
                                                 </li>
+                                                @endforeach
                                             </ul>
 
                                             <!-- div total do carrinho cabeçalho -->
                                             <ul class="dropdown-cart-total">
                                                 <li>
-                                                    <span class="dropdown-cart-total-title">Total:</span>R$998<span class="sub-price">.99</span>
+                                                    <span class="dropdown-cart-total-title">Total:</span>R$ {{ number_format($cart['total'],2) }}
                                                 </li>
                                             </ul>
 
                                             <!-- botões do carrinho total -->
                                             <div class="dropdown-cart-action">
-                                                <p><a href="carrinho.html" class="btn btn-custom-2 btn-block">Carrinho</a></p>
-                                                <p><a href="finalizar.html"class="btn btn-custom btn-block">Finalizar</a></p>
+                                                <p><a href="meucarrinho" class="btn btn-custom-2 btn-block">Carrinho</a></p>
+                                                <p><a href="finalizar" class="btn btn-custom btn-block">Finalizar</a></p>
                                             </div>
                                         </div><!-- fim div carrinho cabeçalho direito -->
                                     </div><!-- fim div botão carrinho cabeçalho direito -->
@@ -263,7 +265,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12 clearfix"><h3>Receba as notícias da FESTA DAS NAÇÕES</h3>
-
                     <!-- informar e-mail para notícias da festa -->
                     <form id="register-newsletter">
                         <input type="text" name="newsletter" required="" placeholder="E-mail">
@@ -295,8 +296,8 @@
                     <ul class="links">
                         <li><a href="/#festa_principal">A Festa</a></li>
                         <li><a href="https://www.facebook.com/pages/Millenium/558733344212135?rf=234786046680210" target="_blank">Local do evento</a></li>
-                        <li><a href="index.html#cardapio_principal">Cardápio</a></li>
-                        <li><a href="index.html#patrocinadores_principal">Patrocinadores</a></li>
+                        <li><a href="/#cardapio_principal">Cardápio</a></li>
+                        <li><a href="/#patrocinadores_principal">Patrocinadores</a></li>
                     </ul>
                 </div>
 
@@ -464,6 +465,37 @@
     <script src="{{ asset('/site/js/jquery.themepunch.revolution.min.js') }}"></script>
     <script src="{{ asset('/site/js/colpick.j') }}s"></script>
     <script src="{{ asset('/site/js/main.js') }}"></script>
+
+
+    /**
+     * Aumentar e diminir quantidade produto.
+     */
+    <script type="text/javascript">
+        function id( el ){
+            return document.getElementById( el );
+        }
+        function menos( id_qnt )
+        {
+            var qnt = parseInt( id( id_qnt ).value );
+            if( qnt > 1 )
+                id( id_qnt ).value = qnt - 1;
+        }
+        function mais( id_qnt )
+        {
+            id( id_qnt ).value = parseInt( id( id_qnt ).value ) + 1;
+        }
+    </script>
+
+    /**
+     * Cálculo do valor total
+     */
+    <script type="text/javascript">
+
+        function atulizaValor(id) {
+
+        }
+
+    </script>
 
 
 </footer>

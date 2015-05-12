@@ -6,7 +6,7 @@
     <div id="breadcrumb-container">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="index.html">Início</a></li>
+                <li><a href="/">Início</a></li>
                 <li class="active">Finalizar Pedido</li>
             </ul>
         </div>
@@ -83,7 +83,7 @@
                             <div id="payment-method" class="collapse">
                                 <div class="panel-body">
                                     <p>O método disponível para pagamento é o <a href="https://pagseguro.uol.com.br/comprar/">PagSeguro</a>, simples e fácil. </p>
-                                    <img src="images/pagseguro.png">
+                                    <img src="{{asset('site/images/pagseguro.png')}}">
                                 </div>
                             </div>
                         </div>

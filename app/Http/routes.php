@@ -41,6 +41,20 @@ Route::resource('admin/pratos', 'PratosController');
 Route::resource('admin/unidades', 'UnidadesController');
 Route::resource('admin/produtos', 'ProdutosController');
 
+/**
+ * RouteGroup do Carrinho
+ */
+Route::group(['prefix' => 'meucarrinho'], function()
+{
+    Route::get('add/{id}', 'CarrinhoController@add');
+    Route::get('/', 'CarrinhoController@index');
+    Route::get('remover/{id}', 'CarrinhoController@remover');
+});
+
+Route::group(['prefix' => '/'], function()
+{
+    Route::get('remover/{id}', 'CarrinhoController@remover2');
+});
 
 /**
  * Rotas de autenticação

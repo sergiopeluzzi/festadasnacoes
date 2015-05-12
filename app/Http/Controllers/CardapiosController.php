@@ -29,7 +29,7 @@ class CardapiosController extends Controller {
 
         foreach($eventos as $key => $values)
         {
-            $evento[$values['id']] = $values['descricao'];
+            $evento[$values['id']] = $values['nome'];
         }
 
         return view('admin.cardapios.create', compact('nomeForm', 'evento'));
@@ -63,7 +63,7 @@ class CardapiosController extends Controller {
 
         foreach($eventos as $key => $values)
         {
-            $evento[$values['id']] = $values['descricao'];
+            $evento[$values['id']] = $values['nome'];
         }
 
         return view('admin.cardapios.edit', compact('nomeForm', 'cardapio', 'evento'));

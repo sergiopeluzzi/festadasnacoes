@@ -4,8 +4,16 @@ use App\Evento;
 use App\Http\Requests;
 use App\Nacao;
 use App\Prato;
+use JulioBitencourt\Cart\CartInterface;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Session;
 
 class SiteController extends Controller {
+
+    public function __construct(CartInterface $cart)
+    {
+        $this->cart = $cart;
+    }
 
     public function index()
     {
@@ -15,36 +23,133 @@ class SiteController extends Controller {
 
         $pratos = Prato::all();
 
-        return view('site.index', compact('evento', 'nacoes', 'pratos'));
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $carrinho = $this->cart->all();
+
+        return view('site.index', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
 	}
 
     public function cadastrar()
     {
-        return view('site.cadastrar');
+        $evento = Evento::latest()->first();
+
+        $nacoes = Nacao::all();
+
+        $pratos = Prato::all();
+
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $carrinho = $this->cart->all();
+
+        return view('site.cadastrar', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 
     public function minhaconta()
     {
-        return view('site.minhaconta');
+
+        $evento = Evento::latest()->first();
+
+        $nacoes = Nacao::all();
+
+        $pratos = Prato::all();
+
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $carrinho = $this->cart->all();
+
+        return view('site.minhaconta', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 
     public function meuspedidos()
     {
-        return view('site.meuspedidos');
+
+        $evento = Evento::latest()->first();
+
+        $nacoes = Nacao::all();
+
+        $pratos = Prato::all();
+
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $carrinho = $this->cart->all();
+
+        return view('site.meuspedidos', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 
     public function meucarrinho()
     {
-        return view('site.meucarrinho');
+
+        $evento = Evento::latest()->first();
+
+        $nacoes = Nacao::all();
+
+        $pratos = Prato::all();
+
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $carrinho = $this->cart->all();
+
+        return view('site.meucarrinho', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 
     public function finalizar()
     {
-        return view('site.finalizar');
+
+        $evento = Evento::latest()->first();
+
+        $nacoes = Nacao::all();
+
+        $pratos = Prato::all();
+
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $carrinho = $this->cart->all();
+
+        return view('site.finalizar', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 
     public function contato()
     {
-        return view('site.contato');
+
+        $evento = Evento::latest()->first();
+
+        $nacoes = Nacao::all();
+
+        $pratos = Prato::all();
+
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $carrinho = $this->cart->all();
+
+        return view('site.contato', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 }

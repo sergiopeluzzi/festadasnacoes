@@ -13,6 +13,7 @@
                         <p><strong>Código: </strong>{{ $funcionario->id }}</p>
                         <p><strong>Nome: </strong>{{ $funcionario->nome }}</p>
                         <p><strong>CPF: </strong>{{ $funcionario->cpf }}</p>
+                        <p><strong>Telefone: </strong>{{ $funcionario->telefone }}</p>
                         <p><strong>Email: </strong>{{ $usuario->email }}</p>
                         <p><strong>Código de Usuário: </strong>{{ $funcionario->id_user }}</p>
                         <p><strong>Tipo de Funcionário: </strong>{{ $usuario_tipo->descricao }}</p>

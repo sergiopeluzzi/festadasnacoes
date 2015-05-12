@@ -68,7 +68,6 @@
                 </li>
 
                 @foreach($nacoes as $nacao)
-
                     <!-- Informar nação goias-->
                     <li data-transition="fade" data-slotamount="6" data-masterspeed="600"
                         data-saveperformance="on" data-title="Special Offers">
@@ -90,10 +89,9 @@
                         </div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="bottom" data-hoffset="-230"
                              data-speed="2000" data-start="500" data-endspeed="800">
-                            <img src="{{ asset('/site/images/homeslider/prato' . $nacao->id . '.png') }}" alt="Slide 1_1">
+                            <img src="{{ asset('/site/images/homeslider/prato' . $pratos->where('id_nacao', $nacao->id)->first()->id . '.png') }}" alt="Slide 1_1">
                         </div>
                     </li>
-
                 @endforeach
 
                 <!-- Acessar contato -->
@@ -156,28 +154,26 @@
                 <div id="similiar-items-slider-next" class="carousel-btn carousel-btn-next carousel-space"></div>
             </div>
             <div class="similiar-items-slider owl-carousel">
-
                 <!-- Informar produto brasil -->
-                @foreach($nacoes as $nacao)
+                @foreach($pratos as $prato)
                 <div class="item item-hover">
                     <div class="item-image-wrapper">
-                        <figure class="item-image-container"><a href="produto_brasil.html"><img
-                                        src="{{ asset('/site/images/homeslider/prato'. $nacao->id .'.png') }}" alt="item1" class="item-image"> <img
-                                        src="{{ asset('/site/images/homeslider/prato'. $nacao->id .'.png') }}" alt="item1  Hover"
+                        <figure class="item-image-container"><a href="{{'prato' . $prato->id }}"><img
+                                        src="{{ asset('/site/images/homeslider/prato'. $prato->id .'.png') }}" alt="item1" class="item-image"> <img
+                                        src="{{ asset('/site/images/homeslider/prato'. $prato->id .'.png') }}" alt="item1  Hover"
                                         class="item-image-hover"></a></figure>
-                        <div class="item-price-container"><span class="item-price">R$ 10,00</span></div>
-                        <span class="new-rect">{{ $nacao->nome }}</span>
+                        <div class="item-price-container"><span class="item-price">R$ {{ number_format($prato->valor,2) }}</span></div>
+                        <span class="new-rect">{{ $nacoes->where('id', $prato->id_nacao)->first()->nome }}</span>
                     </div>
                     <div class="item-meta-container">
-                        <h3 class="item-name"><a href="produto_brasil.html">{{ $pratos->where('id_nacao', $nacao->id)->first()->descricao }}</a></h3>
+                        <h3 class="item-name"><a href="produto_brasil.html">{{ $prato->descricao }}</a></h3>
 
-                        <div class="item-action"><a href="#" class="item-add-btn">
+                        <div class="item-action"><a href="meucarrinho/add/{{ $prato->id }}" class="item-add-btn">
                                 <span class="icon-cart-text">Adicionar carrinho</span></a>
                         </div>
                     </div>
                 </div>
                 @endforeach
-                
             </div><!-- fim div itens cardápio -->
         </div><!-- fim div carrosel cardápio -->
     </div><!-- fim div container cardápio -->

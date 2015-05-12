@@ -33,6 +33,8 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
+    <script src="{{ asset('/site/js/jquery-1.11.1.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('/site/js/jquery.maskedinput-1.1.4.pack.js') }}"></script>
 </head>
 <body class="skin-red fixed">
 <div class="wrapper">
@@ -71,6 +73,10 @@
 <script>
     $('#flash-overlay-modal').modal();
 </script>
+
+<script type="text/javascript">$("#cpf").mask("999.999.999-99")</script>
+<script type="text/javascript">$("#telefone").mask("(99) 9999-9999")</script>
+<script type="text/javascript">$("#valor").mask('99,99')</script>
 
 <!-- jQuery 2.1.3 -->
 <script src="{{ asset('/plugins/jQuery/jQuery-2.1.3.min.js') }}"></script>

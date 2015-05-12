@@ -71,7 +71,7 @@
 
                         <!--Informar meio de pagamento -->
                         <div class="col-md-6 col-sm-6 col-xs-12 service-box-container">
-                            <img src="images/pagseguro.png" data-href="https://pagseguro.uol.com.br/">
+                            <img src="{{asset('site/images/pagseguro.png')}}" data-href="https://pagseguro.uol.com.br/">
                             <div class="services-box">
                                 <h3><a href="https://pagseguro.uol.com.br/" target="_blank">PagSeguro</a> <span class="small-bottom-border"></span></h3>
                                 <p>Parcele em até 12x, o pagamento no cartão de crédito garante a você a compra dos produtos totalmente on-line, simples e rápido.</p>
@@ -80,129 +80,6 @@
 
                     </div>
                 {!! Form::close() !!}
-            </div>
-        </div>
-        <!-- Informar cardápio -->
-        <div class="container">
-            <div class="similiar-items-container carousel-wrapper">
-                <header class="content-title">
-                    <div class="title-bg"><h2 class="title">Cardápio</h2></div>
-                    <p class="title-desc">Escolha os seus pratos, sinta os sabores ao redor do mundo bem pertinho de você</p>
-                </header>
-                <div class="carousel-controls" >
-                    <div id="similiar-items-slider-prev" class="carousel-btn carousel-btn-prev" ></div>
-                    <div id="similiar-items-slider-next" class="carousel-btn carousel-btn-next carousel-space"></div>
-                </div>
-                <div class="similiar-items-slider owl-carousel">
-
-                    <!-- Informar produto brasil -->
-                    <div class="item item-hover">
-                        <div class="item-image-wrapper">
-                            <figure class="item-image-container"><a href="produto_brasil.html"><img
-                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                            class="item-image-hover"></a></figure>
-                            <div class="item-price-container"><span class="item-price">R$ 10,00</span></div>
-                            <span class="new-rect">Brasil</span>
-                        </div>
-                        <div class="item-meta-container">
-                            <h3 class="item-name"><a href="produto_brasil.html">Espetinho de Ganso</a></h3>
-                            <div class="item-action"><a href="#" class="item-add-btn">
-                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- informar produto eua -->
-                    <div class="item item-hover">
-                        <div class="item-image-wrapper">
-                            <figure class="item-image-container"><a href="produto_eua.html"><img
-                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                            class="item-image-hover"></a></figure>
-                            <div class="item-price-container"><span class="item-price">R$ 15,00</span></div>
-                            <span class="new-rect">Eua</span>
-                        </div>
-                        <div class="item-meta-container">
-                            <h3 class="item-name"><a href="produto_eua.html">Lanche Americano</a></h3>
-                            <div class="item-action"><a href="produto_eua.html" class="item-add-btn">
-                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Informar produto itália-->
-                    <div class="item item-hover">
-                        <div class="item-image-wrapper">
-                            <figure class="item-image-container"><a href="produto_italia.html"><img
-                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                            class="item-image-hover"></a></figure>
-                            <div class="item-price-container"><span class="item-price">R$ 25,00</span></div>
-                            <span class="new-rect">Itália</span>
-                        </div>
-                        <div class="item-meta-container">
-                            <h3 class="item-name"><a href="produto_italia.html">Macarronada</a></h3>
-                            <div class="item-action"><a href="#" class="item-add-btn">
-                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Informar produto irlanda -->
-                    <div class="item item-hover">
-                        <div class="item-image-wrapper">
-                            <figure class="item-image-container"><a href="produto_irlanda.html"><img
-                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                            class="item-image-hover"></a></figure>
-                            <div class="item-price-container"><span class="item-price">R$ 8,00</span></div>
-                            <span class="new-rect">Irlanda</span>
-                        </div>
-                        <div class="item-meta-container">
-                            <h3 class="item-name"><a href="produto_irlanda.html">Lanche Americano</a></h3>
-                            <div class="item-action"><a href="#" class="item-add-btn">
-                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Informar produto méxico -->
-                    <div class="item item-hover">
-                        <div class="item-image-wrapper">
-                            <figure class="item-image-container"><a href="produto_mexico.html"><img
-                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                            class="item-image-hover"></a></figure>
-                            <div class="item-price-container"><span class="item-price">R$ 3,50</span></div>
-                            <span class="new-rect">México</span>
-                        </div>
-                        <div class="item-meta-container">
-                            <h3 class="item-name"><a href="produto_mexico.html">Tortilha</a></h3>
-                            <div class="item-action"><a href="#" class="item-add-btn">
-                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Informar produto bebidas -->
-                    <div class="item item-hover">
-                        <div class="item-image-wrapper">
-                            <figure class="item-image-container"><a href="produto_bebida.html"><img
-                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                            class="item-image-hover"></a></figure>
-                            <div class="item-price-container"><span class="item-price">R$ 3,00</span></div>
-                            <span class="new-rect">Bebidas</span>
-                        </div>
-                        <div class="item-meta-container">
-                            <h3 class="item-name"><a href="produto_bebida.html">Refrigerante Lata 250ml</a></h3>
-                            <div class="item-action"><a href="#" class="item-add-btn">
-                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
