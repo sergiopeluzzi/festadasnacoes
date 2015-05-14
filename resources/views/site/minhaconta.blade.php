@@ -1,7 +1,6 @@
 @extends('site.modelo')
 
 @section('body')
-
     <section id="content">
         <div id="breadcrumb-container">
             <div class="container">
@@ -15,6 +14,13 @@
         <!-- Informar cadastrar usuário -->
         <div class="container">
             <div class="row">
+                @if(Auth::guest())
+                    <div>
+                        <h1 align="center">T_T</h1>
+                        <h3 align="center">Usuário não logado</h3>
+                        <h1 align="center">Por favor faça seu login!</h1>
+                    </div>
+                @else
                 <div class="col-md-12">
                     <header class="content-title">
                         <div class="title-bg">
@@ -26,39 +32,62 @@
                     <div class="xs-margin"></div>
 
                     <!-- Informar dados para cadastro -->
-                    <form action="#" id="register-form">
+
+                    {!! Form::model($cliente, ['method' => 'POST', 'action' => ['ClientesController@update', $cliente->id] ]) !!}
                         <div class="row">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <fieldset><h2 class="sub-title">DADOS DO CLIENTE</h2>
+                                    <input type="hidden" value="{{ $cliente = $cliente->where('id_user',  Auth::user()->id)->first() }}">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="input-icon">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                            <span class="input-text">
+                                                Nome
+                                            </span>
+                                        </span>
 
-                                    <div class="input-group"><span class="input-group-addon"><span
-                                                    class="input-icon"> <i class="fa fa-user"></i></span><span class="input-text">Nome</span></span>
-                                        <input type="text" required class="form-control input-lg"
-                                               placeholder="Seu nome">
+                                        <input type="text" value="{{ $cliente->nome }}" required class="form-control input-lg" placeholder="Seu nome">
                                     </div>
 
-                                    <div class="input-group"><span class="input-group-addon"><span
-                                                    class="input-icon"><i class="fa fa-envelope"></i></span><span class="input-text">E-mail</span></span>
-                                        <input type="email" required class="form-control input-lg"
-                                               placeholder="Seu e-mail">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="input-icon">
+                                                <i class="fa fa-envelope"></i>
+                                            </span>
+                                            <span class="input-text">
+                                                E-mail
+                                            </span>
+                                        </span>
+                                        <input type="email" value="{{ $cliente->email }}" required class="form-control input-lg" placeholder="Seu e-mail">
                                     </div>
 
-                                    <div class="input-group"><span class="input-group-addon"><span
-                                                    class="input-icon"><i class="fa fa-lock"></i></span><span class="input-text">Senha</span></span>
-                                        <input type="password" required class="form-control input-lg"
-                                               placeholder="Sua senha">
+                                     <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="input-icon">
+                                                <i class="fa fa-list"></i>
+                                            </span>
+                                            <span class="input-text">
+                                                CPF
+                                            </span>
+                                        </span>
+                                        <input type="text" value="{{ $cliente->cpf }}" class="form-control input-lg" id="cpf" placeholder="Seu CPF">
                                     </div>
 
-                                    <div class="input-group"><span class="input-group-addon"><span
-                                                    class="input-icon"><i class="fa fa-list"></i></span><span class="input-text">CPF</span></span>
-                                        <input type="text" class="form-control input-lg" id="cpf" placeholder="Seu CPF">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="input-icon">
+                                                <i class="fa fa-mobile fa-2x"></i>
+                                            </span>
+                                            <span class="input-text">
+                                                Telefone
+                                            </span>
+                                        </span>
+                                        <input type="text" value="{{ $cliente->telefone }}" class="form-control input-lg" id="telefone" placeholder="Seu telefone">
                                     </div>
 
-                                    <div class="input-group"><span class="input-group-addon"><span
-                                                    class="input-icon"><i class="fa fa-mobile fa-2x"></i></span><span class="input-text">Telefone</span></span>
-                                        <input type="text" class="form-control input-lg" id="telefone" placeholder="Seu telefone">
-                                    </div>
-                                    <input type="submit" value="ENVIAR" class="btn btn-custom-2 md-margin">
+                                    <input type="submit" value="Alterar Dados" class="btn btn-custom-2 md-margin">
                                 </fieldset>
 
                             </div>
@@ -75,9 +104,9 @@
                             </div>
 
                         </div>
-
-                    </form>
+                    {!! Form::close() !!}
                 </div>
+                @endif
             </div>
         </div>
     </section>

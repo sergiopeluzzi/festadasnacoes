@@ -25,7 +25,7 @@
                                     <td class="text-center">{{ $prato->id }}</td>
                                     <td>{{ $prato->descricao }}</td>
                                     <td class="text-center">{{ $nacao->find($prato->id_nacao)->nome }}</td>
-                                    <td class="text-right">R$ {{ $prato->valor }}</td>
+                                    <td class="text-right">R$ {{ number_format($prato->valor,2) }}</td>
                                     <td class="text-center no-padding">
 
                                         <!-- show the nerd (uses the show method found at GET /nerds/{id} -->

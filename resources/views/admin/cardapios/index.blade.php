@@ -23,7 +23,7 @@
                                 <tr>
                                     <td class="text-center">{{ $cardapio->id }}</td>
                                     <td>{{ $cardapio->descricao }}</td>
-                                    <td>{{ $evento->find($cardapio->id_evento)->descricao }}</td>
+                                    <td>{{ $evento->find($cardapio->id_evento)->nome }}</td>
                                     <td class="text-center no-padding">
 
                                         <!-- show the nerd (uses the show method found at GET /nerds/{id} -->

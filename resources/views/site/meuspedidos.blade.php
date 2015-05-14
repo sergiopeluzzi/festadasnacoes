@@ -13,8 +13,14 @@
     </div>
     <div class="container">
         <div class="row">
+            @if(Auth::guest())
+                <div>
+                    <h1 align="center">T_T</h1>
+                    <h3 align="center">Usuário não logado</h3>
+                    <h1 align="center">Por favor faça seu login!</h1>
+                </div>
+            @else
             <div class="col-md-12">
-
                 <!-- Informar meus pedidos -->
                 <header class="content-title"><h1 class="title">Meus pedidos</h1>
                     <p class="title-desc">Segue abaixo os pedidos realizados por: </p>
@@ -81,6 +87,7 @@
 
                 <div class="xlg-margin"></div>
             </div>
+            @endif
         </div>
     </div>
 </section>

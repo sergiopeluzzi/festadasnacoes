@@ -21,6 +21,14 @@
       <primary-key name="PRIMARY" columns="id"/>
       <index name="cardapios_id_evento_foreign" unique="false" columns="id_evento"/>
     </table>
+    <table name="cardapios_pratos" schema="" catalog="festadasnacoes" type="TABLE">
+      <column name="id_cardapio" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_prato" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <index name="cardapios_pratos_id_cardapio_foreign" unique="false" columns="id_cardapio"/>
+      <index name="cardapios_pratos_id_prato_foreign" unique="false" columns="id_prato"/>
+    </table>
     <table name="clientes" schema="" catalog="festadasnacoes" type="TABLE">
       <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="nome" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>
@@ -66,6 +74,17 @@
       <primary-key name="PRIMARY" columns="id"/>
       <index name="funcionarios_email_unique" unique="true" columns="email"/>
       <index name="funcionarios_id_user_foreign" unique="false" columns="id_user"/>
+    </table>
+    <table name="ingredientes" schema="" catalog="festadasnacoes" type="TABLE">
+      <column name="id" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id_prato" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="id_produto" sqlType="INT UNSIGNED" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="qnt" sqlType="DOUBLE" precision="8" scale="2" nullable="false" jdbcType="8"/>
+      <column name="created_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="updated_at" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <index name="ingredientes_id_prato_foreign" unique="false" columns="id_prato"/>
+      <index name="ingredientes_id_produto_foreign" unique="false" columns="id_produto"/>
     </table>
     <table name="migrations" schema="" catalog="festadasnacoes" type="TABLE">
       <column name="migration" sqlType="VARCHAR" precision="255" scale="0" nullable="false" jdbcType="12"/>

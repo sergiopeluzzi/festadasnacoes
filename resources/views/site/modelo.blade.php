@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ asset('/site/css/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('/site/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('/site/css/responsive.css') }}">
-    <link rel="icon" type="image/png" href="{{ asset('/site/images/icons/icon.html') }}">
+    <link rel="icon" type="image/png" href="{{ asset('/site/images/logofesta.png') }}">
 
     <!-- scripts -->
     <script src="{{ asset('/site/js/jquery-1.11.1.min.js') }}"></script>
@@ -75,13 +75,17 @@
                         <div class="header-top-right">
                             <div class="header-top-dropdowns pull-right"></div>
                             <div class="header-text-container pull-right">
-                                <p class="header-text"> Seja bem-vindo! </p>
-                                <p class="header-link">
-                                    <a href="#" data-toggle="modal" data-target="#modal-login-form">
-                                        <i class="fa fa-users"></i> Entrar</a>
-                                    &nbsp;ou&nbsp;
-                                    <a href="{{ url('cadastrar') }}"> <i class="fa fa-plus-circle"></i> Cadastre-se</a>
-                                </p>
+                                <span class="header-link">
+                                    @if(Auth::guest())
+                                        <a href="#" data-toggle="modal" data-target="#modal-login-form">
+                                            <i class="fa fa-users"></i> Entrar</a>
+                                        &nbsp;ou&nbsp;
+                                        <a href="{{ url('cadastrar') }}"> <i class="fa fa-plus-circle"></i> Cadastre-se</a>
+                                    @else
+                                        <span>Seja bem-vindo <span style="color:red"><strong>{{ Auth::user()->name }}</strong></span></span>
+                                        <span class="pull-right"><a href="{{ url('/auth/logout') }}">( Sair )</a><span>
+                                    @endif
+                                </span>
                             </div><!-- fim da div conteúdo superior direito -->
                         </div><!-- fim da div superior direito -->
                     </div><!-- fim colunas div-->
@@ -98,7 +102,7 @@
                     <div class="col-md-5 col-sm-5 col-xs-12 logo-container">
                         <h1 class="logo clearfix">
                             <a href="/" title="Festa das Nações">
-                                <img src="{{ asset('/site/images/logofesta.jpg') }}" alt="e!" width="238" height="76">
+                                <img src="{{ asset('/site/images/logofesta2.jpg') }}" alt="e!" width="238" height="76">
                             </a>
                         </h1>
                     </div>
@@ -358,7 +362,8 @@
 <!-- Informar elementos modal Login-->
 <div class="modal fade" id="modal-login-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1"
      aria-hidden="true" style="display: none;">
-    <form id="login-form" method="get" action="#">
+    <form id="login-form" method="POST" action="{{ url('/auth/login') }}">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -371,26 +376,25 @@
                     <div class="input-group">
                             <span class="input-group-addon"><span class="input-icon input-icon-email"></span><span
                                         class="input-text"><i class="fa fa-envelope"></i> E-mail</span></span>
-                        <input type="email" required="" class="form-control input-lg" placeholder="Seu e-mail">
+                        <input type="email" required="" class="form-control input-lg" placeholder="Seu e-mail" name="email" value="{{ old('email') }}">
                     </div>
                     <!-- Fim  do input group-->
                     <div class="input-group">
                             <span class="input-group-addon"><span class="input-icon input-icon-password"></span><span
                                         class="input-text"><i class="fa fa-lock fa-2x"></i> Senha</span></span>
-                        <input type="password" required="" class="form-control input-lg" placeholder="Sua senha">
+                        <input type="password" required="" class="form-control input-lg" placeholder="Sua senha" name="password">
                     </div>
                     <!-- Fim do input group -->
 
                     <span class="help-block text-right"><a href="#">Esqueceu sua senha?</a></span>
 
-                    <div class="input-group custom-checkbox sm-margin top-10px"><input
-                                type="checkbox"> <span class="checbox-container"><i
-                                    class="fa fa-check"></i></span>Lembrar-me
+                    <div class="input-group custom-checkbox sm-margin top-10px">
+                        <input type="checkbox" name="remember"><span class="checbox-container"><i class="fa fa-check"></i></span>Lembrar-me
                     </div>
                 </div><!-- Fim do .modal body -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-custom" data-dismiss="modal">CANCELAR</button>
-                    <button class="btn btn-custom-2" >ENVIAR</button>
+                    <button class="btn btn-custom-2">ENVIAR</button>
                 </div> <!-- Fim do .modal-footer -->
             </div><!-- Fim do .modal-content -->
         </div><!-- Fim do .modal-dialog -->

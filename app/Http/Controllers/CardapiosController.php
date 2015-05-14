@@ -1,11 +1,14 @@
 <?php namespace App\Http\Controllers;
 
 use App\Cardapio;
+use App\CardapioPrato;
 use App\Evento;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\CardapiosRequest;
+use App\Nacao;
+use App\Prato;
 use Illuminate\Http\Request;
 
 class CardapiosController extends Controller {
@@ -27,19 +30,39 @@ class CardapiosController extends Controller {
 
         $eventos = Evento::all()->toArray();
 
+        $pratos = Prato::all()->toArray();
+
         foreach($eventos as $key => $values)
         {
             $evento[$values['id']] = $values['nome'];
         }
 
-        return view('admin.cardapios.create', compact('nomeForm', 'evento'));
+        foreach ($pratos as $key => $values)
+        {
+            $prato[$values['id']] = Nacao::where('id', $values['id_nacao'])->first()->nome . ' - ' . $values['descricao'];
+        }
+
+        return view('admin.cardapios.create', compact('nomeForm', 'evento', 'prato'));
     }
 
     public function store(CardapiosRequest $request)
     {
         $dados = $request->all();
 
+        $id_prats = explode(',', $dados['id_prats']);
+
         Cardapio::create($dados);
+
+        foreach($id_prats as $carprat)
+        {
+            $cardapio = new CardapioPrato();
+
+            $cardapio->id_cardapio = Cardapio::latest()->first()->id;
+
+            $cardapio->id_prato = $carprat;
+
+            $cardapio->save();
+        }
 
         flash()->success('Cardápio cadastrado com sucesso');
 
@@ -52,7 +75,11 @@ class CardapiosController extends Controller {
 
         $evento = new Evento;
 
-        return view('admin.cardapios.show', compact('nomeForm', 'cardapio', 'evento'));
+        $prato = new Prato;
+
+        $cardapioprato = CardapioPrato::all()->where('id_cardapio', $cardapio->id);
+
+        return view('admin.cardapios.show', compact('nomeForm', 'cardapio', 'evento', 'cardapioprato', 'prato'));
     }
 
     public function edit(Cardapio $cardapio)
@@ -61,9 +88,16 @@ class CardapiosController extends Controller {
 
         $eventos = Evento::all()->toArray();
 
+        $pratos = Prato::all()->toArray();
+
         foreach($eventos as $key => $values)
         {
             $evento[$values['id']] = $values['nome'];
+        }
+
+        foreach ($pratos as $key => $values)
+        {
+            $prato[$values['id']] = Nacao::where('id', $values['id_nacao'])->first()->nome . ' - ' . $values['descricao'];
         }
 
         return view('admin.cardapios.edit', compact('nomeForm', 'cardapio', 'evento'));

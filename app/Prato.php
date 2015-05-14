@@ -18,4 +18,9 @@ class Prato extends Model {
         return $this->hasMany('App\Produto');
     }
 
+    public function cardapio()
+    {
+        return $this->belongsToMany('App\Cardapio');
+    }
+
 }

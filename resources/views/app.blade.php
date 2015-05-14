@@ -76,7 +76,6 @@
 
 <script type="text/javascript">$("#cpf").mask("999.999.999-99")</script>
 <script type="text/javascript">$("#telefone").mask("(99) 9999-9999")</script>
-<script type="text/javascript">$("#valor").mask('99,99')</script>
 
 <!-- jQuery 2.1.3 -->
 <script src="{{ asset('/plugins/jQuery/jQuery-2.1.3.min.js') }}"></script>

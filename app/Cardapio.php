@@ -16,4 +16,9 @@ class Cardapio extends Model {
         return $this->belongsTo('App\Evento');
     }
 
+    public function prato()
+    {
+        return $this->hasMany('App\Prato');
+    }
+
 }

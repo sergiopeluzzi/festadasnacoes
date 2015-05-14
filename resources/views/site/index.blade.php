@@ -13,7 +13,7 @@
                 <li data-transition="fade" data-slotamount="6" data-masterspeed="600"
                     data-saveperformance="on" data-title="Special Offers">
                     <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg1"
-                         data-lazyload="{{ asset('/site/images/homeslider/foto_festa.png') }}"
+                         data-lazyload="{{ asset('/site/images/homeslider/fundo_contato.png') }}"
                          data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="250" data-speed="1600"
                          data-start="300" data-endspeed="300">
@@ -89,7 +89,7 @@
                         </div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="bottom" data-hoffset="-230"
                              data-speed="2000" data-start="500" data-endspeed="800">
-                            <img src="{{ asset('/site/images/homeslider/prato' . $pratos->where('id_nacao', $nacao->id)->first()->id . '.png') }}" alt="Slide 1_1">
+                            <img style="width: 50%; height: 50%" src="{{ asset('/site/images/pratos/prato' . $pratos->where('id_nacao', $nacao->id)->first()->id . '.png') }}" alt="Slide 1_1">
                         </div>
                     </li>
                 @endforeach
@@ -159,8 +159,8 @@
                 <div class="item item-hover">
                     <div class="item-image-wrapper">
                         <figure class="item-image-container"><a href="{{'prato' . $prato->id }}"><img
-                                        src="{{ asset('/site/images/homeslider/prato'. $prato->id .'.png') }}" alt="item1" class="item-image"> <img
-                                        src="{{ asset('/site/images/homeslider/prato'. $prato->id .'.png') }}" alt="item1  Hover"
+                                        src="{{ asset('/site/images/pratos/pratoc'. $prato->id .'.png') }}" alt="item1" class="item-image"> <img
+                                        src="{{ asset('/site/images/pratos/pratoh'. $prato->id .'.png') }}" alt="item1  Hover"
                                         class="item-image-hover"></a></figure>
                         <div class="item-price-container"><span class="item-price">R$ {{ number_format($prato->valor,2) }}</span></div>
                         <span class="new-rect">{{ $nacoes->where('id', $prato->id_nacao)->first()->nome }}</span>

@@ -4,6 +4,7 @@ use App\Evento;
 use App\Http\Requests;
 use App\Nacao;
 use App\Prato;
+use App\Cliente;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
@@ -70,7 +71,9 @@ class SiteController extends Controller {
 
         $carrinho = $this->cart->all();
 
-        return view('site.minhaconta', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
+        $cliente = new Cliente;
+
+        return view('site.minhaconta', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho', 'cliente'));
     }
 
     public function meuspedidos()

@@ -25,7 +25,7 @@
                                     <td class="text-center">{{ $produto->id }}</td>
                                     <td>{{ $produto->descricao }}</td>
                                     <td class="text-center">{{ $unidade->find($produto->id_unidade)->sigla }}</td>
-                                    <td class="text-right">R$ {{ $produto->valor }}</td>
+                                    <td class="text-right">R$ {{ number_format($produto->valor,2) }}</td>
                                     <td class="text-center no-padding">
 
                                         <!-- show the nerd (uses the show method found at GET /nerds/{id} -->

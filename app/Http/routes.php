@@ -21,7 +21,6 @@ Route::get('home', 'HomeController@index');
  * Rotas do Site Front-End
  */
 Route::get('/', 'SiteController@index');
-Route::get('site', 'SiteController@index');
 Route::get('minhaconta', 'SiteController@minhaconta');
 Route::get('meuspedidos', 'SiteController@meuspedidos');
 Route::get('meucarrinho', 'SiteController@meucarrinho');
