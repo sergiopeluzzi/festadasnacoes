@@ -14,7 +14,12 @@ class CreatePedidosPratosTable extends Migration {
 	{
 		Schema::create('pedidos_pratos', function(Blueprint $table)
 		{
-			$table->increments('id');
+			$table->integer('id_pedido')->unsigend();
+            $table->foreign('id_pedido')->references('id')->on('pedidos')->onDelete('cascade');
+
+            $table->integer('id_prato');
+            $table->foreign('id_prato')->references('id')->on('pratos')->onDelete('cascade');
+
 			$table->timestamps();
 		});
 	}

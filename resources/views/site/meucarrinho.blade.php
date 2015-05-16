@@ -119,7 +119,7 @@
                 <!-- Informar botões para rotina final carrinho -->
                 <div align="right">
                     <a href="/#cardapio_principal" class="btn btn-custom-2">CONTINUAR COMPRA</a>
-                    <a href="finalizar.html" class="btn btn-custom">FINALIZAR</a>
+                    <a href="/finalizar" class="btn btn-custom">FINALIZAR</a>
                 </div>
             </div>
         </div>

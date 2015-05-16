@@ -22,7 +22,7 @@ Route::get('home', 'HomeController@index');
  */
 Route::get('/', 'SiteController@index');
 Route::get('minhaconta', 'SiteController@minhaconta');
-Route::get('meuspedidos', 'SiteController@meuspedidos');
+//Route::get('meuspedidos', 'SiteController@meuspedidos');
 Route::get('meucarrinho', 'SiteController@meucarrinho');
 Route::get('finalizar', 'SiteController@finalizar');
 Route::get('cadastrar', 'SiteController@cadastrar');
@@ -50,8 +50,20 @@ Route::group(['prefix' => 'meucarrinho'], function()
     Route::get('remover/{id}', 'CarrinhoController@remover');
 });
 
-Route::group(['prefix' => '/'], function()
+
+/**
+ * Rotas do Site
+ */
+Route::group(['prefix' => '/', 'namespace' => 'Site'], function()
 {
+    Route::resource('meuspedidos', 'Site\PedidosController');
+
+    Route::group(['prefix' => 'finalizar'], function()
+    {
+        Route::get('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@index']);
+        Route::post('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@fechar']);
+    });
+
     Route::get('remover/{id}', 'CarrinhoController@remover2');
 });
 

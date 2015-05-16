@@ -20,13 +20,13 @@
                     <p class="title-desc">Siga os passos abaixo para finalizar o pedido</p>
                 </header>
                 <div class="xs-margin"></div>
-                <form action="#" id="checkout-form">
+                {!! Form::open(['id' => 'checkout-form', 'url' => 'finalizar']) !!}
                     <div class="panel-group custom-accordion" id="checkout">
+                        @if(Auth::guest())
                         <div class="panel">
-
                             <!-- Informar o passo 1 -->
                             <div class="accordion-header">
-                                <div class="accordion-title">1 Passo: <span>Login Cliente</span></div>
+                                <div class="accordion-title"><span>Login Cliente</span></div>
                                 <a class="accordion-btn opened" data-toggle="collapse"
                                    data-target="#checkout-option">
                                 </a>
@@ -42,7 +42,7 @@
 
                                             <p>ao cadastrar-se na festa das nações, você terá acesso a compra dos pratos
                                                 e bebidas disponíveis no cardápio, e receber as notícias desse maravilhoso evento.</p>
-                                            <a href="cadastrar_usuario.html"><button type="button" class="btn btn-custom-3 btn-sm">Cadastre-se</button></a>
+                                            <a href="/cadastrar"><button type="button" class="btn btn-custom-3 btn-sm">Cadastre-se</button></a>
 
                                             <div class="md-margin"></div>
                                         </div>
@@ -73,14 +73,14 @@
 
                             </div>
                         </div>
-
+                        @else
                         <!-- Informar passo 2 -->
                         <div class="panel">
                             <div class="accordion-header">
-                                <div class="accordion-title">2 Passo: <span>Forma de Pagamento</span></div>
+                                <div class="accordion-title"><span>Forma de Pagamento</span></div>
                                 <a class="accordion-btn" data-toggle="collapse" data-target="#payment-method"></a>
                             </div>
-                            <div id="payment-method" class="collapse">
+                            <div id="payment-method" class="collapse" align="center">
                                 <div class="panel-body">
                                     <p>O método disponível para pagamento é o <a href="https://pagseguro.uol.com.br/comprar/">PagSeguro</a>, simples e fácil. </p>
                                     <img src="{{asset('site/images/pagseguro.png')}}">
@@ -91,7 +91,7 @@
                         <!-- Informar passo 3 -->
                         <div class="panel">
                             <div class="accordion-header">
-                                <div class="accordion-title">3 Passo: <span>Confirmar Pedido</span></div>
+                                <div class="accordion-title"><span>Confirmar Pedido</span></div>
                                 <a class="accordion-btn opened" data-toggle="collapse" data-target="#confirm"></a>
                             </div>
                             <div id="confirm" class="collapse in">
@@ -110,83 +110,70 @@
                                             <tbody>
 
                                             <!-- Informar dados dos produtos no pedido -->
-                                            <tr>
-                                                <td class="item-name-col">
-                                                    <figure><a href="#"><img src="images/products/compare1.jpg"
-                                                                             alt="Lowlands Lace Blouse"></a>
-                                                    </figure>
-                                                    <header class="item-name"><a href="#">Lowlands Lace Blouse</a>
-                                                    </header>
-                                                    <ul>
-                                                        <li>Color: White</li>
-                                                        <li>Size: SM</li>
-                                                    </ul>
-                                                </td>
-                                                <td class="item-code">MP125984154</td>
-                                                <td class="item-price-col"><span
-                                                            class="item-price-special">$1175</span></td>
-                                                <td>
-                                                    <div class="custom-quantity-input"><input type="text"
-                                                                                              name="quantity"
-                                                                                              value="1"> <a href="#"
-                                                                                                            onclick="return!1"
-                                                                                                            class="quantity-btn quantity-input-up"><i
-                                                                    class="fa fa-angle-up"></i></a> <a href="#"
-                                                                                                       onclick="return!1"
-                                                                                                       class="quantity-btn quantity-input-down"><i
-                                                                    class="fa fa-angle-down"></i></a></div>
-                                                </td>
-                                                <td class="item-total-col"><span
-                                                            class="item-price-special">$1175</span> <a href="#" class="close-button"></a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="item-name-col">
-                                                    <figure><a href="#"><img src="images/products/compare2.jpg"
-                                                                             alt="Samsung Galaxy Ace"></a></figure>
-                                                    <header class="item-name"><a href="#">Samsung Galaxy Ace</a>
-                                                    </header>
-                                                    <ul>
-                                                        <li>Color: Black</li>
-                                                        <li>Size: XL</li>
-                                                    </ul>
-                                                </td>
-                                                <td class="item-code">MP125984154</td>
-                                                <td class="item-price-col"><span
-                                                            class="item-price-special">$1475</span></td>
-                                                <td>
-                                                    <div class="custom-quantity-input"><input type="text"
-                                                                                              name="quantity"
-                                                                                              value="1"> <a href="#"
-                                                                                                            onclick="return!1"
-                                                                                                            class="quantity-btn quantity-input-up"><i
-                                                                    class="fa fa-angle-up"></i></a> <a href="#"
-                                                                                                       onclick="return!1"
-                                                                                                       class="quantity-btn quantity-input-down"><i
-                                                                    class="fa fa-angle-down"></i></a></div>
-                                                </td>
-                                                <td class="item-total-col"><span
-                                                            class="item-price-special">$1475</span> <a href="#" class="close-button"></a>
-                                                </td>
-                                            </tr>
+                                            @foreach($carrinho as $item)
+                                                <tr>
+                                                    <td class="item-name-col">
+                                                        <figure>
+                                                            <a href="#"><img src="{{ asset('/site/images/homeslider/prato'. $item['sku'] .'.png') }}"
+                                                                             alt="{{ $item['description'] }}"></a>
+                                                        </figure>
+                                                        <header class="item-name">
+                                                            <a href="#">{{ $item['description'] }}</a>
+                                                        </header>
+                                                        <ul>
+                                                            <li>
+                                                                {{ $nacao->find($item['sku'])['nome'] }}
+                                                            </li>
+                                                            <li>
+
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                    <td class="item-code">
+                                                        {{ $item['sku'] }}
+                                                    </td>
+                                                    <td class="item-price-col">
+                                                        <span class="item-price-special" vlr_{{ $item['sku'] }}>{{ 'R$ ' . number_format($item['price'],2) }}</span>
+                                                    </td>
+
+                                                    <!-- Informar a quantidade -->
+                                                    <td>
+                                                        <div class="custom-quantity-input">
+                                                            <input type="text" name="quantidade" id="quantidade{{ $item['sku'] }}"  value="1">
+                                                            <a class="quantity-btn quantity-input-up" onclick="mais( 'quantidade{{ $item['sku'] }}' )">
+                                                                <i class="fa fa-angle-up"></i></a>
+                                                            <a class="quantity-btn quantity-input-down" onclick="menos( 'quantidade{{ $item['sku'] }}' )">
+                                                                <i class="fa fa-angle-down"></i></a>
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="item-total-col">
+                                                        <span class="item-price-special" id="vlr_total_{{ $item['sku'] }}">R$ {{ number_format($item['price'],2) }}</span>
+                                                        <a href="meucarrinho/remover/{{ $item['id'] }}" class="close-button" ><i class="fa fa-times fa-lg" ></i></a>
+                                                    </td>
+                                                </tr>
+                                            @endforeach
                                             </tbody>
                                             <tfoot>
                                             <tr>
                                                 <td class="checkout-total-title" colspan="4"><strong>TOTAL:</strong>
                                                 </td>
-                                                <td class="checkout-total-price cart-total"><strong>$434.50</strong>
+                                                <td class="checkout-total-price cart-total"><strong>R$ {{ number_format($cart['total'],2) }}</strong>
                                                 </td>
                                             </tr>
                                             </tfoot>
                                         </table>
                                     </div>
                                     <div class="lg-margin"></div>
-                                    <div class="text-right"><input type="submit" class="btn btn-custom-2" value="Confirmar pedido"></div>
+                                    <div class="text-right">
+                                        {!! Form::submit('Confirmar pedido', ['class' => 'btn btn-custom-2']) !!}
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        @endif
                     </div>
-                </form>
+                {!! Form::close() !!}
                 <div class="xlg-margin"></div>
             </div>
         </div>

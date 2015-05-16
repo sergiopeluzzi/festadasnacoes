@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f4637df2d063115d469bcfbff8218cda",
+    "hash": "4a3f4dad51aed96a5dd14bfac3c50a87",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -862,12 +862,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/juliobitencourt/laravel-cart.git",
-                "reference": "2333d4ef739026e0429f33c8fc34549eb1ff25e3"
+                "reference": "3e993d932830ca3e9efb4bab0a34fb0b3d37b1b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/juliobitencourt/laravel-cart/zipball/2333d4ef739026e0429f33c8fc34549eb1ff25e3",
-                "reference": "2333d4ef739026e0429f33c8fc34549eb1ff25e3",
+                "url": "https://api.github.com/repos/juliobitencourt/laravel-cart/zipball/3e993d932830ca3e9efb4bab0a34fb0b3d37b1b7",
+                "reference": "3e993d932830ca3e9efb4bab0a34fb0b3d37b1b7",
                 "shasum": ""
             },
             "require": {
@@ -901,7 +901,7 @@
                 "cart",
                 "laravel"
             ],
-            "time": "2015-04-29 17:23:43"
+            "time": "2015-05-14 14:17:17"
         },
         {
             "name": "laracasts/flash",
