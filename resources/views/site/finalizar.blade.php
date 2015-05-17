@@ -20,7 +20,7 @@
                     <p class="title-desc">Siga os passos abaixo para finalizar o pedido</p>
                 </header>
                 <div class="xs-margin"></div>
-                {!! Form::open(['id' => 'checkout-form', 'url' => 'finalizar']) !!}
+                {!! Form::open(['id' => 'checkout-form', 'route' => 'site.finalizar.fechar']) !!}
                     <div class="panel-group custom-accordion" id="checkout">
                         @if(Auth::guest())
                         <div class="panel">

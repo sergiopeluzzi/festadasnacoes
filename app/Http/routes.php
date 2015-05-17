@@ -54,15 +54,16 @@ Route::group(['prefix' => 'meucarrinho'], function()
 /**
  * Rotas do Site
  */
-Route::group(['prefix' => '/', 'namespace' => 'Site'], function()
+Route::group(['namespace' => 'Site'], function()
 {
     Route::resource('meuspedidos', 'Site\PedidosController');
 
     Route::group(['prefix' => 'finalizar'], function()
     {
         Route::get('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@index']);
-        Route::post('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@fechar']);
+        Route::post('/fechar', ['as' => 'site.finalizar.fechar', 'uses' => 'FinalizarController@fechar']);
     });
+
 
     Route::get('remover/{id}', 'CarrinhoController@remover2');
 });
