@@ -48,6 +48,8 @@ Route::group(['prefix' => 'meucarrinho'], function()
     Route::get('add/{id}', 'CarrinhoController@add');
     Route::get('/', 'CarrinhoController@index');
     Route::get('remover/{id}', 'CarrinhoController@remover');
+    Route::get('add2/{id}', 'CarrinhoController@add2');
+    Route::get('diminuir/{id}', 'CarrinhoController@diminuir');
 });
 
 
@@ -63,10 +65,8 @@ Route::group(['namespace' => 'Site'], function()
         Route::get('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@index']);
         Route::post('/fechar', ['as' => 'site.finalizar.fechar', 'uses' => 'FinalizarController@fechar']);
     });
-
-
-    Route::get('remover/{id}', 'CarrinhoController@remover2');
 });
+Route::get('remover/{id}', 'CarrinhoController@remover2');
 
 /**
  * Rotas de autenticação

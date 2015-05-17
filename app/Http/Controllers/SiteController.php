@@ -116,26 +116,6 @@ class SiteController extends Controller {
         return view('site.meucarrinho', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 
-    public function finalizar()
-    {
-
-        $evento = Evento::latest()->first();
-
-        $nacoes = Nacao::all();
-
-        $pratos = Prato::all();
-
-        $cart = [
-            'items' => $this->cart->all(),
-            'count' => $this->cart->totalItems(),
-            'total' => $this->cart->total()
-        ];
-
-        $carrinho = $this->cart->all();
-
-        return view('site.finalizar', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
-    }
-
     public function contato()
     {
 

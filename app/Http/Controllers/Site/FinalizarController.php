@@ -7,6 +7,7 @@ use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Http\Request;
 use JulioBitencourt\Cart\Session;
 use App\Nacao;
+use App\Prato;
 
 class FinalizarController extends SiteController  {
 
@@ -23,11 +24,13 @@ class FinalizarController extends SiteController  {
             'total' => $this->cart->total()
         ];
 
-        $carrinho = $this->cart->all();
-
         $nacao = new Nacao;
 
-        return view('site.finalizar', compact('cart', 'carrinho', 'nacao'));
+        $prato = new Prato;
+
+        $carrinho = $this->cart->all();
+
+        return view('site.finalizar', compact('cart', 'carrinho', 'nacao', 'prato'));
 	}
 
     public function fechar(PedidosRequest $request)

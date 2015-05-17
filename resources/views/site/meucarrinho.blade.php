@@ -63,33 +63,38 @@
                                 </header>
                                 <ul>
                                     <li>
-                                        Color: White
+                                        {{$nacao->find($prato->find($item['sku'])->id_nacao)->nome}}
                                     </li>
                                     <li>
-                                        Size: SM
+                                        {{$nacao->find($prato->find($item['sku'])->id_nacao)->descricao}}
                                     </li>
                                 </ul>
                             </td>
                             <td class="item-code">
                                 {{ $item['sku'] }}
                             </td>
+
                             <td class="item-price-col">
-                                <span class="item-price-special" vlr_{{ $item['sku'] }}>{{ 'R$ ' . number_format($item['price'],2) }}</span>
+                                <span class="item-price-special">
+                                    R$ <input style="width:70px; text-align: right; border: 0;" readonly="true" type="text" name="vlr" id="vlr_{{ $item['sku'] }}" value="{{ number_format($item['price'],2) }}">
+                                </span>
                             </td>
 
                             <!-- Informar a quantidade -->
                             <td>
                                 <div class="custom-quantity-input">
-                                    <input type="text" name="quantidade" id="quantidade{{ $item['sku'] }}"  value="1">
-                                    <a class="quantity-btn quantity-input-up" onclick="mais( 'quantidade{{ $item['sku'] }}' )">
+                                    <input type="text" name="quantidade{{ $item['sku'] }}" id="quantidade{{ $item['sku'] }}"  value="{{ $item['quantity'] }}">
+                                    <a class="quantity-btn quantity-input-up" href="meucarrinho/add2/{{ $item['sku'] }}" onclick="mais('quantidade{{ $item['sku'] }}' )">
                                         <i class="fa fa-angle-up"></i></a>
-                                    <a class="quantity-btn quantity-input-down" onclick="menos( 'quantidade{{ $item['sku'] }}' )">
+                                    <a class="quantity-btn quantity-input-down" href="meucarrinho/diminuir/{{ $item['id'] }}" onclick="menos('quantidade{{ $item['sku'] }}' )">
                                         <i class="fa fa-angle-down"></i></a>
                                 </div>
                             </td>
 
                             <td class="item-total-col">
-                                <span class="item-price-special" id="vlr_total_{{ $item['sku'] }}">R$ {{ number_format($item['price'],2) }}</span>
+                                <span class="item-price-special" >
+                                    R$ <input style="width:70px; text-align: right; border: 0;" readonly="true" type="text" name="vlr" id="vlr_total_{{ $item['sku'] }}" value="{{ number_format($item['price']  * $item['quantity'],2) }}">
+                                </span>
                                 <a href="meucarrinho/remover/{{ $item['id'] }}" class="close-button" ><i class="fa fa-times fa-lg" ></i></a>
                             </td>
                         </tr>

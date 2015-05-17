@@ -233,7 +233,7 @@
                                                         </p>
 
                                                         <!-- conteúdo da div-->
-                                                        <p>1x <span class="item-price">R$ {{ number_format($item['price'],2) }}</span></p>
+                                                        <p>{{ $item['quantity'] }}x R$<span class="item-price"> {{ number_format($item['price'],2) }}</span></p>
                                                     </div>
                                                 </li>
                                                 @endforeach
@@ -488,19 +488,12 @@
         {
             id( id_qnt ).value = parseInt( id( id_qnt ).value ) + 1;
         }
-    </script>
 
-    /**
-     * Cálculo do valor total
-     */
-    <script type="text/javascript">
-
-        function atulizaValor(id) {
-
+        function atualizaValor(id_preco, id_qnt, id_preco_total)
+        {
+            id(id_preco_total).value = parseFloat(id(id_qnt).value * id(id_preco).value) + '.00';
         }
-
     </script>
-
 
 </footer>
 

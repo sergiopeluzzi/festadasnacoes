@@ -122,33 +122,34 @@
                                                         </header>
                                                         <ul>
                                                             <li>
-                                                                {{ $nacao->find($item['sku'])['nome'] }}
+                                                                {{$nacao->find($prato->find($item['sku'])->id_nacao)->nome}}
                                                             </li>
                                                             <li>
-
+                                                                {{$nacao->find($prato->find($item['sku'])->id_nacao)->descricao}}
                                                             </li>
                                                         </ul>
                                                     </td>
                                                     <td class="item-code">
                                                         {{ $item['sku'] }}
                                                     </td>
+
                                                     <td class="item-price-col">
-                                                        <span class="item-price-special" vlr_{{ $item['sku'] }}>{{ 'R$ ' . number_format($item['price'],2) }}</span>
+                                                        <span class="item-price-special">
+                                                            R$ <input style="width:70px; text-align: right; border: 0;" readonly="true" type="text" name="vlr" id="vlr_{{ $item['sku'] }}" value="{{ number_format($item['price'],2) }}">
+                                                        </span>
                                                     </td>
 
                                                     <!-- Informar a quantidade -->
                                                     <td>
-                                                        <div class="custom-quantity-input">
-                                                            <input type="text" name="quantidade" id="quantidade{{ $item['sku'] }}"  value="1">
-                                                            <a class="quantity-btn quantity-input-up" onclick="mais( 'quantidade{{ $item['sku'] }}' )">
-                                                                <i class="fa fa-angle-up"></i></a>
-                                                            <a class="quantity-btn quantity-input-down" onclick="menos( 'quantidade{{ $item['sku'] }}' )">
-                                                                <i class="fa fa-angle-down"></i></a>
+                                                        <div class="item-price-special">
+                                                            <input style="width:70px; text-align: center; border: 0; color:black" readonly="true" type="text" name="quantidade" id="quantidade{{ $item['sku'] }}"  value="{{$item['quantity']}}">
                                                         </div>
                                                     </td>
 
                                                     <td class="item-total-col">
-                                                        <span class="item-price-special" id="vlr_total_{{ $item['sku'] }}">R$ {{ number_format($item['price'],2) }}</span>
+                                                        <span class="item-price-special" >
+                                                            R$ <input style="width:70px; text-align: right; border: 0;" readonly="true" type="text" name="vlr" id="vlr_total_{{ $item['sku'] }}" value="{{ number_format($item['price']  * $item['quantity'],2) }}">
+                                                        </span>
                                                         <a href="meucarrinho/remover/{{ $item['id'] }}" class="close-button" ><i class="fa fa-times fa-lg" ></i></a>
                                                     </td>
                                                 </tr>
