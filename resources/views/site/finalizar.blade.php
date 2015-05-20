@@ -97,7 +97,7 @@
                             <div id="confirm" class="collapse in">
                                 <div class="panel-body">
                                     <div class="table-responsive">
-                                        <table class="table checkout-table">
+                                        <table class="table checkout-table" id="tb_pedido">
                                             <thead>
                                             <tr>
                                                 <th class="table-title">Nome produto</th>
@@ -135,14 +135,13 @@
 
                                                     <td class="item-price-col">
                                                         <span class="item-price-special">
-                                                            R$ <input style="width:70px; text-align: right; border: 0;" readonly="true" type="text" name="vlr" id="vlr_{{ $item['sku'] }}" value="{{ number_format($item['price'],2) }}">
+                                                            R$ {{ number_format($item['price'],2) }}
                                                         </span>
                                                     </td>
 
-                                                    <!-- Informar a quantidade -->
-                                                    <td>
+                                                    <td class="item-price-col">
                                                         <div class="item-price-special">
-                                                            <input style="width:70px; text-align: center; border: 0; color:black" readonly="true" type="text" name="quantidade" id="quantidade{{ $item['sku'] }}"  value="{{$item['quantity']}}">
+                                                            {{$item['quantity']}}
                                                         </div>
                                                     </td>
 
@@ -150,7 +149,6 @@
                                                         <span class="item-price-special" >
                                                             R$ <input style="width:70px; text-align: right; border: 0;" readonly="true" type="text" name="vlr" id="vlr_total_{{ $item['sku'] }}" value="{{ number_format($item['price']  * $item['quantity'],2) }}">
                                                         </span>
-                                                        <a href="meucarrinho/remover/{{ $item['id'] }}" class="close-button" ><i class="fa fa-times fa-lg" ></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -167,6 +165,7 @@
                                     </div>
                                     <div class="lg-margin"></div>
                                     <div class="text-right">
+                                        {!! Form::hidden('dados', null, ['class' => 'form-control']) !!}
                                         {!! Form::submit('Confirmar pedido', ['class' => 'btn btn-custom-2']) !!}
                                     </div>
                                 </div>

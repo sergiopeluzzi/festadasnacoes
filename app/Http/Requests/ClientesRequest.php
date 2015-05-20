@@ -22,9 +22,7 @@ class ClientesRequest extends Request {
     public function rules()
     {
         return [
-            'nome'  => 'required|min:3',
-            'cpf'   => 'required',
-            'email' => 'required|email'
+
         ];
     }
 

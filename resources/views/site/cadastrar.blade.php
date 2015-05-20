@@ -26,7 +26,7 @@
                 <div class="xs-margin"></div>
 
                 <!-- Informar dados para cadastro -->
-                {!! Form::open(['id' => 'cadastrocliente', 'url' => 'cadastrar']) !!}
+                {!! Form::open(['id' => 'cadastrocliente', 'route' => 'site.cadastrar.cadastrar']) !!}
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <fieldset><h2 class="sub-title">PREENCHA OS DADOS</h2>
@@ -41,27 +41,54 @@
                                     <input id="nome" type="text" required class="form-control input-lg" placeholder="Seu nome">
                                 </div>
 
-                                <div class="input-group"><span class="input-group-addon"><span
-                                                class="input-icon"><i class="fa fa-envelope"></i></span><span class="input-text">E-mail&#42;</span></span>
-                                    <input id="email" type="email" required class="form-control input-lg"
-                                           placeholder="Seu e-mail">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="input-icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </span>
+                                        <span class="input-text">
+                                            E-mail&#42;
+                                        </span>
+                                    </span>
+                                    <input id="email" type="email" required class="form-control input-lg" placeholder="Seu e-mail">
                                 </div>
 
-                                <div class="input-group"><span class="input-group-addon"><span
-                                                class="input-icon"><i class="fa fa-lock"></i></span><span class="input-text">Senha&#42;</span></span>
-                                    <input id="senha" type="password" required class="form-control input-lg"
-                                           placeholder="Sua senha">
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="input-icon">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                        <span class="input-text">
+                                            Senha&#42;
+                                        </span>
+                                    </span>
+                                    <input id="senha" type="password" required class="form-control input-lg" placeholder="Sua senha">
                                 </div>
 
-                                <div class="input-group"><span class="input-group-addon"><span
-                                                class="input-icon"><i class="fa fa-list"></i></span><span class="input-text">CPF</span></span>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="input-icon">
+                                            <i class="fa fa-list"></i>
+                                        </span>
+                                        <span class="input-text">
+                                            CPF
+                                        </span>
+                                    </span>
                                     <input id ="cpf" type="text" class="form-control input-lg" placeholder="Seu CPF">
                                 </div>
 
-                                <div class="input-group"><span class="input-group-addon"><span
-                                                class="input-icon"><i class="fa fa-mobile fa-2x"></i></span><span class="input-text">Telefone</span></span>
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="input-icon">
+                                            <i class="fa fa-mobile fa-2x"></i>
+                                        </span>
+                                        <span class="input-text">
+                                            Telefone
+                                        </span>
+                                    </span>
                                     <input id="telefone" type="text" class="form-control input-lg" placeholder="Seu telefone">
                                 </div>
+
                                 <input type="submit" value="ENVIAR" class="btn btn-custom-2 md-margin">
                             </fieldset>
 

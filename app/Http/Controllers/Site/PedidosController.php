@@ -2,10 +2,15 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\PedidoPrato;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Http\Request;
 use JulioBitencourt\Cart\Session;
 use App\Nacao;
+use App\Prato;
+use App\Cliente;
+use App\Pedido;
+use Illuminate\Support\Facades\Auth;
 
 class PedidosController extends SiteController  {
 
@@ -26,7 +31,15 @@ class PedidosController extends SiteController  {
 
         $nacao = new Nacao;
 
-        return view('site.meuspedidos', compact('cart', 'carrinho', 'nacao'));
+        $prato = new Prato;
+
+        $cliente = Cliente::where('id_user', Auth::user()->id)->first();
+
+        $pedidos = Pedido::where('id_cliente', $cliente->id)->get();
+
+        $pedidosPratos = new PedidoPrato;
+
+        return view('site.meuspedidos', compact('cart', 'carrinho', 'nacao', 'cliente', 'pedidos', 'prato', 'pedidosPratos'));
 	}
 
 }

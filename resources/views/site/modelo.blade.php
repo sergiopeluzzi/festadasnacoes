@@ -470,6 +470,7 @@
     <script src="{{ asset('/site/js/colpick.j') }}s"></script>
     <script src="{{ asset('/site/js/main.js') }}"></script>
 
+    @yield('sectionFront')
 
     /**
      * Aumentar e diminir quantidade produto.

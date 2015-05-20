@@ -22,10 +22,8 @@ Route::get('home', 'HomeController@index');
  */
 Route::get('/', 'SiteController@index');
 Route::get('minhaconta', 'SiteController@minhaconta');
-//Route::get('meuspedidos', 'SiteController@meuspedidos');
 Route::get('meucarrinho', 'SiteController@meucarrinho');
 Route::get('finalizar', 'SiteController@finalizar');
-Route::get('cadastrar', 'SiteController@cadastrar');
 Route::get('contato', 'SiteController@contato');
 
 /**
@@ -58,14 +56,27 @@ Route::group(['prefix' => 'meucarrinho'], function()
  */
 Route::group(['namespace' => 'Site'], function()
 {
-    Route::resource('meuspedidos', 'Site\PedidosController');
+
+
+    Route::group(['prefix' => 'meuspedidos'], function()
+    {
+        Route::get('/', 'PedidosController@index');
+    });
+
+    Route::group(['prefix' => 'cadastrar'], function()
+    {
+        Route::get('/', ['as' => 'site.cadastrar', 'uses' => 'ClientesController@index']);
+        Route::post('/cadastro', ['as' => 'site.cadastrar.cadastrar', 'uses' => 'ClientesController@store']);
+    });
 
     Route::group(['prefix' => 'finalizar'], function()
     {
         Route::get('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@index']);
         Route::post('/fechar', ['as' => 'site.finalizar.fechar', 'uses' => 'FinalizarController@fechar']);
+        Route::get('/sucesso', 'FinalizarController@sucesso' );
     });
 });
+
 Route::get('remover/{id}', 'CarrinhoController@remover2');
 
 /**
