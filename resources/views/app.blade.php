@@ -64,7 +64,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.0
         </div>
-        <strong>Copyright &copy; 2014-2015 us.E Tecnologia.</strong> Todos os direitos reservados.
+        <strong>2014-2015 us.E Tecnologia.</strong> Contato (69) 8467-8083 - Sergio | (69) 8444-4444 - Diego
     </footer>
 </div><!-- ./wrapper -->
 

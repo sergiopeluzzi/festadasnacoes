@@ -31,11 +31,13 @@ class FinalizarController extends SiteController  {
 
         $nacao = new Nacao;
 
+        $nacoes = Nacao::all();
+
         $prato = new Prato;
 
         $carrinho = $this->cart->all();
 
-        return view('site.finalizar', compact('cart', 'carrinho', 'nacao', 'prato'));
+        return view('site.finalizar', compact('cart', 'carrinho', 'nacao', 'prato', 'nacoes'));
 	}
 
     public function fechar(PedidosRequest $request)
@@ -48,6 +50,7 @@ class FinalizarController extends SiteController  {
         $pedido->id_cliente = $cliente;
         $pedido->valor = $this->cart->total();
         $pedido->data = Carbon::now();
+        $pedido->baixado = 0;
         $pedido->save();
 
         foreach($dados as $pratos)
@@ -73,13 +76,11 @@ class FinalizarController extends SiteController  {
             'total' => $this->cart->total()
         ];
 
-        $nacao = new Nacao;
-
-        $prato = new Prato;
+        $nacoes = Nacao::all();
 
         $carrinho = $this->cart->all();
 
-        return view('site.sucesso', compact('cart', 'carrinho'));
+        return view('site.sucesso', compact('cart', 'carrinho', 'nacoes'));
 
     }
 

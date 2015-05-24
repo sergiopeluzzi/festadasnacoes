@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-
-<!-- Início da página em html do projeto Festa das nações
-
+<!--
+    Início da página em html do projeto Festa das nações
     * Alunos: Diego Reinos Noronha e Sergio Henrique Martins Pelluzi.
     * Orientador: Alberto Ayres Benicio.
 -->
 <html>
-
-<!-- Cabeçalho da página
-
-    * Importar os arquivos Estilos e JavaScript para a página.
--->
 <head>
     <meta charset="utf-8">
     <title> Festa das Nações </title>
@@ -29,11 +23,11 @@
     <!-- scripts -->
     <script src="{{ asset('/site/js/jquery-1.11.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/site/js/jquery.maskedinput-1.1.4.pack.js') }}"></script>
+
 </head>
 
 <body>
-<div id="wrapper">
-    <!-- início header principal -->
+    <div id="wrapper">
     <!-- início header principal -->
     <header id="header">
         <div id="header-top">
@@ -46,26 +40,42 @@
                             <ul id="top-links" class="clearfix">
                                 <li>
                                     <a href="minhaconta" title="Minha conta">
-                                        <span class="top-icon"><i class="fa fa-user"></i></span>
-                                        <span class="hide-for-xs">Minha conta</span>
+                                        <span class="top-icon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        <span class="hide-for-xs">
+                                            Minha conta
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="meuspedidos" title="Meus pedidos">
-                                        <span class="top-icon"><i class="fa fa-check-square-o"></i></span>
-                                        <span class="hide-for-xs">Meus pedidos</span>
+                                        <span class="top-icon">
+                                            <i class="fa fa-check-square-o"></i>
+                                        </span>
+                                        <span class="hide-for-xs">
+                                            Meus pedidos
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="meucarrinho" title="Meu Carrinho">
-                                        <span class="top-icon"><i class="fa fa-shopping-cart"></i></span>
-                                        <span class="hide-for-xs">Meu carrinho</span>
+                                        <span class="top-icon">
+                                            <i class="fa fa-shopping-cart"></i>
+                                        </span>
+                                        <span class="hide-for-xs">
+                                            Meu carrinho
+                                        </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="finalizar" title="Finalizar Pedido">
-                                        <span class="top-icon"><i class="fa fa-check"></i></span>
-                                        <span class="hide-for-xs">Finalizar pedido</span>
+                                        <span class="top-icon">
+                                            <i class="fa fa-check"></i>
+                                        </span>
+                                        <span class="hide-for-xs">
+                                            Finalizar pedido
+                                        </span>
                                     </a>
                                 </li>
                             </ul>
@@ -111,25 +121,28 @@
                     <div class="col-md-7 col-sm-7 col-xs-12 header-inner-right">
                         <div class="header-box contact-infos pull-right">
                             <ul>
-
                                 <!-- Skype -->
                                 <li>
-                                <span class="header-box-icon">
-                                    <style>
-                                        .fa-skype {
-                                            color: #ff0000;
-                                        }</style><i class="fa fa-skype fa-lg"></i>
-                                </span>
-                                    igreja_shekina
+                                    <span class="header-box-icon">
+                                        <style>
+                                            .fa-skype {
+                                                color: #ff0000;
+                                            }
+                                        </style>
+                                        <i class="fa fa-skype fa-lg"></i>
+                                    </span>
+                                        igreja_shekina
                                 </li>
 
                                 <!-- E-mail -->
                                 <li>
-                                <span class="header-box-icon">
-                                    <style>
-                                        .fa-envelope {
-                                            color: #FF0000;
-                                        }</style><i class="fa fa-envelope fa-lg"></i>
+                                    <span class="header-box-icon">
+                                        <style>
+                                            .fa-envelope {
+                                                color: #FF0000;
+                                            }
+                                        </style>
+                                        <i class="fa fa-envelope fa-lg"></i>
                                     </span>
                                     <a href="mailto:igreja_shekina@gmail.com">igreja_shekina@gmail.com</a>
                                 </li>
@@ -142,7 +155,10 @@
                                 <style>
                                     .fa-phone {
                                         color: #FF0000;
-                                    }</style><i class="fa fa-phone fa-3x"></i></span>
+                                    }
+                                </style>
+                                <i class="fa fa-phone fa-3x"></i>
+                            </span>
                             <ul class="pull-left">
                                 <li>(69) 3441-5237</li>
                                 <li>(69) 8448-2693</li>
@@ -161,34 +177,22 @@
 
                                 <!-- informar menu inicial -->
                                 <div id="responsive-nav">
-                                    <div id="responsive-nav-button">Menu<span id="responsive-nav-button-icon"></span></div>
+                                    <div id="responsive-nav-button">
+                                        Menu
+                                        <span id="responsive-nav-button-icon"></span>
+                                    </div>
                                 </div>
                                 <ul class="menu clearfix">
-
                                     <!-- Menu inicial -->
                                     <li><a class="active" href="/"><i class="fa fa-home fa-lg"></i></a></li>
-
                                     <!--Menu cardápio -->
                                     <li><a href="/#cardapio_principal">CARDÁPIO</a>
                                         <ul>
+                                            @foreach($nacoes as $nacao)
                                             <li>
-                                                <a href="produto_brasil.html">BRASIL - GOIÁS</a>
+                                                <a href="cardapio/{{$nacao->id}}">{{$nacao->nome}}</a>
                                             </li>
-                                            <li>
-                                                <a href="produto_eua.html">ESTADOS UNIDOS</a>
-                                            </li>
-                                            <li>
-                                                <a href="produto_italia.html">ITÁLIA</a>
-                                            </li>
-                                            <li>
-                                                <a href="produto_irlanda.html">IRLANDA</a>
-                                            </li>
-                                            <li>
-                                                <a href="produto_mexico.html">MÉXICO</a>
-                                            </li>
-                                            <li>
-                                                <a href="produto_bebida.html">BEBIDAS</a>
-                                            </li>
+                                            @endforeach
                                         </ul>
                                     </li>
 
@@ -210,12 +214,18 @@
                                     <!-- div botão carrinho do sistema -->
                                     <div class="btn-group dropdown-cart">
                                         <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
-                                            <span class="cart-menu-icon"></span>{{$cart['count']}}<span class="drop-price"> - R$ {{ number_format($cart['total'],2) }}</span>
+                                            <span class="cart-menu-icon"></span>
+                                            {{$cart['count']}}
+                                            <span class="drop-price">
+                                                - R$ {{ number_format($cart['total'],2) }}
+                                            </span>
                                         </button>
 
                                         <!-- Rótulo dos itens carrinho -->
                                         <div class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu">
-                                            <p class="dropdown-cart-description">Itens recente(s).</p>
+                                            <p class="dropdown-cart-description">
+                                                Itens recente(s).
+                                            </p>
                                             <ul class="dropdown-cart-product-list">
                                                 @foreach($carrinho as $item)
                                                 <li class="item clearfix">
@@ -242,14 +252,21 @@
                                             <!-- div total do carrinho cabeçalho -->
                                             <ul class="dropdown-cart-total">
                                                 <li>
-                                                    <span class="dropdown-cart-total-title">Total:</span>R$ {{ number_format($cart['total'],2) }}
+                                                    <span class="dropdown-cart-total-title">
+                                                        Total
+                                                    </span>
+                                                    R$ {{ number_format($cart['total'],2) }}
                                                 </li>
                                             </ul>
 
                                             <!-- botões do carrinho total -->
                                             <div class="dropdown-cart-action">
-                                                <p><a href="meucarrinho" class="btn btn-custom-2 btn-block">Carrinho</a></p>
-                                                <p><a href="finalizar" class="btn btn-custom btn-block">Finalizar</a></p>
+                                                <p>
+                                                    <a href="meucarrinho" class="btn btn-custom-2 btn-block">Carrinho</a>
+                                                </p>
+                                                <p>
+                                                    <a href="finalizar" class="btn btn-custom btn-block">Finalizar</a>
+                                                </p>
                                             </div>
                                         </div><!-- fim div carrinho cabeçalho direito -->
                                     </div><!-- fim div botão carrinho cabeçalho direito -->
@@ -265,20 +282,6 @@
 @yield('body')
 
 <footer id="footer">
-    <div id="newsletter-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 clearfix"><h3>Receba as notícias da FESTA DAS NAÇÕES</h3>
-                    <!-- informar e-mail para notícias da festa -->
-                    <form id="register-newsletter">
-                        <input type="text" name="newsletter" required="" placeholder="E-mail">
-                        <input type="email" class="btn btn-custom-3" value="INSCREVA-SE">
-                    </form>
-                </div>
-            </div> <!-- fim div linha -->
-        </div> <!-- fim div container -->
-    </div> <!-- fim div noticias container -->
-
     <!-- Acessar informações gerais -->
     <div id="inner-footer">
         <div class="container">
@@ -288,7 +291,7 @@
                 <div class="col-md-3 col-sm-4 col-xs-12 widget">
                     <h3>DÚVIDAS</h3>
                     <ul class="links">
-                        <li> <a href="{{ url('meuspedidos') }}">Meus pedidos</a></li>
+                        <li><a href="{{ url('meuspedidos') }}">Meus pedidos</a></li>
                         <li><a href="{{ url('minhaconta') }}">Minha conta</a></li>
                         <li><a href="{{ url('cadastrar') }}">Sugestões</a></li>
                     </ul>
@@ -352,7 +355,7 @@
 
                 <!-- Informar sobre empresa desenvolvedora -->
                 <div class="col-md-5 col-sm-5 col-xs-12 footer-text-container">
-                    <p>&copy; 2015 us.E Tecnologia&trade;. Direitos Reservados.</p>
+                    <p>&copy; 2015 us.E Tecnologia&trade;</p>
                 </div>
             </div>
         </div>
@@ -472,9 +475,9 @@
 
     @yield('sectionFront')
 
-    /**
+    <!--
      * Aumentar e diminir quantidade produto.
-     */
+     -->
     <script type="text/javascript">
         function id( el ){
             return document.getElementById( el );

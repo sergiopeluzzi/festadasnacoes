@@ -26,51 +26,49 @@
                         <div class="panel">
                             <!-- Informar o passo 1 -->
                             <div class="accordion-header">
-                                <div class="accordion-title"><span>Login Cliente</span></div>
-                                <a class="accordion-btn opened" data-toggle="collapse"
-                                   data-target="#checkout-option">
-                                </a>
+                                <div class="accordion-title">
+                                    <span>
+                                        Login Cliente
+                                    </span>
+                                </div>
+                                <a class="accordion-btn opened" data-toggle="collapse" data-target="#checkout-option"></a>
                             </div>
 
                             <!-- Informar conteúdo do passo 1 -->
                             <div id="checkout-option" class="collapse in">
                                 <div class="panel-body">
                                     <div class="row">
-                                        <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">Cliente Novo</h2>
-                                            <p>Cadastre-se para finalizar o pedido, é bem simples:</p>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <h2 class="checkout-title">
+                                                Cliente Novo
+                                            </h2>
+                                            <p>
+                                                Cadastre-se para finalizar o pedido, é bem simples:
+                                            </p>
                                             <div class="xs-margin"></div>
-
-                                            <p>ao cadastrar-se na festa das nações, você terá acesso a compra dos pratos
-                                                e bebidas disponíveis no cardápio, e receber as notícias desse maravilhoso evento.</p>
-                                            <a href="/cadastrar"><button type="button" class="btn btn-custom-3 btn-sm">Cadastre-se</button></a>
+                                            <p>
+                                                ao cadastrar-se na festa das nações, você terá acesso a compra dos pratos
+                                                e bebidas disponíveis no cardápio, e receber as notícias desse maravilhoso evento.
+                                            </p>
+                                            <a href="/cadastrar">
+                                                <button type="button" class="btn btn-custom-2">
+                                                    Cadastre-se
+                                                </button>
+                                            </a>
 
                                             <div class="md-margin"></div>
                                         </div>
-                                        <div class="col-md-6 col-sm-6 col-xs-12"><h2 class="checkout-title">Clientes</h2>
+                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                            <h2 class="checkout-title">
+                                                Clientes
+                                            </h2>
 
                                             <p>Caso possua uma conta, por favor faça o seu Login.</p>
 
-                                            <div class="xs-margin"></div>
-                                            <div class="input-group"><span class="input-group-addon"><span
-                                                            class="input-icon"><i class="fa fa-envelope"></i></span><span
-                                                            class="input-text">E-mail</span></span> <input type="email" required class="form-control input-lg" placeholder="Seu e-mail">
-                                            </div>
-                                            <div class="input-group xs-margin"><span class="input-group-addon"><span
-                                                            class="input-icon"><i class="fa fa-lock"></i></span><span
-                                                            class="input-text">Senha</span></span> <input
-                                                        type="password" required class="form-control input-lg"
-                                                        placeholder="Sua senha"></div>
-                                            <span class="help-block text-right"><a href="#">Esqueceu sua senha?</a></span>
-
-                                            <div class="input-group custom-checkbox sm-margin top-10px"><input
-                                                        type="checkbox"> <span class="checbox-container"><i
-                                                            class="fa fa-check"></i></span>Lembrar senha
-                                            </div>
-                                            <a href="#" class="btn btn-custom-2">Continuar</a></div>
+                                            <a href="#" data-toggle="modal" data-target="#modal-login-form" class="btn btn-custom-2">Continuar</a>
+                                        </div>
                                     </div>
-
                                 </div>
-
                             </div>
                         </div>
                         @else
@@ -166,7 +164,9 @@
                                     <div class="lg-margin"></div>
                                     <div class="text-right">
                                         {!! Form::hidden('dados', null, ['class' => 'form-control']) !!}
-                                        {!! Form::submit('Confirmar pedido', ['class' => 'btn btn-custom-2']) !!}
+                                        @if($cart['total'] > 0)
+                                            {!! Form::submit('Confirmar pedido', ['class' => 'btn btn-custom-2']) !!}
+                                        @endif
                                     </div>
                                 </div>
                             </div>

@@ -39,13 +39,6 @@ class ClientesController extends SiteController {
         return view('site.cadastrar', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
     }
 
-    public function create()
-    {
-        $nomeForm = 'Clientes';
-
-        return view('admin.clientes.create', compact('nomeForm'));
-    }
-
     public function store(ClientesRequest $request)
     {
         $dados = $request->all();
@@ -63,7 +56,7 @@ class ClientesController extends SiteController {
 
         Cliente::create($dados);
 
-        return redirect('/');
+        return redirect('/cadastrar/sucesso');
     }
 
     public function show(Cliente $cliente)
@@ -93,16 +86,19 @@ class ClientesController extends SiteController {
         return redirect('admin/clientes');
     }
 
-    public function destroy(Cliente $cliente)
+    public function sucesso()
     {
-        $usuario = User::findOrFail($cliente->id_user);
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
 
-        $cliente->delete();
+        $nacoes = Nacao::all();
 
-        $usuario->delete();
+        $carrinho = $this->cart->all();
 
-        flash()->success('Cliente excluído com sucesso');
+        return view('site.sucesso2', compact('cart', 'carrinho', 'nacoes'));
 
-        return redirect('admin/clientes');
     }
 }

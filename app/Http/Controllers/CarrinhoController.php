@@ -41,11 +41,13 @@ class CarrinhoController extends Controller {
 
         $nacao = new Nacao;
 
+        $nacoes = Nacao::all();
+
         $prato = new Prato;
 
         $carrinho = $this->cart->all();
 
-        return view('site.meucarrinho', compact('cart', 'carrinho', 'nacao', 'prato'));
+        return view('site.meucarrinho', compact('cart', 'carrinho', 'nacao', 'prato', 'nacoes'));
 
     }
 

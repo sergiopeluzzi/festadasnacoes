@@ -31,15 +31,20 @@ class PedidosController extends SiteController  {
 
         $nacao = new Nacao;
 
+        $nacoes = Nacao::all();
+
         $prato = new Prato;
 
-        $cliente = Cliente::where('id_user', Auth::user()->id)->first();
+        if(Auth::user())
+        {
+            $cliente = Cliente::where('id_user', Auth::user()->id)->first();
 
-        $pedidos = Pedido::where('id_cliente', $cliente->id)->get();
+            $pedidos = Pedido::where('id_cliente', $cliente->id)->get();
+        }
 
         $pedidosPratos = new PedidoPrato;
 
-        return view('site.meuspedidos', compact('cart', 'carrinho', 'nacao', 'cliente', 'pedidos', 'prato', 'pedidosPratos'));
+        return view('site.meuspedidos', compact('cart', 'carrinho', 'nacao', 'cliente', 'pedidos', 'prato', 'pedidosPratos', 'nacoes'));
 	}
 
 }

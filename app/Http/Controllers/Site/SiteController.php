@@ -1,7 +1,12 @@
 <?php namespace App\Http\Controllers\Site;
 
 use App\Http\Controllers\Controller;
+use JulioBitencourt\Cart\CartInterface;
+use App\Evento;
+use App\Nacao;
+use App\Prato;
 
-abstract class SiteController extends Controller {
-    # implemente as suas regras e/ou métodos que serão válidas/usadas em todos os controllers do seu "front"
+abstract class SiteController extends Controller
+{
+
 }

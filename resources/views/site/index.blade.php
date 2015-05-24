@@ -79,11 +79,7 @@
                              data-start="300" data-endspeed="300">
                             <font size="52" color="#FFFFFF">{{$nacao->nome}}</font>
                         </div>
-                        <div class="tp-caption rev-text lfr ltr" data-x="0" data-y="70" data-speed="1600"
-                             data-start="600" data-endspeed="550">
-                            <font size="32" color="FF0000"><strong>{{$nacao->descricao}}</strong></font>
-                        </div>
-                        <div class="tp-caption lfr ltr" data-x="695" data-y="332" data-speed="1600"
+                           <div class="tp-caption lfr ltr" data-x="695" data-y="332" data-speed="1600"
                              data-start="900" data-endspeed="800">
                             <a href="produto_brasil.html" class="btn btn-custom-2">Leia mais</a>
                         </div>
@@ -174,6 +170,7 @@
                     </div>
                 </div>
                 @endforeach
+
             </div><!-- fim div itens cardápio -->
         </div><!-- fim div carrosel cardápio -->
     </div><!-- fim div container cardápio -->
@@ -205,18 +202,10 @@
                     <div class="carousel-inner">
                         <div class="item active">
                             <img src="{{ asset('/site/images/blog/post1-large.jpg') }}" class="img-responsive" alt="Slider post 1">
-
-                            <div class="carousel-caption">
-                                More Features
-                            </div>
                         </div>
 
                         <div class="item">
                             <img src="{{ asset('/site/images/blog/post1-large.jpg') }}" class="img-responsive" alt="Slider post 2">
-
-                            <div class="carousel-caption">
-                                More Ui Elements
-                            </div>
                         </div>
                     </div>
 
@@ -252,9 +241,9 @@
                             <div class="related-portfolio owl-carousel">
                                 <div class="portfolio-item">
                                     <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio4.jpg') }}" alt="Portfolio item 4">
+                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio1.jpg') }}" alt="Portfolio item 4">
                                         <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio4.jpg') }}" title="Portfolio item 4"
+                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio1.jpg') }}" title="Portfolio item 4"
                                                data-rel="prettyPhoto[portfolio]" class="zoom-button">
                                             </a>
                                         </figcaption>
@@ -262,9 +251,9 @@
                                 </div>
                                 <div class="portfolio-item">
                                     <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio11.jpg') }}" alt="Portfolio item 11">
+                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio2.jpg') }}" alt="Portfolio item 11">
                                         <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio11.jpg') }}" title="Portfolio item 11"
+                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio2.jpg') }}" title="Portfolio item 11"
                                                data-rel="prettyPhoto[portfolio]" class="zoom-button">
                                             </a>
                                         </figcaption>
@@ -272,9 +261,9 @@
                                 </div>
                                 <div class="portfolio-item">
                                     <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio1.jpg') }}" alt="Portfolio item 1">
+                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio3.jpg') }}" alt="Portfolio item 8">
                                         <figcaption>
-                                            <a href="https://www.youtube.com/watch?v=u8Hak_70CJM" title="Apresentação Angola"
+                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio3.jpg') }}" title="Portfolio item 8"
                                                data-rel="prettyPhoto[portfolio]" class="zoom-button">
                                             </a>
                                         </figcaption>
@@ -282,9 +271,9 @@
                                 </div>
                                 <div class="portfolio-item">
                                     <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio8.jpg') }}" alt="Portfolio item 8">
+                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio4.jpg') }}" alt="Portfolio item 13">
                                         <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio8.jpg') }}" title="Portfolio item 8"
+                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio4.jpg') }}" title="Portfolio item 13"
                                                data-rel="prettyPhoto[portfolio]" class="zoom-button">
                                             </a>
                                         </figcaption>
@@ -292,49 +281,9 @@
                                 </div>
                                 <div class="portfolio-item">
                                     <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio13.jpg') }}" alt="Portfolio item 13">
+                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio5.jpg') }}" alt="Portfolio item 14">
                                         <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio13.jpg') }}" title="Portfolio item 13"
-                                               data-rel="prettyPhoto[portfolio]" class="zoom-button">
-                                            </a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="portfolio-item">
-                                    <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio14.jpg') }}" alt="Portfolio item 14">
-                                        <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio14.jpg') }}" title="Portfolio item 14"
-                                               data-rel="prettyPhoto[portfolio]" class="zoom-button">
-                                            </a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="portfolio-item">
-                                    <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio10.jpg') }}" alt="Portfolio item 10">
-                                        <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio10.jpg') }}" title="Portfolio item 10"
-                                               data-rel="prettyPhoto[portfolio]" class="zoom-button">
-                                            </a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="portfolio-item">
-                                    <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio3.jpg') }}" alt="Portfolio item 3">
-                                        <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio3.jpg') }}" title="Portfolio item 3"
-                                               data-rel="prettyPhoto[portfolio]" class="zoom-button">
-                                            </a>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                                <div class="portfolio-item">
-                                    <figure>
-                                        <img src="{{ asset('/site/images/portfolio/classic/portfolio3.jpg') }}" alt="Portfolio item 3">
-                                        <figcaption>
-                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio3.jpg') }}" title="Portfolio item 3"
+                                            <a href="{{ asset('/site/images/portfolio/classic/portfolio5.jpg') }}" title="Portfolio item 14"
                                                data-rel="prettyPhoto[portfolio]" class="zoom-button">
                                             </a>
                                         </figcaption>
@@ -347,7 +296,7 @@
 
                 <!-- informar vídeo da festa -->
                 <div class="col-md-4 col-sm-4 col-xs-12 lg-margin">
-                    <iframe width="365" height="225" src="http://www.youtube.com/embed/Z0MNVFtyO30?rel=0"></iframe>
+                    <iframe width="365" height="225" src="https://www.youtube.com/embed/9qWi8wB0DXs?rel=0"></iframe>
                 </div>
             </div><!-- fim div tamanho -->
         </div><!-- fim div container -->

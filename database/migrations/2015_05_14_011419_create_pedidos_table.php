@@ -17,7 +17,7 @@ class CreatePedidosTable extends Migration {
 			$table->increments('id');
             $table->integer('id_cliente')->unsigned();
             $table->float('valor');
-            $table->timestamp('data');
+            $table->boolean('baixado')->default(1);
 			$table->timestamps();
 		});
 	}

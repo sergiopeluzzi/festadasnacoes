@@ -6,7 +6,7 @@
     <div id="breadcrumb-container">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="index.html">Início</a></li>
+                <li><a href="/">Início</a></li>
                 <li class="active">Cadastrar usuário</li>
             </ul>
         </div>
@@ -38,7 +38,7 @@
                                         </span>
                                         <span class="input-text">Nome&#42;</span>
                                     </span>
-                                    <input id="nome" type="text" required class="form-control input-lg" placeholder="Seu nome">
+                                    {!! Form::text('nome', null, ['class' => 'form-control input-lg', 'placeholder' => 'Seu nome', 'required']) !!}
                                 </div>
 
                                 <div class="input-group">
@@ -50,7 +50,7 @@
                                             E-mail&#42;
                                         </span>
                                     </span>
-                                    <input id="email" type="email" required class="form-control input-lg" placeholder="Seu e-mail">
+                                    {!! Form::email('email', null, ['class' => 'form-control input-lg', 'placeholder' => 'Seu e-mail', 'required' ]) !!}
                                 </div>
 
                                 <div class="input-group">
@@ -62,7 +62,19 @@
                                             Senha&#42;
                                         </span>
                                     </span>
-                                    <input id="senha" type="password" required class="form-control input-lg" placeholder="Sua senha">
+                                    {!! Form::password('password', ['class' => 'form-control input-lg', 'placeholder' => 'Sua senha', 'required' ]) !!}
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <span class="input-icon">
+                                            <i class="fa fa-lock"></i>
+                                        </span>
+                                        <span class="input-text">
+                                            Senha&#42;
+                                        </span>
+                                    </span>
+                                    {!! Form::password('password2', ['class' => 'form-control input-lg', 'placeholder' => 'Confirme sua senha', 'required' ]) !!}
                                 </div>
 
                                 <div class="input-group">
@@ -74,7 +86,7 @@
                                             CPF
                                         </span>
                                     </span>
-                                    <input id ="cpf" type="text" class="form-control input-lg" placeholder="Seu CPF">
+                                    {!! Form::text('cpf', null, ['id' => 'cpf', 'class' => 'form-control input-lg', 'placeholder' => 'Seu CPF', 'required' ]) !!}
                                 </div>
 
                                 <div class="input-group">
@@ -86,12 +98,11 @@
                                             Telefone
                                         </span>
                                     </span>
-                                    <input id="telefone" type="text" class="form-control input-lg" placeholder="Seu telefone">
+                                    {!! Form::text('telefone', null, ['id' => 'telefone', 'class' => 'form-control input-lg', 'placeholder' => 'Seu telefone' ]) !!}
                                 </div>
 
                                 <input type="submit" value="ENVIAR" class="btn btn-custom-2 md-margin">
                             </fieldset>
-
                         </div>
 
                         <h2 class="sub-title">FORMAS DE PAGAMENTO</h2>
@@ -104,12 +115,10 @@
                                 <p>Parcele em até 12x, o pagamento no cartão de crédito garante a você a compra dos produtos totalmente on-line, simples e rápido.</p>
                             </div>
                         </div>
-
                     </div>
                 {!! Form::close() !!}
             </div>
         </div>
     </div>
 </section>
-
 @stop

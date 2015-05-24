@@ -47,8 +47,8 @@
             </li>
 
             <li class="header">GERENCIAMENTO</li>
-            <li><a href="#"><i class="fa fa-bar-chart-o"></i> Controle da Produção</a></li>
-            <li><a href="#"><i class="fa fa-money"></i> Gerenciamento das Vendas</a></li>
+            <li><a href="/admin/producao"><i class="fa fa-bar-chart-o"></i> Gerenciar Produção</a></li>
+            <li><a href="/admin/vendas"><i class="fa fa-money"></i> Gerenciar Vendas</a></li>
         </ul>
     </section>
     <!-- /.sidebar -->
