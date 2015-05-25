@@ -36,17 +36,17 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Produto</th>
-                                                    <th>Qnt</th>
-                                                    <th>Total</th>
+                                                    <th class="text-center no-padding">Produto</th>
+                                                    <th class="text-center no-padding">Qnt</th>
+                                                    <th class="text-center no-padding">Total</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @foreach($ingredientes->where('id_prato', $prato->where('id_nacao', $nacao->id)->first()->id) as $ingrediente)
                                                     <tr>
                                                         <td>{{ $produto->find($ingrediente->id_produto)->descricao }}</td>
-                                                        <td>{{ $ingrediente->qnt * $vlr }} {{ $unidade->find($produto->find($ingrediente->id_produto)->id_unidade)->sigla }}</td>
-                                                        <td>R$ {{ number_format($produto->find($ingrediente->id_produto)->valor * $vlr,2) }}</td>
+                                                        <td class="text-center">{{ $ingrediente->qnt * $vlr }} {{ $unidade->find($produto->find($ingrediente->id_produto)->id_unidade)->sigla }}</td>
+                                                        <td class="text-right">R$ {{ number_format($produto->find($ingrediente->id_produto)->valor * $vlr,2) }}</td>
                                                         {!! Form::input('hidden', $total += $produto->find($ingrediente->id_produto)->valor * $vlr)  !!}
                                                     </tr>
                                                 @endforeach

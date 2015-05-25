@@ -2,127 +2,69 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Prato;
-use App\Nacao;
+use App\Bebida;
+use App\Http\Requests\BebidasRequest;
 use Illuminate\Http\Request;
 
 class BebidasController extends AdminController {
 
     public function index()
     {
-        $nomeForm = 'Pratos';
+        $nomeForm = 'Bebidas';
 
-        $pratos = Prato::all();
+        $bebidas = Bebida::all();
 
-        $nacao = new Nacao;
-
-        return view('admin.pratos.index', compact('nomeForm', 'pratos', 'nacao'));
+        return view('admin.bebidas.index', compact('nomeForm', 'bebidas'));
     }
 
     public function create()
     {
-        $nomeForm = 'Pratos';
+        $nomeForm = 'Bebidas';
 
-        $nacoes = Nacao::all()->toArray();
-
-        $produtos = Produto::all()->toArray();
-
-        foreach($nacoes as $key => $values)
-        {
-            $nacao[$values['id']] = $values['nome'];
-        }
-
-        foreach($produtos as $key => $values)
-        {
-            $produto[$values['id']] = $values['descricao'];
-        }
-
-        return view('admin.pratos.create', compact('nomeForm', 'nacao', 'produto'));
+        return view('admin.bebidas.create', compact('nomeForm'));
     }
 
-    public function store(PratosRequest $request)
+    public function store(BebidasRequest $request)
     {
-        $dadosPrato = $request->all();
+        $dadosBebida = $request->all();
 
-        $id_prods = explode(',', $dadosPrato['id_prods']);
+        Bebida::create($dadosBebida);
 
-        foreach($id_prods as $cod => $qnt)
-        {
-            if ($qnt != "")
-            {
-                $ids[$cod] = $qnt;
-            }
-        }
+        flash()->success('Bebida cadastrada com sucesso');
 
-        $dadosPrato['id_prods'] = $ids;
-
-        Prato::create($dadosPrato);
-
-        foreach($ids as $cod => $qnt)
-        {
-            $ingredientes = new Ingrediente();
-
-            $ingredientes->id_prato = Prato::latest()->first()->id;
-
-            $ingredientes->id_produto = $cod;
-
-            $ingredientes->qnt = $qnt;
-
-            $ingredientes->save();
-        }
-
-        flash()->success('Prato cadastrado com sucesso');
-
-        return redirect('admin/pratos');
+        return redirect('admin/bebidas');
     }
 
-    public function show(Prato $prato)
+    public function show(Bebida $bebida)
     {
-        $nomeForm = 'Pratos';
+        $nomeForm = 'Bebidas';
 
-        $nacao = new Nacao;
-
-        return view('admin.pratos.show', compact('nomeForm', 'prato', 'nacao'));
+        return view('admin.bebidas.show', compact('nomeForm', 'bebida'));
     }
 
-    public function edit(Prato $prato)
+    public function edit(Bebida $bebida)
     {
-        $nomeForm = 'Pratos';
+        $nomeForm = 'Bebidas';
 
-        $nacoes = Nacao::all()->toArray();
-
-        $produtos = Produto::all()->toArray();
-
-        foreach($nacoes as $key => $values)
-        {
-            $nacao[$values['id']] = $values['nome'];
-        }
-
-        foreach($produtos as $key => $values)
-        {
-            $produto[$values['id']] = $values['descricao'];
-        }
-
-        return view('admin.pratos.edit', compact('nomeForm', 'prato', 'nacao', 'produto'));
+        return view('admin.bebidas.edit', compact('nomeForm', 'bebida'));
     }
 
-    public function update(Prato $prato, PratosRequest $request)
+    public function update(Bebida $bebida, BebidasRequest $request)
     {
-        $prato->update($request->all());
+        $bebida->update($request->all());
 
-        flash()->success('Prato atualizado com sucesso');
+        flash()->success('Bebida atualizada com sucesso');
 
-        return redirect('admin/pratos');
+        return redirect('admin/bebidas');
     }
 
-    public function destroy(Prato $prato)
+    public function destroy(Bebida $bebida)
     {
-        $prato->delete();
+        $bebida->delete();
 
-        flash()->success('Prato excluído com sucesso');
+        flash()->success('Bebida excluída com sucesso');
 
-        return redirect('admin/pratos');
+        return redirect('admin/bebidas');
     }
-
-
 }
+

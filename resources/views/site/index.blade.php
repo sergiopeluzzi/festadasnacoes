@@ -150,10 +150,10 @@
                 <div id="similiar-items-slider-next" class="carousel-btn carousel-btn-next carousel-space"></div>
             </div>
             <div class="similiar-items-slider owl-carousel">
-                <!-- Informar produto brasil -->
+                <!-- Produtos do cardapio -->
                 @foreach($pratos as $prato)
-                <div class="item item-hover">
-                    <div class="item-image-wrapper">
+                <div class="item item-hover" style="height: 400px">
+                    <div class="item-image-wrapper" style="height: 250px">
                         <figure class="item-image-container"><a href="{{'prato' . $prato->id }}"><img
                                         src="{{ asset('/site/images/pratos/pratoc'. $prato->id .'.png') }}" alt="item1" class="item-image"> <img
                                         src="{{ asset('/site/images/pratos/pratoh'. $prato->id .'.png') }}" alt="item1  Hover"
@@ -169,6 +169,26 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
+                <!-- Bebidas do cardapio -->
+                @foreach($bebidas as $bebida)
+                    <div class="item item-hover" style="height: 400px">
+                        <div class="item-image-wrapper" style="height: 250px">
+                            <figure class="item-image-container"><a href="{{'bebida' . $bebida->id }}"><img
+                                            src="{{ asset('/site/images/bebidas/bebidac'. $bebida->id .'.png') }}" alt="item1" class="item-image"> <img
+                                            src="{{ asset('/site/images/bebidas/bebidah'. $bebida->id .'.png') }}" alt="item1  Hover"
+                                            class="item-image-hover"></a></figure>
+                            <div class="item-price-container"><span class="item-price">R$ {{ number_format($bebida->valor,2) }}</span></div>
+                            <span class="new-rect">Bebidas</span>
+                        </div>
+                        <div class="item-meta-container">
+                            <h3 class="item-name"><a href="produto_brasil.html">{{ $bebida->descricao }}</a></h3>
+
+                            <div class="item-action"><a href="meucarrinho/add/{{ $bebida->id }}" class="item-add-btn">
+                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
 
             </div><!-- fim div itens cardápio -->

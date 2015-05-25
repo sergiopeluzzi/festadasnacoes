@@ -14,7 +14,7 @@ class PedidosController extends AdminController {
 
     public function index()
     {
-        $nomeForm = 'Vendas';
+        $nomeForm = 'Gerenciar Vendas';
 
         $pedidos = Pedido::all();
 
@@ -36,7 +36,7 @@ class PedidosController extends AdminController {
 
     public function show(Pedido $pedido)
     {
-        $nomeForm = 'Vendas';
+        $nomeForm = 'Pedido';
 
         $itens = PedidoPrato::where('id_pedido', $pedido->id)->get();
 

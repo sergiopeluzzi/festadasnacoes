@@ -9,8 +9,8 @@
                         Editar {{ $nomeForm }}
                     </div>
                     <div class="panel-body">
-                        {!! Form::model($prato, ['method' => 'PATCH', 'action' => ['PratosController@update', $prato->id] ]) !!}
-                           @include ('admin.pratos.form', ['botao' => 'Atualizar'])
+                        {!! Form::model($bebida, ['method' => 'PATCH', 'action' => ['Admin\BebidasController@update', $bebida->id] ]) !!}
+                           @include ('admin.bebidas.form', ['botao' => 'Atualizar'])
                         {!! Form::close() !!}
                     </div>
                     @include ('errors.list')

@@ -69,7 +69,13 @@ Route::group(['prefix' => 'meucarrinho'], function()
  */
 Route::group(['namespace' => 'Site'], function()
 {
-    Route::get('contato', 'ContatosController@indexC');
+    Route::group(['prefix' => 'contato'], function()
+    {
+        Route::get('/', 'ContatosController@index');
+        Route::post('/submeter', ['as' => 'site.contato.submeter', 'uses' => 'ContatosController@submeter']);
+        Route::get('/submetido', 'ContatosController@submetido');
+    });
+
 
     Route::group(['prefix' => 'meuspedidos'], function()
     {

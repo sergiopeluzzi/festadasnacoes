@@ -10,21 +10,19 @@
                         Visualizar {{ $nomeForm }}
                     </div>
                     <div class="panel-body">
-                        <p><strong>Código: </strong>{{ $prato->id }}</p>
-                        <p><strong>Descrição: </strong>{{ $prato->descricao }}</p>
-                        <p><strong>Valor: </strong>{{ $prato->valor }}</p>
-                        <p><strong>Nação: </strong>{{ $nacao->find($prato->id_nacao)->nome }}</p>
+                        <p><strong>Código: </strong>{{ $bebida->id }}</p>
+                        <p><strong>Descrição: </strong>{{ $bebida->descricao }}</p>
+                        <p><strong>Valor: </strong>R$ {{ number_format($bebida->valor,2) }}</p>
                         <hr>
-                        <p><strong>Data Cadastro: </strong>{{ $prato->created_at->format('d/m/Y à\s H:i:s') }}</p>
-                        <p><strong>Ultima Alteração: </strong>{{ $prato->updated_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Data Cadastro: </strong>{{ $bebida->created_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Ultima Alteração: </strong>{{ $bebida->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 
-                        <a href="/admin/pratos" class="btn btn-danger">Voltar</a>
+                        <a href="/admin/bebidas" class="btn btn-danger">Voltar</a>
                     </div>
                     @include ('errors.list')
                 </div>
             </div>
         </div>
     </div>
-
-
 @stop
+

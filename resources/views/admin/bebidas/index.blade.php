@@ -14,26 +14,24 @@
                                 <tr>
                                     <th class="text-center no-padding">Código</th>
                                     <th class="text-center no-padding">Descrição</th>
-                                    <th class="text-center no-padding">Nação</th>
                                     <th class="text-center no-padding">Valor</th>
                                     <th class="text-center no-padding">Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach($pratos as $prato)
+                            @foreach($bebidas as $bebida)
                                 <tr>
-                                    <td class="text-center">{{ $prato->id }}</td>
-                                    <td>{{ $prato->descricao }}</td>
-                                    <td class="text-center">{{ $nacao->find($prato->id_nacao)->nome }}</td>
-                                    <td class="text-right">R$ {{ number_format($prato->valor,2) }}</td>
+                                    <td class="text-center">{{ $bebida->id }}</td>
+                                    <td>{{ $bebida->descricao }}</td>
+                                    <td class="text-right">R$ {{ number_format($bebida->valor,2) }}</td>
                                     <td class="text-center no-padding">
 
                                         <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/pratos/' . $prato->id) }}"><i class="glyphicon glyphicon-user"></i></a>
+                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/bebidas/' . $bebida->id) }}"><i class="glyphicon glyphicon-user"></i></a>
                                         <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/pratos/' . $prato->id . '/edit') }}"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/bebidas/' . $bebida->id . '/edit') }}"><i class="glyphicon glyphicon-edit"></i></a>
                                         <a>
-                                            {!! Form::open(array('class' => 'inline', 'method' => 'DELETE', 'route' => array('admin.pratos.destroy', $prato->id))) !!}
+                                            {!! Form::open(array('class' => 'inline', 'method' => 'DELETE', 'route' => array('admin.bebidas.destroy', $bebida->id))) !!}
                                             {!! Form::submit('X', array('class' => 'btn bg-gray')) !!}
                                             {!! Form::close() !!}
                                         </a>
@@ -46,7 +44,7 @@
                         </table>
                     </div>
                 </div>
-                <a class="btn btn-danger" href="{{ url('admin/pratos/create') }}">Adicionar</a>
+                <a class="btn btn-danger" href="{{ url('admin/bebidas/create') }}">Adicionar</a>
             </div>
         </div>
     </div>

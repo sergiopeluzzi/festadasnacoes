@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\Nacao;
 use App\Prato;
 use App\Cliente;
+use App\Bebida;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
@@ -24,6 +25,8 @@ class SiteController extends Controller {
 
         $pratos = Prato::all();
 
+        $bebidas = Bebida::all();
+
         $cart = [
             'items' => $this->cart->all(),
             'count' => $this->cart->totalItems(),
@@ -32,7 +35,7 @@ class SiteController extends Controller {
 
         $carrinho = $this->cart->all();
 
-        return view('site.index', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho'));
+        return view('site.index', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho', 'bebidas'));
 	}
 
     public function cadastrar()

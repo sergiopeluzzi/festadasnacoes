@@ -6,7 +6,7 @@
         <div id="breadcrumb-container">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="index.html">Início</a></li>
+                    <li><a href="/">Início</a></li>
                     <li class="active">Contato</li>
                 </ul>
             </div>
@@ -30,7 +30,7 @@
                             <div class="row">
 
                                 <!-- Informar dados para o comentário -->
-                                <form action="#" id="contact-form">
+                                {!! Form::open(['id' => 'frmContato', 'url' => 'contato/submeter']) !!}
                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                         <!-- Informar nome comentário -->
                                         <div class="input-group">
@@ -42,7 +42,7 @@
                                                     Nome
                                                 </span>
                                             </span>
-                                            <input type="text" name="contact-name" id="contact-name" required class="form-control input-lg" placeholder="Seu Nome" />
+                                            {!! Form::text('nome', null, ['class' => 'form-control input-lg', 'required', 'placeholder' => 'Seu Nome']) !!}
                                         </div>
 
                                         <!-- Informar e-mail comentário -->
@@ -55,7 +55,7 @@
                                                     E-mail
                                                 </span>
                                             </span>
-                                            <input type="email" name="contact-email" id="contact-email" required class="form-control input-lg" placeholder="Seu e-mail" />
+                                            {!! Form::email('email', null, ['class' => 'form-control input-lg', 'required', 'placeholder' => 'Seu e-mail']) !!}
                                         </div>
 
                                         <!-- Informar assunto comentário -->
@@ -68,7 +68,7 @@
                                                     Assunto
                                                 </span>
                                             </span>
-                                            <input type="text" name="contact-subject" id="contact-subject" required class="form-control input-lg" placeholder="Assunto" />
+                                            {!! Form::text('assunto', null, ['class' => 'form-control input-lg', 'required', 'placeholder' => 'Assunto']) !!}
                                         </div>
                                         <p class="item-desc">
                                             Fique tranquilo, seu endereço de e-mail não será publicado.
@@ -86,11 +86,11 @@
                                                     Seu comentário
                                                 </span>
                                             </span>
-                                        <textarea name="contact-message" id="contact-message" class="form-control" cols="30" rows="6" placeholder="Sua mensagem"></textarea>
+                                        {!! Form::textArea('comentario', null, ['class' => 'form-control input-lg', 'required', 'placeholder' => 'Sua mensagem', 'cols' => '30', 'rows' => '6']) !!}
                                         </div>
                                         <input type="submit" value="ENVIAR" class="btn btn-custom-2 md-margin">
                                     </div>
-                                </form>
+                                {!! Form::close() !!}
                             </div>
                         </div>
 
