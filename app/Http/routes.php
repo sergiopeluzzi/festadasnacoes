@@ -69,7 +69,7 @@ Route::group(['prefix' => 'meucarrinho'], function()
  */
 Route::group(['namespace' => 'Site'], function()
 {
-    Route::get('contato', 'ContatosController@index');
+    Route::get('contato', 'ContatosController@indexC');
 
     Route::group(['prefix' => 'meuspedidos'], function()
     {
