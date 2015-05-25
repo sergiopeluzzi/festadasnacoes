@@ -24,7 +24,7 @@ Route::get('/', 'SiteController@index');
 Route::get('minhaconta', 'SiteController@minhaconta');
 Route::get('meucarrinho', 'SiteController@meucarrinho');
 Route::get('finalizar', 'SiteController@finalizar');
-Route::get('contato', 'SiteController@contato');
+
 
 /**
  * Rotas do admin Back-End
@@ -43,6 +43,7 @@ Route::group(['namespace' => 'Admin'], function()
     Route::group(['prefix' => 'admin'], function()
     {
         Route::resource('vendas', 'PedidosController');
+        Route::resource('bebidas', 'BebidasController');
         Route::get('vendas/baixar/{id}', 'PedidosController@baixar');
         Route::get('vendas/busca', 'PedidosController@busca');
         Route::get('producao', 'ProducaoController@index');
@@ -68,6 +69,8 @@ Route::group(['prefix' => 'meucarrinho'], function()
  */
 Route::group(['namespace' => 'Site'], function()
 {
+    Route::get('contato', 'ContatosController@index');
+
     Route::group(['prefix' => 'meuspedidos'], function()
     {
         Route::get('/', 'PedidosController@index');

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePedidosPratosTable extends Migration {
+class CreatePedidosBebidasTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,13 @@ class CreatePedidosPratosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('pedidos_pratos', function(Blueprint $table)
+		Schema::create('pedidos_bebidas', function(Blueprint $table)
 		{
-			$table->integer('id_pedido')->unsigend();
+            $table->integer('id_pedido')->unsigend();
             $table->foreign('id_pedido')->references('id')->on('pedidos')->onDelete('cascade');
 
-            $table->integer('id_prato')->unsigned();
-            $table->foreign('id_prato')->references('id')->on('pratos')->onDelete('cascade');
+            $table->integer('id_bebida')->unsigned();
+            $table->foreign('id_bebida')->references('id')->on('bebidas')->onDelete('cascade');
 
 			$table->timestamps();
 		});
@@ -31,7 +31,7 @@ class CreatePedidosPratosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('pedidos_pratos');
+		Schema::drop('pedidos_bebidas');
 	}
 
 }

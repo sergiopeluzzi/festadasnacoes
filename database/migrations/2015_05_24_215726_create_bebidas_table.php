@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContatosTable extends Migration {
+class CreateBebidasTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,11 @@ class CreateContatosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('contatos', function(Blueprint $table)
+		Schema::create('bebidas', function(Blueprint $table)
 		{
 			$table->increments('id');
-            $table->string('nome');
-            $table->string('email');
-            $table->string('assunto');
-            $table->text('comentario');
+            $table->string('descricao');
+            $table->float('valor');
 			$table->timestamps();
 		});
 	}
@@ -30,7 +28,7 @@ class CreateContatosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('contatos');
+		Schema::drop('bebidas');
 	}
 
 }

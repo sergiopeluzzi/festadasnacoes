@@ -71,7 +71,7 @@
                                             <input type="text" name="contact-subject" id="contact-subject" required class="form-control input-lg" placeholder="Assunto" />
                                         </div>
                                         <p class="item-desc">
-                                            Fique tranquilo, seu endereço de e-mail não será pulicado.
+                                            Fique tranquilo, seu endereço de e-mail não será publicado.
                                         </p>
                                     </div>
 
