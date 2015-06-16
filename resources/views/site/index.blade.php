@@ -81,7 +81,7 @@
                         </div>
                            <div class="tp-caption lfr ltr" data-x="695" data-y="332" data-speed="1600"
                              data-start="900" data-endspeed="800">
-                            <a href="produto_brasil.html" class="btn btn-custom-2">Leia mais</a>
+                            <a href="/cardapio/{{$nacao->id}}" class="btn btn-custom-2">Leia mais</a>
                         </div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="bottom" data-hoffset="-230"
                              data-speed="2000" data-start="500" data-endspeed="800">
@@ -124,19 +124,18 @@
                     </div>
                     <div class="tp-caption sfr str" data-x="20" data-y="190" data-speed="600"
                          data-start="1900" data-endspeed="400">
-                        <a href="contato.html" class="btn btn-custom-2">Leia mais</a>
+                        <a href="/contato" class="btn btn-custom-2">Contato</a>
                     </div>
                 </li>
             </ul>
         </div><!-- fim div slider container -->
     </div><!-- fim div carrosel -->
 
+    <!-- Informar ancora para div cardápio -->
+    <a name="cardapio_principal"></a>
 
     <!-- Informar tamanho de espaço de uma div a outra -->
     <div class="md-margin2x"></div>
-
-    <!-- Informar ancora para div cardápio -->
-    <a name="cardapio_principal"></a>
 
     <!-- Informar cardápio -->
     <div class="container">
@@ -154,7 +153,7 @@
                 @foreach($pratos as $prato)
                 <div class="item item-hover" style="height: 400px">
                     <div class="item-image-wrapper" style="height: 250px">
-                        <figure class="item-image-container"><a href="{{'prato' . $prato->id }}"><img
+                        <figure class="item-image-container"><a href="cardapio/{{ $prato->id_nacao }}"><img
                                         src="{{ asset('/site/images/pratos/pratoc'. $prato->id .'.png') }}" alt="item1" class="item-image"> <img
                                         src="{{ asset('/site/images/pratos/pratoh'. $prato->id .'.png') }}" alt="item1  Hover"
                                         class="item-image-hover"></a></figure>
@@ -162,7 +161,7 @@
                         <span class="new-rect">{{ $nacoes->where('id', $prato->id_nacao)->first()->nome }}</span>
                     </div>
                     <div class="item-meta-container">
-                        <h3 class="item-name"><a href="produto_brasil.html">{{ $prato->descricao }}</a></h3>
+                        <h3 class="item-name"><a href="cardapio/{{ $prato->id_nacao }}">{{ $prato->descricao }}</a></h3>
 
                         <div class="item-action"><a href="meucarrinho/add/{{ $prato->id }}" class="item-add-btn">
                                 <span class="icon-cart-text">Adicionar carrinho</span></a>
@@ -182,7 +181,7 @@
                             <span class="new-rect">Bebidas</span>
                         </div>
                         <div class="item-meta-container">
-                            <h3 class="item-name"><a href="produto_brasil.html">{{ $bebida->descricao }}</a></h3>
+                            <h3 class="item-name"><a href="#">{{ $bebida->descricao }}</a></h3>
 
                             <div class="item-action"><a href="meucarrinho/add/{{ $bebida->id }}" class="item-add-btn">
                                     <span class="icon-cart-text">Adicionar carrinho</span></a>

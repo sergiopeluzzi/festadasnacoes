@@ -8,8 +8,12 @@
         <div id="breadcrumb-container">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="index.html">Início</a></li>
-                    <li class="active">Produtos</li>
+                    <li>
+                        <a href="/">Início</a>
+                    </li>
+                    <li class="active">
+                        Produtos
+                    </li>
                 </ul>
             </div>
         </div>
@@ -20,47 +24,13 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-6 col-sm-12 col-xs-12 product-viewer clearfix">
-                            <div id="product-image-carousel-container">
-
-                                <!-- Imagem acesso a esquerda -->
-                                <ul id="product-carousel" class="celastislide-list">
-                                    <li class="active-slide"><a data-rel="prettyPhoto[product]"
-                                                                href="images/products/big-item1.jpg"
-                                                                data-image="images/products/big-item1.jpg"
-                                                                data-zoom-image="images/products/big-item1.jpg"
-                                                                class="product-gallery-item"><img
-                                                    src="images/products/thumbnails/item10.jpg" alt="Phone photo 1"></a>
-                                    </li>
-                                    <li><a data-rel="prettyPhoto[product]" href="images/products/big-item2.jpg"
-                                           data-image="images/products/big-item2.jpg"
-                                           data-zoom-image="images/products/big-item2.jpg" class="product-gallery-item"><img
-                                                    src="images/products/thumbnails/item11.jpg" alt="Phone photo 2"></a>
-                                    </li>
-                                    <li><a data-rel="prettyPhoto[product]" href="images/products/big-item3.jpg"
-                                           data-image="images/products/big-item3.jpg"
-                                           data-zoom-image="images/products/big-item3.jpg" class="product-gallery-item"><img
-                                                    src="images/products/thumbnails/item12.jpg" alt="Phone photo 3"></a>
-                                    </li>
-                                    <li><a data-rel="prettyPhoto[product]" href="images/products/big-item4.jpg"
-                                           data-image="images/products/big-item4.jpg"
-                                           data-zoom-image="images/products/big-item4.jpg" class="product-gallery-item"><img
-                                                    src="images/products/thumbnails/item13.jpg" alt="Phone photo 4"></a>
-                                    </li>
-                                    <li><a data-rel="prettyPhoto[product]" href="images/products/big-item5.jpg"
-                                           data-image="images/products/big-item5.jpg"
-                                           data-zoom-image="images/products/big-item5.jpg" class="product-gallery-item"><img
-                                                    src="images/products/thumbnails/item14.jpg" alt="Phone photo 4"></a>
-                                    </li>
-                                </ul>
-                            </div> <!-- Fim div produtos a esquerda -->
-
                             <!-- Imagem inicial do produto e o seu valor -->
                             <div id="product-image-container">
-                                <figure><img src="images/products/big-item1.jpg"
+                                <figure><img src="{{ asset('/site/images/pratos/pratoh'. $prato->where('id_nacao', $id)->first()->id .'.png') }}"
                                              data-zoom-image="images/products/big-item1.jpg" alt="Product Big image"
                                              id="product-image">
-                                    <figcaption class="item-price-container"><span class="old-price">$160</span> <span
-                                                class="item-price">$120</span></figcaption>
+                                    <figcaption class="item-price-container"><span class="old-price">R$ {{ number_format(($prato->where('id_nacao', $id)->first()->valor + $prato->where('id_nacao', $id)->first()->valor* 0.20),2) }}</span> <span
+                                                class="item-price">R$ {{ number_format($prato->where('id_nacao', $id)->first()->valor,2)  }}</span></figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -68,30 +38,15 @@
                         <!-- Informar o nome do produto -->
                         <div class="col-md-6 col-sm-12 col-xs-12 product">
                             <div class="lg-margin visible-sm visible-xs"></div>
-                            <h1 class="product-name">Churrasco</h1>
+                            <h1 class="product-name">{{ $prato->where('id_nacao', $id)->first()->descricao }}</h1>
                             <ul class="product-list">
                                 <!-- Informar a disponibilidade do estoque do produto -->
                                 <li><span>Disponível:</span>Sim</li>
                                 <!-- Informar o código do produto -->
-                                <li><span>Código do produto:</span>483512569</li>
+                                <li><span>Código do produto:</span>{{ $prato->where('id_nacao', $id)->first()->id }}</li>
                                 <!-- Informar a nação do produto -->
-                                <li><span>Nação:</span>Brasil - Goiás</li>
+                                <li><span>Nação:</span>{{ $nacao->find($id)->nome }}</li>
                             </ul>
-                            <hr>
-
-                            <!-- Informar a quantidade e adicionar ao carrinho -->
-                            <div class="product-add clearfix">
-                                <div class="custom-quantity-input"><input type="text" name="quantidade" id="quantidade1" value="1">
-                                    <a   class="quantity-btn quantity-input-up" onclick="mais( 'quantidade1' )">
-                                        <i class="fa fa-angle-up"></i>
-                                    </a>
-                                    <a class="quantity-btn quantity-input-down" onclick="menos( 'quantidade1')">
-                                        <i class="fa fa-angle-down"></i>
-                                    </a>
-                                </div>
-                                <button class="btn btn-custom-2">Adicionar carrinho</button>
-                            </div>
-                            <hr>
                         </div>
                         <div class="lg-margin"></div>
 
@@ -148,7 +103,7 @@
                             <!-- Colocar a div dos videos da naçao e apresentação -->
 
                             <aside class="col-md-3 col-sm-12 col-xs-12 sidebar">
-                                <div class="widget"><h3>GOIÁS</h3>
+                                <div class="widget"><h3>{{ $nacao->find($id)->nome }}</h3>
 
                                     <div class="video-container">
                                         <iframe src="http://www.youtube.com/embed/OzOh9cTbX60"></iframe>
@@ -164,135 +119,9 @@
                                     </div>
                                 </div>
                             </aside>
-
-                        </div>
-                        <div class="lg-margin2x"></div>
-
-                        <div class="container">
-                            <div class="similiar-items-container carousel-wrapper">
-                                <header class="content-title">
-                                    <div class="title-bg"><h2 class="title">Cardápio</h2></div>
-                                    <p class="title-desc">Escolha os seus pratos, sinta os sabores ao redor do mundo bem pertinho de você</p>
-                                </header>
-                                <div class="carousel-controls" >
-                                    <div id="similiar-items-slider-prev" class="carousel-btn carousel-btn-prev" ></div>
-                                    <div id="similiar-items-slider-next" class="carousel-btn carousel-btn-next carousel-space"></div>
-                                </div>
-                                <div class="similiar-items-slider owl-carousel">
-
-                                    <!-- Informar produto 1 -->
-                                    <div class="item item-hover">
-                                        <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
-                                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                                            class="item-image-hover"></a></figure>
-                                            <div class="item-price-container"><span class="item-price">R$ 10,00</span></div>
-                                            <span class="new-rect">Brasil</span>
-                                        </div>
-                                        <div class="item-meta-container">
-                                            <h3 class="item-name"><a href="product.html">Espetinho de Ganso</a></h3>
-                                            <div class="item-action"><a href="#" class="item-add-btn">
-                                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- informar produto 2 -->
-                                    <div class="item item-hover">
-                                        <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
-                                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                                            class="item-image-hover"></a></figure>
-                                            <div class="item-price-container"><span class="item-price">R$ 15,00</span></div>
-                                            <span class="new-rect">Eua</span>
-                                        </div>
-                                        <div class="item-meta-container">
-                                            <h3 class="item-name"><a href="product.html">Lanche Americano</a></h3>
-                                            <div class="item-action"><a href="#" class="item-add-btn">
-                                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Informar produto 3-->
-                                    <div class="item item-hover">
-                                        <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
-                                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                                            class="item-image-hover"></a></figure>
-                                            <div class="item-price-container"><span class="item-price">R$ 25,00</span></div>
-                                            <span class="new-rect">Itália</span>
-                                        </div>
-                                        <div class="item-meta-container">
-                                            <h3 class="item-name"><a href="product.html">Macarronada</a></h3>
-                                            <div class="item-action"><a href="#" class="item-add-btn">
-                                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Informar produto 4 -->
-                                    <div class="item item-hover">
-                                        <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
-                                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                                            class="item-image-hover"></a></figure>
-                                            <div class="item-price-container"><span class="item-price">R$ 8,00</span></div>
-                                            <span class="new-rect">Irlanda</span>
-                                        </div>
-                                        <div class="item-meta-container">
-                                            <h3 class="item-name"><a href="product.html">Lanche Americano</a></h3>
-                                            <div class="item-action"><a href="#" class="item-add-btn">
-                                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Informar produto 5 -->
-                                    <div class="item item-hover">
-                                        <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
-                                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                                            class="item-image-hover"></a></figure>
-                                            <div class="item-price-container"><span class="item-price">R$ 3,50</span></div>
-                                            <span class="new-rect">México</span>
-                                        </div>
-                                        <div class="item-meta-container">
-                                            <h3 class="item-name"><a href="product.html">Tortilha</a></h3>
-                                            <div class="item-action"><a href="#" class="item-add-btn">
-                                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Informar produto 6 -->
-                                    <div class="item item-hover">
-                                        <div class="item-image-wrapper">
-                                            <figure class="item-image-container"><a href="product.html"><img
-                                                            src="images/products/item1.jpg" alt="item1" class="item-image"> <img
-                                                            src="images/products/item1-hover.jpg" alt="item1  Hover"
-                                                            class="item-image-hover"></a></figure>
-                                            <div class="item-price-container"><span class="item-price">R$ 3,00</span></div>
-                                            <span class="new-rect">Bebidas</span>
-                                        </div>
-                                        <div class="item-meta-container">
-                                            <h3 class="item-name"><a href="product.html">Refrigerante Lata 250ml</a></h3>
-                                            <div class="item-action"><a href="#" class="item-add-btn">
-                                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
     </section>
-
 @stop

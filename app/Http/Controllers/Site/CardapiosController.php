@@ -24,7 +24,9 @@ class CardapiosController extends SiteController {
 
         $nacoes = Nacao::all();
 
-        $pratos = Prato::all();
+        $nacao = new Nacao;
+
+        $prato = new Prato;
 
         $cart = [
             'items' => $this->cart->all(),
@@ -34,7 +36,7 @@ class CardapiosController extends SiteController {
 
         $carrinho = $this->cart->all();
 
-        return view('site.cardapio.' . $id, compact('nacoes', 'cart', 'carrinho'));
+        return view('site.cardapio.' . $id, compact('nacoes', 'cart', 'carrinho', 'prato', 'id', 'nacao'));
 	}
 
 }
