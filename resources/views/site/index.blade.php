@@ -13,7 +13,7 @@
                 <li data-transition="fade" data-slotamount="6" data-masterspeed="600"
                     data-saveperformance="on" data-title="Special Offers">
                     <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg1"
-                         data-lazyload="{{ asset('/site/images/homeslider/fundo_contato.png') }}"
+                         data-lazyload="{{ asset('/site/images/homeslider/faca_pedido.jpg') }}"
                          data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="200" data-speed="1600"
                          data-start="300" data-endspeed="300">
@@ -70,14 +70,14 @@
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                         <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="250" data-speed="1600"
-                             data-start="300" data-endspeed="300">
-                            {{$nacao->nome}}
+                             data-start="300" data-endspeed="300" data-bgposition="center center">
+                            <font color="white">{{$nacao->nome}}</font>
                         </div>
                            <div class="tp-caption lfr ltr" data-x="695" data-y="332" data-speed="1600"
                              data-start="900" data-endspeed="800">
                             <a href="/cardapio/{{$nacao->id}}" class="btn btn-custom-2">Leia mais</a>
                         </div>
-                        <div class="tp-caption lfl ltl" data-x="center" data-y="bottom" data-hoffset="-230"
+                        <div class="tp-caption lfl ltl" data-x="center" data-y="100" data-hoffset="-230"
                              data-speed="2000" data-start="500" data-endspeed="800">
                             <img style="width: 50%; height: 50%" src="{{ asset('/site/images/pratos/prato' . $pratos->where('id_nacao', $nacao->id)->first()->id . '.png') }}" alt="Slide 1_1">
                         </div>
@@ -88,6 +88,7 @@
                 <li data-transition="fade" data-slotamount="4" data-masterspeed="600"
                     data-saveperformance="on" data-title="More Features">
                     <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg3"
+                         data-lazyload="{{ asset('/site/images/homeslider/faca_pedido.jpg') }}"
                          data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                     <div class="tp-caption sfr str" data-x="24" data-y="bottom" data-speed="900"
@@ -167,15 +168,15 @@
                 @foreach($bebidas as $bebida)
                     <div class="item item-hover" style="height: 400px">
                         <div class="item-image-wrapper" style="height: 250px">
-                            <figure class="item-image-container"><a href="{{'bebida' . $bebida->id }}"><img
-                                            src="{{ asset('/site/images/bebidas/bebidac'. $bebida->id .'.png') }}" alt="item1" class="item-image"> <img
-                                            src="{{ asset('/site/images/bebidas/bebidah'. $bebida->id .'.png') }}" alt="item1  Hover"
-                                            class="item-image-hover"></a></figure>
+                            <figure class="item-image-container">
+                                <img src="{{ asset('/site/images/bebidas/bebidac'. $bebida->id .'.png') }}" alt="item1" class="item-image">
+                                <img src="{{ asset('/site/images/bebidas/bebidah'. $bebida->id .'.png') }}" alt="item1  Hover" class="item-image-hover">
+                            </figure>
                             <div class="item-price-container"><span class="item-price">R$ {{ number_format($bebida->valor,2) }}</span></div>
                             <span class="new-rect">Bebidas</span>
                         </div>
                         <div class="item-meta-container">
-                            <h3 class="item-name"><a href="#">{{ $bebida->descricao }}</a></h3>
+                            <h3 class="item-name">{{ $bebida->descricao }}</h3>
 
                             <div class="item-action"><a href="meucarrinho/add/{{ $bebida->id }}" class="item-add-btn">
                                     <span class="icon-cart-text">Adicionar carrinho</span></a>
