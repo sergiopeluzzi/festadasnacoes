@@ -86,7 +86,11 @@ class PratosController extends Controller {
 
         $nacao = new Nacao;
 
-        return view('admin.pratos.show', compact('nomeForm', 'prato', 'nacao'));
+        $produto = new Produto;
+
+        $ingrediente = Ingrediente::all()->where('id_prato', $prato->id);
+
+        return view('admin.pratos.show', compact('nomeForm', 'prato', 'nacao', 'ingrediente', 'produto'));
     }
 
     public function edit(Prato $prato)

@@ -15,6 +15,13 @@
                         <p><strong>Valor: </strong>{{ $prato->valor }}</p>
                         <p><strong>Nação: </strong>{{ $nacao->find($prato->id_nacao)->nome }}</p>
                         <hr>
+                        <h3>Ingredientes</h3>
+                        <ul>
+                            @foreach($ingrediente as $item)
+                                <li>{{ $produto->find($item->id_produto)->descricao }}</li>
+                            @endforeach
+                        </ul>
+                        <hr>
                         <p><strong>Data Cadastro: </strong>{{ $prato->created_at->format('d/m/Y à\s H:i:s') }}</p>
                         <p><strong>Ultima Alteração: </strong>{{ $prato->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 
