@@ -27,12 +27,12 @@
                                     <td class="text-center no-padding">
 
                                         <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
-                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/cardapios/' . $cardapio->id) }}"><i class="glyphicon glyphicon-user"></i></a>
+                                        <a data-toggle="tooltip" data-original-title="Detalhar" class="btn btn-sm bg-gray" href="{{ URL::to('admin/cardapios/' . $cardapio->id) }}"><i class="glyphicon glyphicon-user"></i></a>
                                         <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                                        <a class="btn btn-sm bg-gray" href="{{ URL::to('admin/cardapios/' . $cardapio->id . '/edit') }}"><i class="glyphicon glyphicon-edit"></i></a>
+                                        <a data-toggle="tooltip" data-original-title="Editar" class="btn btn-sm bg-gray" href="{{ URL::to('admin/cardapios/' . $cardapio->id . '/edit') }}"><i class="glyphicon glyphicon-edit"></i></a>
                                         <a>
                                             {!! Form::open(array('class' => 'inline', 'method' => 'DELETE', 'route' => array('admin.cardapios.destroy', $cardapio->id))) !!}
-                                            {!! Form::submit('X', array('class' => 'btn bg-gray')) !!}
+                                            {!! Form::submit('X', array('class' => 'btn bg-gray', 'data-toggle' => 'tooltip', 'data-original-title' => 'Excluir', 'onclick'=>'javascript:return confirm(\'Tem certeza que deseja excluir este Cardápio?\')' )) !!}
                                             {!! Form::close() !!}
                                         </a>
                                     </td>
