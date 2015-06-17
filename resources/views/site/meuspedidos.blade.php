@@ -28,7 +28,7 @@
                 <div class="xs-margin"></div>
                 @foreach($pedidos as $pedido)
                 <h3 class="pull-left">Cod. Pedido {{ $pedido->id }}</h3>
-                <span class="pull-right">Cód. verificador ({{ bcrypt($pedido->id) }})</span>
+                <span class="pull-right">Número Voucher ({{ bcrypt($pedido->id) }})</span>
                 <!-- Informar grid meus pedidos -->
                 <div class="table-responsive">
                     <table class="table checkout-table">

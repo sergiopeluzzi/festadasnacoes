@@ -15,13 +15,12 @@
                     <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg1"
                          data-lazyload="{{ asset('/site/images/homeslider/fundo_contato.png') }}"
                          data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="250" data-speed="1600"
+                    <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="200" data-speed="1600"
                          data-start="300" data-endspeed="300">
                         {{$evento->nome}}
                     </div>
                     <div class="tp-caption rev-text lfr ltr" data-x="350" data-y="500" data-speed="1600"
                          data-start="600" data-endspeed="550">
-                        <font color="blue">{{$evento->descricao}}</font>
                     </div>
                     <div class="tp-caption lfr ltr" data-x="695" data-y="332" data-speed="1600"
                          data-start="900" data-endspeed="800">
@@ -34,11 +33,10 @@
                 </li>
 
                 <!-- Informar pedido-->
-                <li data-transition="fade" data-slotamount="5" data-masterspeed="600"
-                    data-saveperformance="on" data-title="Learn More">
-                    <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg2"
+                <li data-transition="fade" data-slotamount="5" data-masterspeed="600" data-saveperformance="on" data-title="Learn More">
+                    <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg1"
+                         data-lazyload="{{ asset('/site/images/homeslider/faca_pedido.jpg') }}"
                          data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
-
                     <div class="tp-caption rev-title lfr ltr" data-x="755" data-y="238" data-speed="1600"
                          data-start="750" data-endspeed="300">
                         FAÇA SEU PEDIDO
@@ -47,15 +45,11 @@
                          data-start="1050" data-endspeed="550">
                         Agora é fácil!
                         <br>
-                        E xperimente todos os nossos pratos!
+                        Experimente todos os nossos pratos!
                     </div>
                     <div class="tp-caption lfr ltr" data-x="755" data-y="360" data-speed="1600"
                          data-start="1350" data-endspeed="800">
                         <a href="#" class="btn btn-custom-2">Leia mais</a>
-                    </div>
-                    <div class="tp-caption rev-price randomrotate randomrotateout" data-x="360"
-                         data-y="55" data-speed="1200" data-start="2000" data-endspeed="400">
-                        <i class="fa fa-credit-card fa-3x"></i>
                     </div>
                     <div class="tp-caption lfl ltl" data-x="center" data-y="center" data-hoffset="-204"
                          data-speed="1750" data-start="400" data-endspeed="800">
@@ -70,14 +64,14 @@
                 @foreach($nacoes as $nacao)
                     <!-- Informar nação goias-->
                     <li data-transition="fade" data-slotamount="6" data-masterspeed="600"
-                        data-saveperformance="on" data-title="Special Offers">
+                        data-saveperformance="on">
                         <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg1"
                              data-lazyload="{{ asset('/site/images/homeslider/bandeira'. $nacao->id .'.jpg') }}"
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                         <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="250" data-speed="1600"
                              data-start="300" data-endspeed="300">
-                            <font size="52" color="#FFFFFF">{{$nacao->nome}}</font>
+                            {{$nacao->nome}}
                         </div>
                            <div class="tp-caption lfr ltr" data-x="695" data-y="332" data-speed="1600"
                              data-start="900" data-endspeed="800">

@@ -23,6 +23,8 @@
     <!-- scripts -->
     <script src="{{ asset('/site/js/jquery-1.11.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('/site/js/jquery.maskedinput-1.1.4.pack.js') }}"></script>
+    <script type="text/javascript" src="http://updateyourbrowser.net/asn.js"> </script>
+
 
 </head>
 
@@ -153,11 +155,11 @@
                         <div class="header-box contact-phones pull-right clearfix">
                             <span class="header-box-icon">
                                 <style>
-                                    .fa-phone {
+                                    .fa-whatsapp {
                                         color: #FF0000;
                                     }
                                 </style>
-                                <i class="fa fa-phone fa-3x"></i>
+                                <i class="fa fa-whatsapp fa-3x"></i>
                             </span>
                             <ul class="pull-left">
                                 <li>(69) 3441-5237</li>
@@ -179,7 +181,7 @@
                                 <div id="responsive-nav">
                                     <div id="responsive-nav-button">
                                         Menu
-                                        <span id="responsive-nav-button-icon"></span>
+                                        <i class="fa fa-caret-square-o-down"></i>
                                     </div>
                                 </div>
                                 <ul class="menu clearfix">
