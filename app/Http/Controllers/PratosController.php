@@ -8,6 +8,7 @@ use App\Ingrediente;
 use App\Nacao;
 use App\Prato;
 use App\Produto;
+use App\PedidoPrato;
 use Illuminate\Http\Request;
 
 class PratosController extends Controller {
@@ -125,11 +126,24 @@ class PratosController extends Controller {
 
     public function destroy(Prato $prato)
     {
-        $prato->delete();
+        $c = count(PedidoPrato::where('id_prato', $prato->id)->get());
 
-        flash()->success('Prato excluído com sucesso');
+        if($c > 0)
+        {
+            flash()->error("O Prato $prato->nome não pode ser excluído!");
 
-        return redirect('admin/pratos');
+            return redirect('admin/pratos');
+        }
+        else
+        {
+            $prato->delete();
+
+            flash()->success('Prato excluído com sucesso');
+
+            return redirect('admin/pratos');
+        }
+
+
     }
 
 }

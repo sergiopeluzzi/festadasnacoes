@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Requests\NacoesRequest;
 use App\Nacao;
+use App\Prato;
 use Illuminate\Http\Request;
 
 class NacoesController extends Controller {
@@ -85,12 +86,23 @@ class NacoesController extends Controller {
     {
         $eventonacao = EventoNacao::where('id_nacao', $nacao->id)->latest();
 
-        $eventonacao->delete();
+        $c = count(Prato::where('id_nacao', $nacao->id)->get());
 
-        $nacao->delete();
+        if($c > 0)
+        {
+            flash()->error("A Nação $nacao->nome não pode ser excluída!");
 
-        flash()->success('Nação excluída com sucesso');
+            return redirect('admin/nacoes');
+        }
+        else
+        {
+            $eventonacao->delete();
 
-        return redirect('admin/nacoes');
+            $nacao->delete();
+
+            flash()->success('Nação excluída com sucesso');
+
+            return redirect('admin/nacoes');
+        }
     }
 }

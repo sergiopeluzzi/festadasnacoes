@@ -116,11 +116,24 @@ class CardapiosController extends Controller {
 
     public function destroy(Cardapio $cardapio)
     {
-        $cardapio->delete();
+        $c = count(CardapioPrato::where('id_cardapio', $cardapio->id)->get());
 
-        flash()->success('Cardápio excluído com sucesso');
+        if($c > 0)
+        {
+            flash()->error("O Cardápio $cardapio->descricao não pode ser excluído!");
 
-        return redirect('admin/cardapios');
+            return redirect('admin/cardapios');
+        }
+        else
+        {
+            $cardapio->delete();
+
+            flash()->success('Cardápio excluído com sucesso');
+
+            return redirect('admin/cardapios');
+        }
+
+
     }
 
 }

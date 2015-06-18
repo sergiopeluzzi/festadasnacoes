@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Bebida;
+use App\PedidoBebida;
 use App\Http\Requests\BebidasRequest;
 use Illuminate\Http\Request;
 
@@ -60,11 +61,22 @@ class BebidasController extends AdminController {
 
     public function destroy(Bebida $bebida)
     {
-        $bebida->delete();
+        $c = count(PedidoBebida::where('id_bebida', $bebida->id)->get());
 
-        flash()->success('Bebida excluída com sucesso');
+        if($c > 0)
+        {
+            flash()->error("A Bebida $bebida->descricao não pode ser excluída!");
 
-        return redirect('admin/bebidas');
+            return redirect('admin/bebidas');
+        }
+        else
+        {
+            $bebida->delete();
+
+            flash()->success('Bebida excluída com sucesso');
+
+            return redirect('admin/bebidas');
+        }
     }
 }
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Requests\UnidadesRequest;
 use App\Unidade;
+use App\Produto;
 use Illuminate\Http\Request;
 
 class UnidadesController extends Controller {
@@ -63,11 +64,23 @@ class UnidadesController extends Controller {
 
     public function destroy(Unidade $unidade)
     {
-        $unidade->delete();
+        $c = count(Produto::where('id_unidade', $unidade->id)->get());
 
-        flash()->success('Unidade excluída com sucesso');
+        if($c > 0)
+        {
+            flash()->error("Unidade $unidade->sigla não pode ser excluída!");
 
-        return redirect('admin/unidades');
+            return redirect('admin/unidades');
+        }
+        else
+        {
+            $unidade->delete();
+
+            flash()->success('Unidade excluída com sucesso');
+
+            return redirect('admin/unidades');
+        }
+
     }
 
 }
