@@ -9,7 +9,7 @@
                         Lista de {{ $nomeForm }}
                     </div>
                     <div class="panel-body">
-                        <table id="tb_funcionarios" class="table table-bordered table-hover">
+                        <table id="tb_nacoes" class="table table-bordered table-hover">
                             <thead class="bg-red">
                             <tr>
                                 <th class="text-center no-padding">Código</th>
@@ -48,5 +48,17 @@
             </div>
         </div>
     </div>
+
+@stop
+
+@section('scripts')
+
+    <script type="text/javascript">
+
+        $(document).ready( function () {
+            $('#tb_nacoes').DataTable();
+        } );
+
+    </script>
 
 @stop

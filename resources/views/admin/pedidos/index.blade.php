@@ -6,19 +6,7 @@
             <div class="col-md-11">
                 <div class="panel">
                     <div class="panel-heading bg-red">
-                        <div class="row" style="padding: 10px">
-                            <span style="font-size: 160%">{{ $nomeForm }}</span>
-                            {!! Form::open(['url' => 'admin/vendas/busca', 'method' => 'get', 'class' => 'form col-md-4 pull-right']) !!}
-                                <div class="input-group">
-                                    <input type="text" name="q" class="form-control" placeholder="Buscar...">
-                                    <span class="input-group-btn">
-                                        <button type="submit" class="btn btn-flat">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                            {!! Form::close() !!}
-                        </div>
+                        {{ $nomeForm }}
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -39,7 +27,7 @@
                                 </div>
                             </div>
                         </div>
-                        <table id="tb_clientes" class="table table-bordered table-hover">
+                        <table id="tb_pedidos" class="table table-bordered table-hover">
                             <thead class="bg-red">
                             <tr>
                                 <th class="text-center no-padding">Código</th>
@@ -63,7 +51,7 @@
                                         <td class="text-center"><span data-toggle="tooltip" data-original-title="Pendente" class="badge bg-red">|</span></td>
                                     @endif
                                     <td class="text-center no-padding">
-                                        <a data-toggle="tooltip" data-original-title="Editar" class="btn btn-sm bg-gray" href="{{ URL::to('admin/vendas/' . $pedido->id) }}"><i class="glyphicon glyphicon-user"></i></a>
+                                        <a data-toggle="tooltip" data-original-title="Detalhar" class="btn btn-sm bg-gray" href="{{ URL::to('admin/vendas/' . $pedido->id) }}"><i class="glyphicon glyphicon-user"></i></a>
                                         <a data-toggle="tooltip" data-original-title="Baixar" class="btn btn-sm bg-gray" href="{{ URL::to('admin/vendas/baixar/' . $pedido->id) }}"><i class="glyphicon glyphicon-arrow-down"></i></a>
                                     </td>
                                 </tr>
@@ -100,5 +88,17 @@
             </div>
         </div>
     </div>
+
+@stop
+
+@section('scripts')
+
+<script type="text/javascript">
+
+    $(document).ready( function () {
+        $('#tb_pedidos').DataTable();
+    } );
+
+</script>
 
 @stop

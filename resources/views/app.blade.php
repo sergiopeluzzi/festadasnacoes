@@ -10,6 +10,9 @@
     <link href="{{ asset('/dist/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- Ionicons 2.0.0 -->
     <link href="{{ asset('/dist/css/ionicons/2.0.0/ionicons.min.css') }}" rel="stylesheet" type="text/css" />
+    <!-- DataTables -->
+    <link href="{{ asset('/dist/css/jquery.dataTables.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('/plugins/datatables/dataTables.bootstrap.css') }}" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="{{ asset('/dist/css/AdminLTE.min.css') }}" rel="stylesheet" type="text/css" />
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -117,8 +120,11 @@
 <script src="{{ asset('/dist/js/demo.js') }}" type="text/javascript"></script>
 <!-- Scrip para as mascaras -->
 <script src="{{ asset('/dist/js/jquery.mask.min.js') }}" type="text/javascript"></script>
-<script src="{{ asset('/plugins/input-mask/jquery.inputmask') }}"></script>
-<script src="{{ asset('/plugins/input-mask/jquery.inputmask.date.extensions') }}"></script>
-<script src="{{ asset('/plugins/input-mask/jquery.inputmask.extensions') }}"></script>
+<script src="{{ asset('/plugins/input-mask/jquery.inputmask') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/input-mask/jquery.inputmask.date.extensions') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/input-mask/jquery.inputmask.extensions') }}" type="text/javascript"></script>
+<!-- Datatables -->
+<script src="{{ asset('/plugins/datatables/dataTables.bootstrap.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/datatables/jquery.dataTables.js') }}" type="text/javascript"></script>
 </body>
 </html>

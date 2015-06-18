@@ -49,3 +49,15 @@
     </div>
 
 @stop
+
+@section('scripts')
+
+    <script type="text/javascript">
+
+        $(document).ready( function () {
+            $('#tb_pratos').DataTable();
+        } );
+
+    </script>
+
+@stop

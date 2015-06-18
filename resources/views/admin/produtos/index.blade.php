@@ -53,3 +53,15 @@
     </div>
 
 @stop
+
+@section('scripts')
+
+    <script type="text/javascript">
+
+        $(document).ready( function () {
+            $('#tb_produtos').DataTable();
+        } );
+
+    </script>
+
+@stop

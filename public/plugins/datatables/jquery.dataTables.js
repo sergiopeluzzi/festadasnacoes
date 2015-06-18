@@ -9182,7 +9182,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sFirst": "First",
+				"sFirst": "Primeiro ",
 			
 			
 				/**
@@ -9203,7 +9203,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sLast": "Last",
+				"sLast": "- Ultimo",
 			
 			
 				/**
@@ -9224,7 +9224,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "- Proximo",
 			
 			
 				/**
@@ -9245,7 +9245,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "Anterior "
 			},
 		
 			/**
@@ -9266,7 +9266,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "Nao existem dados nesta tabela",
 		
 		
 			/**
@@ -9287,7 +9287,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "Showing _START_ to _END_ of _TOTAL_ entries",
+			"sInfo": "Mostrando _START_ - _END_ de _TOTAL_ registros",
 		
 		
 			/**
@@ -9306,7 +9306,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "Showing 0 to 0 of 0 entries",
+			"sInfoEmpty": "Mostrando 0 - 0 de 0 registros",
 		
 		
 			/**
@@ -9326,7 +9326,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "(filtered from _MAX_ total entries)",
+			"sInfoFiltered": "(filtrandro de _MAX_ registros)",
 		
 		
 			/**
@@ -9407,7 +9407,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "Show _MENU_ entries",
+			"sLengthMenu": "Mostrar _MENU_ registros",
 		
 		
 			/**
@@ -9429,7 +9429,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLoadingRecords": "Loading...",
+			"sLoadingRecords": "Carregando...",
 		
 		
 			/**
@@ -9448,7 +9448,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sProcessing": "Processing...",
+			"sProcessing": "Processando...",
 		
 		
 			/**
@@ -9481,7 +9481,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "Search:",
+			"sSearch": "Busca:",
 		
 		
 			/**
@@ -9524,7 +9524,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No matching records found"
+			"sZeroRecords": "Nenhum resultado encontrado"
 		},
 	
 	
