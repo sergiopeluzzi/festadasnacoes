@@ -331,22 +331,23 @@
                 </div>
                 <div class="sm-margin"></div>
                 <div class="row">
-                    <div class="brand-slider owl-carousel"><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 1"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 2"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 3"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 4"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 5"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 6"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 7"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 8"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 9"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 10"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 11"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 12"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 13"></a><a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 14"></a> <a href="#">
-                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 15"></a></div>
+                    <div class="brand-slider owl-carousel"><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 1"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 2"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 3"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 4"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 5"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 6"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 7"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 8"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 9"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 10"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 11"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 12"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 13"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 14"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank">
+                            <img src="{{ asset('/site/images/brands/brand-logo.png') }}" alt="Brand Logo 15"></a><a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835?fref=ts" target="_blank"></a>
+                    </div>
                 </div><!-- fim div linha patrocinador -->
             </div><!-- fim div carrosel patrocinador -->
         </div> <!-- fim div container -->

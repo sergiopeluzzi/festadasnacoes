@@ -83,7 +83,7 @@
                                             <i class="fa fa-list"></i>
                                         </span>
                                         <span class="input-text">
-                                            CPF
+                                            CPF&#42;
                                         </span>
                                     </span>
                                     {!! Form::text('cpf', null, ['id' => 'cpf', 'class' => 'form-control input-lg', 'placeholder' => 'Seu CPF', 'required' ]) !!}

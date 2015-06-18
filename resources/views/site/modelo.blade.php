@@ -398,9 +398,9 @@
                     </div>
                 </div><!-- Fim do .modal body -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-custom" data-dismiss="modal">CANCELAR</button>
                     <button class="btn btn-custom-2">ENVIAR</button>
-                </div> <!-- Fim do .modal-footer -->
+                    <button type="button" class="btn btn-custom" data-dismiss="modal">CANCELAR</button>
+                 </div> <!-- Fim do .modal-footer -->
             </div><!-- Fim do .modal-content -->
         </div><!-- Fim do .modal-dialog -->
     </form> <!-- fim form modal login -->

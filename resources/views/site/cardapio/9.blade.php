@@ -56,41 +56,45 @@
                                 <div class="tab-container left product-detail-tab clearfix">
                                     <ul class="nav-tabs">
                                         <li class="active">
-                                            <a href="#overview" data-toggle="tab">Nação</a>
+                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  BRASIL - GOIÁS</a>
                                         </li>
                                         <li>
-                                            <a href="#description" data-toggle="tab">Prato</a>
+                                            <a href="#description" data-toggle="tab"><i class="fa fa-cutlery fa-lg"></i> MODO DE PREPARO</a>
                                         </li>
                                     </ul>
                                     <!-- Informar sobre a nação do produto -->
                                     <div class="tab-content clearfix">
-                                        <div class="tab-pane active" id="overview"><p>Goiás é uma das 27 unidades federativas do Brasil.
-                                                Situa-se a leste da Região Centro-Oeste,no Planalto Central brasileiro. O seu território é de 340.086 km²,
-                                                sendo delimitado pelos estados do Mato Grosso do Sul a sudoeste, Mato Grosso a oeste, Tocantins a norte,
-                                                Bahia a nordeste, Minas Gerais a leste, sudeste e sul e pelo Distrito Federal a leste.</p>
+                                        <div class="tab-pane active" id="overview">
+                                            <p align="justify">Itália (em italiano: Italia [iˈtaːlja]),
+                                                oficialmente República Italiana (em italiano: Repubblica Italiana),
+                                                é uma república parlamentar unitária localizada no centro-sul da Europa (Europa meridional).
+                                                Ao norte, faz fronteira com França, Suíça, Áustria e Eslovênia ao longo dos Alpes. Ao sul,
+                                                que consiste na totalidade da península Itálica, Sicília, Sardenha, as duas maiores ilhas no Mar Mediterrâneo,
+                                                e muitas outras ilhas menores ficam no entorno do território italiano. Os Estados independentes
+                                                de San Marino e do Vaticano são enclaves no interior de Itália, enquanto Campione d'Italia é um enclave italiano na Suíça.
+                                                O território do país abrange cerca de 301 338 km² e é influenciado por um clima temperado sazonal.
+                                                Com 60,6 milhões de habitantes, é a quinta nação mais populosa da Europa e a 23ª do mundo.
+                                            </p>
+                                            <p align="justify">
+                                                Roma, a capital italiana, foi durante séculos o centro político e religioso
+                                                da civilização ocidental como a capital do Império Romano e como sede da Santa
+                                                Sé. Após o declínio dos romanos, a Itália sofreu inúmeras invasões de povos estrangeiros,
+                                                desde tribos germânicas, como os lombardos e ostrogodos, aos bizantinos e, mais tarde, os normandos, entre outros.
+                                            </p>
 
-                                            <p>Goiânia é a capital e maior cidade do estado, assim como sede da Região Metropolitana de Goiânia,
-                                                a única no estado. Outras cidades importantes, fora da região metropolitana de Goiânia, são:
-                                                Anápolis, Rio Verde, Itumbiara, Catalão, Luziânia, Formosa, Jataí, Porangatu, Caldas Novas,
-                                                Quirinópolis e Niquelândia, que também são as maiores cidades em população do interior do estado,
-                                                além das cidades que compõem o Entorno do Distrito Federal. Ao todo são 246 municípios .</p>
-
-                                            <p>Com 6 523 222 habitantes2 é o estado mais populoso do Centro-Oeste e o nono mais rico do país. Segundo o Tribunal
-                                                Regional Eleitoral de Goiás, em junho de 2011 registram-se em Goiás 4.061.613 eleitores 7</p>
                                         </div>
-
-                                        <div class="tab-pane" id="description"><p>The perfect mix of portability and
-                                                performance in a slim 1" form factor:</p>
+                                        <div class="tab-pane" id="description">
+                                            <div align="center">
+                                                <img src="/site/images/homeslider/cozinha.png">
+                                            </div>
+                                            <br>
                                             <ul class="product-details-list">
-                                                <li>3rd gen Intel® Core™ i7 quad core processor available;</li>
-                                                <li>Windows 8 Pro available;</li>
-                                                <li>13.3" and 15.5" screen sizes available;</li>
-                                                <li>Double your battery life with available sheet battery;</li>
-                                                <li>4th gen Intel® Core™ i7 processor available;</li>
-                                                <li>Full HD TRILUMINOS IPS touchscreen (1920 x 1080);</li>
-                                                <li>Super fast 512GB PCIe SSD available;</li>
-                                                <li>Ultra-light at just 2.34 lbs.</li>
-                                                <li>And more...</li>
+                                                <p align="justify">O macarrão é levado para cozinhar,
+                                                    na agua que está cozinhada é adicionado sal a gosto, óleo vegetal.
+                                                    Após o cozimento do macarrão, é adicionado um super molho de carne moida com manjericão, uma delícia!!!
+                                                    <br>
+                                                </p>
+
                                             </ul>
                                         </div>
                                     </div>

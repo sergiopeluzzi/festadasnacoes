@@ -56,41 +56,45 @@
                                 <div class="tab-container left product-detail-tab clearfix">
                                     <ul class="nav-tabs">
                                         <li class="active">
-                                            <a href="#overview" data-toggle="tab">Nação</a>
+                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  BRASIL - GOIÁS</a>
                                         </li>
                                         <li>
-                                            <a href="#description" data-toggle="tab">Prato</a>
+                                            <a href="#description" data-toggle="tab"><i class="fa fa-cutlery fa-lg"></i> MODO DE PREPARO</a>
                                         </li>
                                     </ul>
                                     <!-- Informar sobre a nação do produto -->
                                     <div class="tab-content clearfix">
-                                        <div class="tab-pane active" id="overview"><p>Goiás é uma das 27 unidades federativas do Brasil.
-                                                Situa-se a leste da Região Centro-Oeste,no Planalto Central brasileiro. O seu território é de 340.086 km²,
-                                                sendo delimitado pelos estados do Mato Grosso do Sul a sudoeste, Mato Grosso a oeste, Tocantins a norte,
-                                                Bahia a nordeste, Minas Gerais a leste, sudeste e sul e pelo Distrito Federal a leste.</p>
+                                        <div class="tab-pane active" id="overview">
+                                            <p align="justify">A Irlanda (em irlandês: Éire,
+                                                por vezes chamada (de maneira não oficial, para diferenciá-la da ilha de mesmo nome,
+                                                que divide com a Irlanda do Norte) República da Irlanda (em irlandês: Poblacht na hÉireann e
+                                                em inglês: Republic of Ireland),4 é um Estado soberano da Europa que ocupa cerca de cinco sextos da
+                                                ilha homônima. É uma república constitucional governada como uma democracia parlamentar, com um presidente eleito
+                                                servir como chefe de Estado.
+                                            </p>
+                                            <p align="justify">Considerada um país desenvolvido, a Irlanda tem o décimo primeiro maior Índice de
+                                                Desenvolvimento Humano (IDH) do mundo,
+                                                 além de ótimas classificações em índices que medem o grau de democracia e
+                                                liberdades como a de imprensa, econômica e política.
+                                                Além da União Europeia (UE), a Irlanda também é membro do Conselho da Europa,
+                                                da Organização para a Cooperação e Desenvolvimento Econômico (OCDE),
+                                                da Organização Mundial do Comércio (OMC) e da Organização das Nações Unidas (ONU).
+                                                Sua capital é Dublin e sua população é estimada em 4,58 milhões de habitantes.
+                                            </p>
 
-                                            <p>Goiânia é a capital e maior cidade do estado, assim como sede da Região Metropolitana de Goiânia,
-                                                a única no estado. Outras cidades importantes, fora da região metropolitana de Goiânia, são:
-                                                Anápolis, Rio Verde, Itumbiara, Catalão, Luziânia, Formosa, Jataí, Porangatu, Caldas Novas,
-                                                Quirinópolis e Niquelândia, que também são as maiores cidades em população do interior do estado,
-                                                além das cidades que compõem o Entorno do Distrito Federal. Ao todo são 246 municípios .</p>
-
-                                            <p>Com 6 523 222 habitantes2 é o estado mais populoso do Centro-Oeste e o nono mais rico do país. Segundo o Tribunal
-                                                Regional Eleitoral de Goiás, em junho de 2011 registram-se em Goiás 4.061.613 eleitores 7</p>
                                         </div>
-
-                                        <div class="tab-pane" id="description"><p>The perfect mix of portability and
-                                                performance in a slim 1" form factor:</p>
+                                        <div class="tab-pane" id="description">
+                                            <div align="center">
+                                                <img src="/site/images/homeslider/cozinha.png">
+                                            </div>
+                                            <br>
                                             <ul class="product-details-list">
-                                                <li>3rd gen Intel® Core™ i7 quad core processor available;</li>
-                                                <li>Windows 8 Pro available;</li>
-                                                <li>13.3" and 15.5" screen sizes available;</li>
-                                                <li>Double your battery life with available sheet battery;</li>
-                                                <li>4th gen Intel® Core™ i7 processor available;</li>
-                                                <li>Full HD TRILUMINOS IPS touchscreen (1920 x 1080);</li>
-                                                <li>Super fast 512GB PCIe SSD available;</li>
-                                                <li>Ultra-light at just 2.34 lbs.</li>
-                                                <li>And more...</li>
+                                                <p align="justify">O frape é um prato delicioso, adicione leite moça,
+                                                    com algumas colheres de nescafé, após adicionar sorvete de creme,
+                                                    e por cima uma bela camada de chantilly, é para deixar qualquer um com água na boca.
+                                                    <br>
+                                                </p>
+
                                             </ul>
                                         </div>
                                     </div>
