@@ -100,7 +100,9 @@ class CardapiosController extends Controller {
             $prato[$values['id']] = Nacao::where('id', $values['id_nacao'])->first()->nome . ' - ' . $values['descricao'];
         }
 
-        return view('admin.cardapios.edit', compact('nomeForm', 'cardapio', 'evento'));
+        $cardapioPratos = CardapioPrato::where('id_cardapio', $cardapio->id)->get();
+
+        return view('admin.cardapios.edit', compact('nomeForm', 'cardapio', 'evento', 'prato', 'cardapioPratos'));
     }
 
     public function update(Cardapio $cardapio, CardapiosRequest $request)

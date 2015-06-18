@@ -10,7 +10,7 @@
                 </div>
                 <div class="panel-body">
                     {!! Form::open(['id' => 'frmCardapios', 'url' => 'admin/cardapios']) !!}
-                        @include ('admin.cardapios.form', ['botao' => 'Salvar'])
+                        @include ('admin.cardapios.form', ['botao' => 'Salvar', 'cardapioPratos' => null])
                     {!! Form::close() !!}
                 </div>
                 @include ('errors.list')

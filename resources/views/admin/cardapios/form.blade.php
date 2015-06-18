@@ -35,7 +35,15 @@
                 </tr>
                 </thead>
                 <tbody id="lista">
-
+                    @if(count($cardapioPratos) > 0)
+                        @foreach($cardapioPratos as $cprato)
+                            <tr id="item_{{$cprato->id_prato}}">
+                                <td class='text-center'>{{ $cprato->id_prato }}</td>
+                                <td>{{ $prato[$cprato->id_prato] }}</td>
+                                <td class="text-center"><a class="glyphicon glyphicon-remove" onclick="removeElement('{{'item_'.$cprato->id_prato}}')" href="javascript:void(0);"></a></td>
+                            </tr>
+                        @endforeach
+                    @endif
                 </tbody>
             </table>
         </div>
