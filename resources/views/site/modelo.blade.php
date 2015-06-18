@@ -295,7 +295,7 @@
                     <ul class="links">
                         <li><a href="{{ url('meuspedidos') }}">Meus pedidos</a></li>
                         <li><a href="{{ url('minhaconta') }}">Minha conta</a></li>
-                        <li><a href="{{ url('cadastrar') }}">Sugestões</a></li>
+                        <li><a href="{{ url('contato') }}">Sugestões</a></li>
                     </ul>
                 </div>
 
