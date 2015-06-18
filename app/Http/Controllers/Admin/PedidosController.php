@@ -53,6 +53,10 @@ class PedidosController extends AdminController {
         {
             flash()->warning('Pedido ' . $id . ' já foi baixado');
         }
+        else
+        {
+            flash()->success('Pedido ' . $id . ' baixado com sucesso');
+        }
 
         Pedido::where('id', $id)->update(['baixado' => 1]);
 

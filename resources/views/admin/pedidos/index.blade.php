@@ -33,7 +33,8 @@
                                 <th class="text-center no-padding">Código</th>
                                 <th class="text-center no-padding">Cliente</th>
                                 <th class="text-center no-padding">Valor</th>
-                                <th class="text-center no-padding">Data</th>
+                                <th class="text-center no-padding">Voucher</th>
+                                <th class="text-center no-padding">CPF</th>
                                 <th class="text-center no-padding">Baixado</th>
                                 <th class="text-center no-padding">Ações</th>
                             </tr>
@@ -43,8 +44,9 @@
                                 <tr>
                                     <td width="100px" class="text-center">{{ $pedido->id }}</td>
                                     <td>{{ $cliente->find($pedido->id_cliente)->nome }}</td>
-                                    <td width="150px" class="text-right">R$ {{ number_format($pedido->valor,2) }}</td>
-                                    <td width="200px" class="text-center">{{ $pedido->created_at->format('d/m/Y à\s H:i:s') }}</td>
+                                    <td width="100px" class="text-right">R$ {{ number_format($pedido->valor,2) }}</td>
+                                    <td width="100px" class="text-center">{{ $pedido->id . $pedido->created_at->format('i') . $pedido->created_at->format('s') }}</td>
+                                    <td width="150px" class="text-center">{{ $cliente->find($pedido->id_cliente)->cpf }}</td>
                                     @if($pedido->baixado == 1)
                                         <td class="text-center"><span data-toggle="tooltip" data-original-title="Baixado" class="badge bg-green">|</span></td>
                                     @else

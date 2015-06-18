@@ -100,7 +100,9 @@ class CardapiosController extends Controller {
             $prato[$values['id']] = Nacao::where('id', $values['id_nacao'])->first()->nome . ' - ' . $values['descricao'];
         }
 
-        return view('admin.cardapios.edit', compact('nomeForm', 'cardapio', 'evento'));
+        $cardapioPratos = CardapioPrato::where('id_cardapio', $cardapio->id)->get();
+
+        return view('admin.cardapios.edit', compact('nomeForm', 'cardapio', 'evento', 'prato', 'cardapioPratos'));
     }
 
     public function update(Cardapio $cardapio, CardapiosRequest $request)
@@ -116,11 +118,24 @@ class CardapiosController extends Controller {
 
     public function destroy(Cardapio $cardapio)
     {
-        $cardapio->delete();
+        $c = count(CardapioPrato::where('id_cardapio', $cardapio->id)->get());
 
-        flash()->success('Cardápio excluído com sucesso');
+        if($c > 0)
+        {
+            flash()->error("O Cardápio $cardapio->descricao não pode ser excluído!");
 
-        return redirect('admin/cardapios');
+            return redirect('admin/cardapios');
+        }
+        else
+        {
+            $cardapio->delete();
+
+            flash()->success('Cardápio excluído com sucesso');
+
+            return redirect('admin/cardapios');
+        }
+
+
     }
 
 }

@@ -12,7 +12,7 @@
                     <div class="panel-body">
                         <p><strong>Código: </strong>{{ $prato->id }}</p>
                         <p><strong>Descrição: </strong>{{ $prato->descricao }}</p>
-                        <p><strong>Valor: </strong>{{ $prato->valor }}</p>
+                        <p><strong>Valor: </strong>R$ {{ number_format($prato->valor,2) }}</p>
                         <p><strong>Nação: </strong>{{ $nacao->find($prato->id_nacao)->nome }}</p>
                         <hr>
                         <h3>Ingredientes</h3>

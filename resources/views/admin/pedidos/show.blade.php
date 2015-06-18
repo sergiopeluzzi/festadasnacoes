@@ -13,6 +13,7 @@
                         <p><strong>Código: </strong>{{ $pedido->id }}</p>
                         <p><strong>Cliente: </strong>{{$cliente->find($pedido->id_cliente)->nome }}</p>
                         <p><strong>Data: </strong>{{ $pedido->created_at->format('d/m/Y à\s H:i:s') }}</p>
+                        <p><strong>Baixado: @if ($pedido->baixado == 1) <span style="color:green; font-size:26px;">SIM</span> @else <span style="color:red; font-size:26px;">NÃO</span>@endif</strong></p>
                         <hr>
                         <h4 class="text-red">Pratos</h4>
                         <table class="table table-bordered table-hover">
@@ -43,6 +44,9 @@
                         <p><strong>Ultima Alteração: </strong>{{ $pedido->updated_at->format('d/m/Y à\s H:i:s') }}</p>
 
                         <a href="/admin/vendas" class="btn btn-danger">Voltar</a>
+                        @if ($pedido->baixado != 1)
+                            <a href="{{ URL::to('admin/vendas/baixar/' . $pedido->id) }}" class="btn btn-danger">Baixar</a>
+                        @endif
                     </div>
                     @include ('errors.list')
                 </div>

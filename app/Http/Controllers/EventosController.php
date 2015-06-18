@@ -2,6 +2,7 @@
 
 use App\Http\Requests;
 use App\Evento;
+use App\EventoNacao;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\EventosRequest;
@@ -68,11 +69,21 @@ class EventosController extends Controller {
 
     public function destroy(Evento $evento)
     {
-        $evento->delete();
+        $c = count(EventoNacao::where('id_evento', $evento->id)->get());
 
-        flash()->success('Evento excluído com sucesso');
+        if ($c > 0)
+        {
+            flash()->error("O Evento $evento->nome não pode ser excluído!");
 
-        return redirect('admin/eventos');
+            return redirect('admin/eventos');
+        }
+        else
+        {
+            $evento->delete();
+
+            flash()->success('Evento excluído com sucesso');
+
+            return redirect('admin/eventos');
+        }
     }
-
 }

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProdutosRequest;
 use App\Produto;
 use App\Unidade;
+use App\Ingrediente;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller {
@@ -80,11 +81,24 @@ class ProdutosController extends Controller {
 
     public function destroy(Produto $produto)
     {
-        $produto->delete();
+        $c = count(Ingrediente::where('id_produto', $produto->id)->get());
 
-        flash()->success('Produto excluído com sucesso');
+        if ($c > 0)
+        {
+            flash()->error("O Produto $produto->descricao não pode ser excluído!");
 
-        return redirect('admin/produtos');
+            return redirect('admin/produtos');
+        }
+        else
+        {
+            $produto->delete();
+
+            flash()->success('Produto excluído com sucesso');
+
+            return redirect('admin/produtos');
+        }
+
+
     }
 
 }

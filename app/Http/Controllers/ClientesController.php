@@ -4,6 +4,7 @@ use App\Cliente;
 use App\Http\Requests;
 use App\Http\Requests\ClientesRequest;
 use App\User;
+use App\Pedido;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -78,12 +79,23 @@ class ClientesController extends Controller {
     {
         $usuario = User::findOrFail($cliente->id_user);
 
-        $cliente->delete();
+        $c = count(Pedido::where('id_cliente', $cliente->id)->get());
 
-        $usuario->delete();
+        if ($c > 0)
+        {
+            flash()->error("O Cliente $cliente->nome não pode ser excluído!");
 
-        flash()->success('Cliente excluído com sucesso');
+            return redirect('admin/clientes');
+        }
+        else
+        {
+            $cliente->delete();
 
-        return redirect('admin/clientes');
+            $usuario->delete();
+
+            flash()->success('Cliente excluído com sucesso');
+
+            return redirect('admin/clientes');
+        }
     }
 }
