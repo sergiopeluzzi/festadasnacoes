@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 
 class PratosController extends Controller {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Pratos';

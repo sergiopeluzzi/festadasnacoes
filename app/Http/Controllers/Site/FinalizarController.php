@@ -6,10 +6,14 @@ use App\Http\Requests\PedidosRequest;
 use App\Pedido;
 use App\PedidoPrato;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use JulioBitencourt\Cart\Session;
+use PHPSC\PagSeguro\Items\Item;
+use PHPSC\PagSeguro\Requests\Checkout\CheckoutBuilderTest;
+use PHPSC\PagSeguro\Requests\Checkout\CheckoutService;
 use App\Nacao;
 use App\Prato;
 use App\Cliente;
@@ -40,11 +44,30 @@ class FinalizarController extends SiteController  {
         return view('site.finalizar', compact('cart', 'carrinho', 'nacao', 'prato', 'nacoes'));
 	}
 
-    public function fechar(PedidosRequest $request)
+    public function fechar(CheckoutService $checkoutService, PedidosRequest $request)
     {
         $dados = $this->cart->all();
 
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
         $cliente = Cliente::where('id_user', Auth::user()->id)->first()->id;
+
+        $carrinho = $cart['items'];
+
+        $checkout = $checkoutService->createCheckoutBuilder();
+
+        foreach($carrinho as $itens)
+        {
+            $checkout=$checkout->addItem(new Item($itens['id'], $itens['description'], $itens['price'], $itens['quantity']));
+        }
+
+        $checkout=$checkout->getCheckout();
+
+        $response = $checkoutService->checkout($checkout);
 
         $pedido = new Pedido;
         $pedido->id_cliente = $cliente;
@@ -64,8 +87,8 @@ class FinalizarController extends SiteController  {
 
         $this->cart->destroy();
 
+        return redirect($response->getRedirectionUrl());
 
-        return redirect('/finalizar/sucesso');
     }
 
     public function sucesso()
@@ -80,7 +103,31 @@ class FinalizarController extends SiteController  {
 
         $carrinho = $this->cart->all();
 
+        $ultiPedido = Pedido::latest()->first();
+
+        $cliente = Cliente::find($ultiPedido->id_cliente);
+
+        Mail::send('emails.email', ['cliente' => $cliente, 'pedido' => $ultiPedido], function ($m) use ($cliente) {
+            $m->to($cliente->email, $cliente->nome)->subject('Festa das Nações - PEDIDO');
+        });
+
         return view('site.sucesso', compact('cart', 'carrinho', 'nacoes'));
+
+    }
+
+    public function falha()
+    {
+        $cart = [
+            'items' => $this->cart->all(),
+            'count' => $this->cart->totalItems(),
+            'total' => $this->cart->total()
+        ];
+
+        $nacoes = Nacao::all();
+
+        $carrinho = $this->cart->all();
+
+        return view('site.falha', compact('cart', 'carrinho', 'nacoes'));
 
     }
 

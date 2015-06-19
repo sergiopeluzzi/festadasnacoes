@@ -62,7 +62,7 @@
                                             Senha&#42;
                                         </span>
                                     </span>
-                                    {!! Form::password('password', ['class' => 'form-control input-lg', 'placeholder' => 'Sua senha', 'required' ]) !!}
+                                    {!! Form::password('password', ['class' => 'form-control input-lg', 'id' => 'password', 'placeholder' => 'Sua senha', 'required' ]) !!}
                                 </div>
 
                                 <div class="input-group">
@@ -74,7 +74,7 @@
                                             Senha&#42;
                                         </span>
                                     </span>
-                                    {!! Form::password('password2', ['class' => 'form-control input-lg', 'placeholder' => 'Confirme sua senha', 'required' ]) !!}
+                                    {!! Form::password('password2', ['class' => 'form-control input-lg', 'id' => 'password2', 'placeholder' => 'Confirme sua senha', 'required' ]) !!}
                                 </div>
 
                                 <div class="input-group">
@@ -121,4 +121,23 @@
         </div>
     </div>
 </section>
+@stop
+
+@section('sectionFront')
+    <script>
+        var password = document.getElementById("password")
+                , confirm_password = document.getElementById("password2");
+
+        function validatePassword(){
+            if(password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Senhas diferentes!");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+
+    </script>
 @stop

@@ -48,7 +48,7 @@
                                             </span>
                                         </span>
 
-                                        <input type="text" value="{{ $cliente->nome }}" required class="form-control input-lg" placeholder="Seu nome">
+                                        <input type="text" value="{{ $cliente->nome }}" required class="form-control input-lg" readonly placeholder="Seu nome">
                                     </div>
 
                                     <div class="input-group">
@@ -60,7 +60,7 @@
                                                 E-mail
                                             </span>
                                         </span>
-                                        <input type="email" value="{{ $cliente->email }}" required class="form-control input-lg" placeholder="Seu e-mail">
+                                        <input type="email" value="{{ $cliente->email }}" required class="form-control input-lg" readonly placeholder="Seu e-mail">
                                     </div>
 
                                      <div class="input-group">
@@ -72,7 +72,7 @@
                                                 CPF
                                             </span>
                                         </span>
-                                        <input type="text" value="{{ $cliente->cpf }}" class="form-control input-lg" id="cpf" placeholder="Seu CPF">
+                                        <input type="text" value="{{ $cliente->cpf }}" class="form-control input-lg" readonly id="cpf" placeholder="Seu CPF">
                                     </div>
 
                                     <div class="input-group">
@@ -84,10 +84,10 @@
                                                 Telefone
                                             </span>
                                         </span>
-                                        <input type="text" value="{{ $cliente->telefone }}" class="form-control input-lg" id="telefone" placeholder="Seu telefone">
+                                        <input type="text" value="{{ $cliente->telefone }}" class="form-control input-lg" readonly id="telefone" placeholder="Seu telefone">
                                     </div>
 
-                                    <input type="submit" value="Alterar Dados" class="btn btn-custom-2 md-margin">
+                                    <!--<input type="submit" value="Alterar Dados" class="btn btn-custom-2 md-margin">-->
                                 </fieldset>
 
                             </div>

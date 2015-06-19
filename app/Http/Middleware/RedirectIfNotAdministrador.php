@@ -13,9 +13,9 @@ class RedirectIfNotAdministrador {
 	 */
 	public function handle($request, Closure $next)
 	{
-        if (! $request->user()->isAdministrador())
+        if (!$request->user()->isAdministrador() && !$request->user()->isFuncionario())
         {
-            return redirect('admin/clientes');
+            return redirect('admin/acessonegado');
         }
 
 		return $next($request);

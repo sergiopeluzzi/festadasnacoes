@@ -46,8 +46,8 @@
                                                     <tr>
                                                         <td>{{ $produto->find($ingrediente->id_produto)->descricao }}</td>
                                                         <td class="text-center">{{ $ingrediente->qnt * $vlr }} {{ $unidade->find($produto->find($ingrediente->id_produto)->id_unidade)->sigla }}</td>
-                                                        <td class="text-right">R$ {{ number_format($produto->find($ingrediente->id_produto)->valor * $vlr,2) }}</td>
-                                                        {!! Form::input('hidden', $total += $produto->find($ingrediente->id_produto)->valor * $vlr)  !!}
+                                                        <td class="text-right">R$ {{ number_format($produto->find($ingrediente->id_produto)->valor * ($ingrediente->qnt * $vlr),2) }}</td>
+                                                        {!! Form::input('hidden', $total += $produto->find($ingrediente->id_produto)->valor * ($ingrediente->qnt * $vlr))  !!}
                                                     </tr>
                                                 @endforeach
                                             </tbody>

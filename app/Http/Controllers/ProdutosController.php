@@ -11,6 +11,11 @@ use Illuminate\Http\Request;
 
 class ProdutosController extends Controller {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Produtos';

@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 
 class CardapiosController extends Controller {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Cardápios';

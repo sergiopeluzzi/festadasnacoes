@@ -14,7 +14,7 @@
 </div>
 
 <div class="form-group">
-    {!! Form::label('dataFinal', 'Data Final') !!}
+    {!! Form::label('dataFim', 'Data Final') !!}
     {!! Form::input('date', 'dataFim', null, ['class' => 'form-control', 'placeholder' => 'DD/MM/AAAA']) !!}
 </div>
 

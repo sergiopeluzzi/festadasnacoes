@@ -12,7 +12,7 @@ class EventosController extends Controller {
 
     public function __construct()
     {
-        $this->middleware('administrador', ['except' => ['show', 'index']]);
+        $this->middleware('administrador');
     }
 
     public function index()

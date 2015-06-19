@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class UnidadesController extends Controller {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Unidades';

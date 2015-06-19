@@ -151,6 +151,7 @@ return [
          */
         'Laracasts\Flash\FlashServiceProvider',
         'JulioBitencourt\Cart\CartServiceProvider',
+        'Artesaos\Defender\Providers\DefenderServiceProvider',
 
 	],
 
@@ -202,6 +203,7 @@ return [
         'Form'      => 'Illuminate\Html\FormFacade',
         'Html'      => 'Illuminate\Html\HtmlFacade',
         'Flash'     => 'Laracasts\Flash\Flash',
+        'Defender'  => 'Artesaos\Defender\Facades\Defender',
 
 	],
 

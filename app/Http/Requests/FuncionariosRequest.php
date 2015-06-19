@@ -24,7 +24,8 @@ class FuncionariosRequest extends Request {
 		return [
             'nome'  => 'required|min:3',
             'cpf'   => 'required',
-            'email' => 'required|email'
+            'email' => 'required|email',
+            'password' => 'required'
 		];
 	}
 

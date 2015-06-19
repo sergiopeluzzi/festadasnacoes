@@ -54,6 +54,9 @@ class ClientesController extends SiteController {
 
         $dados['id_user'] = User::orderby('created_at', 'desc')->first()->id;
 
+        $permissao = User::orderby('created_at', 'desc')->first();
+        $permissao->attachRole(3);
+
         Cliente::create($dados);
 
         return redirect('/cadastrar/sucesso');

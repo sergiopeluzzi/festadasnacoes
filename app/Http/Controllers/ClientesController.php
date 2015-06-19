@@ -10,6 +10,11 @@ use Illuminate\Support\Facades\Auth;
 
 class ClientesController extends Controller {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Clientes';
@@ -41,7 +46,12 @@ class ClientesController extends Controller {
 
         $dados['id_user'] = User::orderby('created_at', 'desc')->first()->id;
 
+        $permissao = User::orderby('created_at', 'desc')->first();
+        $permissao->attachRole(3);
+
         Cliente::create($dados);
+
+
 
         flash()->success('Cliente cadastrado com sucesso');
 

@@ -15,6 +15,9 @@
  * Rotas Básicas do Laravel
  */
 Route::get('admin', 'HomeController@index');
+Route::get('admin/acessonegado', function(){
+    return view('acessonegado');
+});
 Route::get('home', 'HomeController@index');
 
 /**
@@ -94,6 +97,8 @@ Route::group(['namespace' => 'Site'], function()
         Route::get('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@index']);
         Route::post('/fechar', ['as' => 'site.finalizar.fechar', 'uses' => 'FinalizarController@fechar']);
         Route::get('/sucesso', 'FinalizarController@sucesso' );
+        Route::get('/falha', 'FinalizarController@falha' );
+        Route::get('/pagamento', 'PagSeguroController@pagamento' );
     });
 
     Route::group(['prefix' => 'cardapio'], function()

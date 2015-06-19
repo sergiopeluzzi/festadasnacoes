@@ -28,6 +28,12 @@ class Kernel extends HttpKernel {
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
 		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
         'administrador' => 'App\Http\Middleware\RedirectIfNotAdministrador',
+
+        // Controle de acesso usando permissões
+        'needsPermission' => 'Artesaos\Defender\Middlewares\NeedsPermissionMiddleware',
+
+        // Controle de acesso mais simples, utiliza apenas os grupos
+        'needsRole' => 'Artesaos\Defender\Middlewares\NeedsRoleMiddleware'
 	];
 
 }

@@ -12,6 +12,11 @@ use Illuminate\Http\Request;
 
 class PedidosController extends AdminController {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Gerenciar Vendas';

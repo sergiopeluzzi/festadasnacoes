@@ -12,6 +12,11 @@ use Illuminate\Http\Request;
 
 class NacoesController extends Controller {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Nações';

@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 
 class ProducaoController extends AdminController {
 
+    public function __construct()
+    {
+        $this->middleware('administrador');
+    }
+
     public function index()
     {
         $nomeForm = 'Gerenciar Produção';

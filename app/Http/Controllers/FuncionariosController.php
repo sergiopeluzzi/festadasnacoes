@@ -13,12 +13,12 @@ class FuncionariosController extends Controller {
 
     public function __construct()
     {
-        $this->middleware('administrador', ['except' => ['show', 'index']]);
+        $this->middleware('administrador');
     }
 
     public function index()
     {
-        $nomeForm = 'Funcionarios';
+        $nomeForm = 'Funcionários';
 
         $funcionarios = Funcionario::all();
 
@@ -27,7 +27,7 @@ class FuncionariosController extends Controller {
 
     public function create()
     {
-        $nomeForm = 'Funcionarios';
+        $nomeForm = 'Funcionários';
 
         return view('admin.funcionarios.create', compact('nomeForm'));
     }
@@ -46,6 +46,16 @@ class FuncionariosController extends Controller {
         User::create($usuario);
 
         $dados['id_user'] = User::latest()->first()->id;
+
+        $permissao = User::latest()->first();
+        if($permissao->id_users_tipo == 2)
+        {
+            $permissao->attachRole(2);
+        }
+        elseif ($permissao->id_users_tipo == 1)
+        {
+            $permissao->attachRole(1);
+        }
 
         Funcionario::create($dados);
 

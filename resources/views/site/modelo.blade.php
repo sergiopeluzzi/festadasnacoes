@@ -41,7 +41,7 @@
                         <div class="header-top-left">
                             <ul id="top-links" class="clearfix">
                                 <li>
-                                    <a href="minhaconta" title="Minha conta">
+                                    <a href="/minhaconta" title="Minha conta">
                                         <span class="top-icon">
                                             <i class="fa fa-user"></i>
                                         </span>
@@ -51,7 +51,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="meuspedidos" title="Meus pedidos">
+                                    <a href="/meuspedidos" title="Meus pedidos">
                                         <span class="top-icon">
                                             <i class="fa fa-check-square-o"></i>
                                         </span>
@@ -61,7 +61,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="meucarrinho" title="Meu Carrinho">
+                                    <a href="/meucarrinho" title="Meu Carrinho">
                                         <span class="top-icon">
                                             <i class="fa fa-shopping-cart"></i>
                                         </span>
@@ -71,7 +71,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="finalizar" title="Finalizar Pedido">
+                                    <a href="/finalizar" title="Finalizar Pedido">
                                         <span class="top-icon">
                                             <i class="fa fa-check"></i>
                                         </span>
@@ -80,6 +80,30 @@
                                         </span>
                                     </a>
                                 </li>
+                                @is('administrador')
+                                <li>
+                                    <a href="/admin" title="FdN Admin">
+                                        <span class="top-icon">
+                                            <i class="fa fa-dashboard"></i>
+                                        </span>
+                                        <span class="hide-for-xs">
+                                            FdN Admin
+                                        </span>
+                                    </a>
+                                </li>
+                                @endis
+                                @is('funcionario')
+                                <li>
+                                    <a href="/admin" title="FdN Admin">
+                                        <span class="top-icon">
+                                            <i class="fa fa-dashboard"></i>
+                                        </span>
+                                        <span class="hide-for-xs">
+                                            FdN Admin
+                                        </span>
+                                    </a>
+                                </li>
+                                @endis
                             </ul>
                         </div><!-- fim da div conteúdo superior esquerdo -->
 
@@ -192,7 +216,7 @@
                                         <ul>
                                             @foreach($nacoes as $nacao)
                                             <li>
-                                                <a href="cardapio/{{$nacao->id}}">{{$nacao->nome}}</a>
+                                                <a href="/cardapio/{{$nacao->id}}">{{$nacao->nome}}</a>
                                             </li>
                                             @endforeach
                                         </ul>

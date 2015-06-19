@@ -67,7 +67,7 @@
         <div class="pull-right hidden-xs">
             <b>Version</b> 2.0
         </div>
-        <strong>2014-2015 us.E Tecnologia.</strong> Contato (69) 8467-8083 - Sergio | (69) 8444-4444 - Diego
+        <strong>2014-2015 us.E Tecnologia.</strong> Contato | Sergio: (69) 8467-8083 | Diego: (69) 8448-2693
     </footer>
 </div><!-- ./wrapper -->
 

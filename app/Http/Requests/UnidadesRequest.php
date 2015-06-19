@@ -22,7 +22,7 @@ class UnidadesRequest extends Request {
 	public function rules()
 	{
 		return [
-			'sigla' => 'required|min:2',
+			'sigla' => 'required|min:1',
             'descricao' => 'required'
 		];
 	}

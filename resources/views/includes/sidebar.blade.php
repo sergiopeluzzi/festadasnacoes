@@ -20,6 +20,7 @@
 
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
+            @is('administrador')
             <li class="header">PESSOAS</li>
             <li><a href="/admin/clientes"><i class="fa fa-male"></i>Clientes</a></li>
             <li><a href="/admin/funcionarios"><i class="fa fa-male"></i>Funcionários</a></li>
@@ -46,7 +47,7 @@
                     <li><a href="/admin/cardapios"><i class="fa"></i> Cardápio</a></li>
                 </ul>
             </li>
-
+            @endis
             <li class="header">GERENCIAMENTO</li>
             <li><a href="/admin/producao"><i class="fa fa-bar-chart-o"></i> Gerenciar Produção</a></li>
             <li><a href="/admin/vendas"><i class="fa fa-money"></i> Gerenciar Vendas</a></li>

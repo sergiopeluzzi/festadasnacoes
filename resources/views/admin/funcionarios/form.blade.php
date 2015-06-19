@@ -2,12 +2,12 @@
     {!! Form::label('nome', 'Nome') !!}
     {!! Form::text('nome', null, ['class' => 'form-control']) !!}
 </div>
-
+<!--
 <div class="form-group">
     {!! Form::label('arquivo', 'Carregar Fotografia') !!}
     {!! Form::input('file', 'arquivo', null) !!}
 </div>
-
+-->
 <div class="form-group">
     {!! Form::label('id_users_tipo', 'Tipo de Funcionário') !!}
     {!! Form::select('id_users_tipo', ['1' => 'Administrador', '2' => 'Funcionário'], null, ['class' => 'form-control'] ) !!}
