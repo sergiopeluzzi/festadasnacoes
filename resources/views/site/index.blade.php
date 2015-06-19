@@ -49,7 +49,7 @@
                     </div>
                     <div class="tp-caption lfr ltr" data-x="755" data-y="360" data-speed="1600"
                          data-start="1350" data-endspeed="800">
-                        <a href="#" class="btn btn-custom-2">Leia mais</a>
+                        <a href="/#cardapio_principal" class="btn btn-custom-2">Cardápio</a>
                     </div>
                     <div class="tp-caption lfl ltl" data-x="center" data-y="center" data-hoffset="-204"
                          data-speed="1750" data-start="400" data-endspeed="800">
@@ -178,8 +178,8 @@
                         <div class="item-meta-container">
                             <h3 class="item-name">{{ $bebida->descricao }}</h3>
 
-                            <div class="item-action"><a href="meucarrinho/add/{{ $bebida->id }}" class="item-add-btn">
-                                    <span class="icon-cart-text">Adicionar carrinho</span></a>
+                            <div class="item-action"><a class="item-add-btn">
+                                    <span class="icon-cart-text">Esgotado</span></a>
                             </div>
                         </div>
                     </div>
