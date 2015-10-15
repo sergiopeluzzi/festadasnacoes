@@ -6,36 +6,47 @@ use App\Nacao;
 use App\Prato;
 use App\Cliente;
 use App\Bebida;
+use JulioBitencourt\Cart\Cart;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
 
 class SiteController extends Controller {
 
-    public function __construct(CartInterface $cart)
+    protected $cart;
+    protected $evento;
+    protected $nacoes;
+    protected $pratos;
+    protected $dados;
+
+    public function __construct(Cart $cart, Evento $evento, Nacao $nacoes, Prato $pratos)
     {
         $this->cart = $cart;
+        $this->evento = $evento;
+        $this->nacoes = $nacoes;
+        $this->pratos = $pratos;
+        $this->dados = [];
     }
 
     public function index()
     {
-        $evento = Evento::latest()->first();
+        $this->dados['evento'] = $this->evento->latest()->first();
 
-        $nacoes = Nacao::all();
+        $this->dados['nacoes'] = $this->nacoes->all();
 
-        $pratos = Prato::all();
+        $this->dados['pratos'] = $this->pratos->all();
 
-        $bebidas = Bebida::all();
+        //$bebidas = Bebida::all();
 
-        $cart = [
+        $this->dados['cart'] = [
             'items' => $this->cart->all(),
             'count' => $this->cart->totalItems(),
             'total' => $this->cart->total()
         ];
 
-        $carrinho = $this->cart->all();
+        $this->dados['carrinho'] = $this->cart->all();
 
-        return view('site.index', compact('evento', 'nacoes', 'pratos', 'cart', 'carrinho', 'bebidas'));
+        return view('site.index')->with($this->dados);
 	}
 
     public function cadastrar()
