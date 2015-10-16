@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use JulioBitencourt\Cart\Cart;
 use PHPSC\PagSeguro\Customer\Address;
 use PHPSC\PagSeguro\Customer\CustomerTest;
 use JulioBitencourt\Cart\Session;

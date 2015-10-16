@@ -7,6 +7,7 @@ use App\Pedido;
 use App\PedidoPrato;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
+use JulioBitencourt\Cart\Cart;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;

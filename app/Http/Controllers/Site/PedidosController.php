@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\PedidoPrato;
+use JulioBitencourt\Cart\Cart;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Http\Request;
 use JulioBitencourt\Cart\Session;

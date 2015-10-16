@@ -8,6 +8,7 @@ use App\Evento;
 use App\Prato;
 use App\Contato;
 use Illuminate\Http\Request;
+use JulioBitencourt\Cart\Cart;
 use JulioBitencourt\Cart\CartInterface;
 
 class ContatosController extends SiteController
