@@ -9,6 +9,7 @@ use App\Http\Requests\CardapiosRequest;
 use App\Nacao;
 use App\Prato;
 use Illuminate\Http\Request;
+use JulioBitencourt\Cart\Cart;
 use JulioBitencourt\Cart\CartInterface;
 
 class CardapiosController extends SiteController {

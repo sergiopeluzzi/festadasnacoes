@@ -8,6 +8,7 @@ use App\Evento;
 use App\Nacao;
 use App\Prato;
 use Illuminate\Support\Facades\Auth;
+use JulioBitencourt\Cart\Cart;
 use JulioBitencourt\Cart\CartInterface;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Session;
