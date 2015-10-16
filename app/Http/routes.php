@@ -95,7 +95,7 @@ Route::group(['namespace' => 'Site'], function()
     Route::group(['prefix' => 'finalizar'], function()
     {
         Route::get('/', ['as' => 'site.finalizar', 'uses' => 'FinalizarController@index']);
-        Route::post('/fechar', ['as' => 'site.finalizar.fechar', 'uses' => 'FinalizarController@fechar']);
+        Route::post('/fechar', ['as' => 'site.finalizar.fechar', 'uses' => 'SiteController@index']); //'FinalizarController@fechar'
         Route::get('/sucesso', 'FinalizarController@sucesso' );
         Route::get('/falha', 'FinalizarController@falha' );
         Route::get('/pagamento', 'PagSeguroController@pagamento' );
