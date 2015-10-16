@@ -159,7 +159,7 @@
                         <h3 class="item-name"><a href="cardapio/{{ $prato->id_nacao }}">{{ $prato->descricao }}</a></h3>
 
                         <div class="item-action"><a href="#" class="item-add-btn"> <!-- meucarrinho/add/{{ $prato->id }} -->
-                                <span class="icon-cart-text">Adicionar carrinho</span></a>
+                                <span class="icon-cart-text">Indisponível</span></a> <!-- Adicionar carrinho -->
                         </div>
                     </div>
                 </div>
