@@ -20,7 +20,9 @@ use App\Cliente;
 
 class FinalizarController extends SiteController  {
 
-    public function __construct(CartInterface $cart)
+    protected $cart;
+
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
     }

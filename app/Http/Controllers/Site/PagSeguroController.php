@@ -14,7 +14,9 @@ use PHPSC\PagSeguro\Requests\Checkout\CheckoutService;
 
 class PagSeguroController extends SiteController {
 
-    public function __construct(CartInterface $cart)
+    protected $cart;
+
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
     }

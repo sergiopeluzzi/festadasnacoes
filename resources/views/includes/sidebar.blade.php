@@ -43,7 +43,7 @@
                     <li><a href="/admin/unidades"><i class="fa"></i> Unidades</a></li>
                     <li><a href="/admin/produtos"><i class="fa"></i> Produtos</a></li>
                     <li><a href="/admin/pratos"><i class="fa"></i> Prato</a></li>
-                    <li><a href="/admin/bebidas"><i class="fa"></i> Bebida</a></li>
+                    <!--<li><a href="/admin/bebidas"><i class="fa"></i> Bebida</a></li>-->
                     <li><a href="/admin/cardapios"><i class="fa"></i> Cardápio</a></li>
                 </ul>
             </li>

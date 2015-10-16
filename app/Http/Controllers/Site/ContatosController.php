@@ -12,8 +12,9 @@ use JulioBitencourt\Cart\CartInterface;
 
 class ContatosController extends SiteController
 {
+    protected $cart;
 
-    public function __construct(CartInterface $cart)
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
     }

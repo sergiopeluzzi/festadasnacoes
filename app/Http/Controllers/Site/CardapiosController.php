@@ -13,7 +13,9 @@ use JulioBitencourt\Cart\CartInterface;
 
 class CardapiosController extends SiteController {
 
-    public function __construct(CartInterface $cart)
+    protected $cart;
+
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
     }

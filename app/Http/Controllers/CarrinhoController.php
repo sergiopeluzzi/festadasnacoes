@@ -21,7 +21,7 @@ class CarrinhoController extends Controller {
      *
      * @param CartInterface $cart
      */
-    public function __construct(CartInterface $cart)
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
     }

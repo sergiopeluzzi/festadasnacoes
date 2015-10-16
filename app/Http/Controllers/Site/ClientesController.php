@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Session;
 
 class ClientesController extends SiteController {
 
-    public function __construct(CartInterface $cart)
+    protected $cart;
+
+    public function __construct(Cart $cart)
     {
         $this->cart = $cart;
     }
