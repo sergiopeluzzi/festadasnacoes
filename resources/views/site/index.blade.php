@@ -158,7 +158,7 @@
                     <div class="item-meta-container">
                         <h3 class="item-name"><a href="cardapio/{{ $prato->id_nacao }}">{{ $prato->descricao }}</a></h3>
 
-                        <div class="item-action"><a href="meucarrinho/add/{{ $prato->id }}" class="item-add-btn">
+                        <div class="item-action disabled"><a href="meucarrinho/add/{{ $prato->id }}" class="item-add-btn">
                                 <span class="icon-cart-text">Adicionar carrinho</span></a>
                         </div>
                     </div>
