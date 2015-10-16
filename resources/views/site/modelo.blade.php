@@ -259,13 +259,13 @@
                                                         <i class="fa fa-times"></i>
                                                     </a>
                                                     <figure>
-                                                        <a href="product.html"><img src="{{ asset('/site/images/homeslider/prato'. $item['sku'] .'.png') }}" alt="{{ $item['description'] }}"></a>
+                                                        <a href="#"><img src="{{ asset('/site/images/homeslider/prato'. $item['sku'] .'.png') }}" alt="{{ $item['description'] }}"></a>
                                                     </figure>
 
                                                     <!-- div do conteúdo carrinho cabeçalho -->
                                                     <div class="dropdown-cart-details">
                                                         <p class="item-name">
-                                                            <a href="product.html">{{ $item['description'] }}</a>
+                                                            <a href="#">{{ $item['description'] }}</a>
                                                         </p>
 
                                                         <!-- conteúdo da div-->
