@@ -151,8 +151,8 @@
             <div class="similiar-items-slider owl-carousel">
                 <!-- Produtos do cardapio -->
                 @foreach($pratos as $prato)
-                <div class="item item-hover" style="height: 400px">
-                    <div class="item-image-wrapper" style="height: 250px">
+                <div class="item item-hover">
+                    <div class="item-image-wrapper">
                         <figure class="item-image-container"><a href="cardapio/{{ $prato->id_nacao }}"><img
                                         src="{{ asset('/site/images/pratos/pratoc'. $prato->id .'.png') }}" alt="item1" class="item-image"> <img
                                         src="{{ asset('/site/images/pratos/pratoh'. $prato->id .'.png') }}" alt="item1  Hover"
