@@ -187,7 +187,7 @@
                             </span>
                             <ul class="pull-left">
                                 <li>(69) 3441-5237</li>
-                                <li>(69) 8448-2693</li>
+                                <li>(69) 8467-8083</li>
                             </ul>
                         </div>
                     </div><!-- fim div inner cabeçalho -->
