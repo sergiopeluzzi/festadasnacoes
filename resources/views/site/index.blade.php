@@ -66,8 +66,13 @@
                     <li data-transition="fade" data-slotamount="6" data-masterspeed="600"
                         data-saveperformance="on">
                         <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg1"
-                             data-lazyload="{{ asset('/site/images/homeslider/bandeira'. $nacao->id .'.jpg') }}"
+                             data-lazyload="{{ asset('/site/images/homeslider/bandeira'. $nacao->id .'.png') }}"
                              data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+                        <div class="tp-caption rev-text2 lfr ltr" data-x="695" data-y="150" data-speed="1600"
+                             data-start="100" data-endspeed="900" data-bgposition="center center">
+                            <font size="96" color="white">{{ $pratos->where('id_nacao', $nacao->id)->first()->descricao }}</font>
+                        </div>
 
                         <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="250" data-speed="1600"
                              data-start="300" data-endspeed="300" data-bgposition="center center">
@@ -79,7 +84,7 @@
                         </div>
                         <div class="tp-caption lfl ltl" data-x="center" data-y="100" data-hoffset="-230"
                              data-speed="2000" data-start="500" data-endspeed="800">
-                            <img style="width: 50%; height: 50%" src="{{ asset('/site/images/pratos/prato' . $pratos->where('id_nacao', $nacao->id)->first()->id . '.png') }}" alt="Slide 1_1">
+                            <img src="{{ asset('/site/images/pratos/prato' . $pratos->where('id_nacao', $nacao->id)->first()->id . '.png') }}" alt="Slide 1_1">
                         </div>
                     </li>
                 @endforeach
