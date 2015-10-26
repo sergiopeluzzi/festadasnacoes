@@ -216,7 +216,7 @@
                                         <ul>
                                             @foreach($nacoes as $nacao)
                                             <li>
-                                                <a href="#">{{$nacao->nome}}</a> <!-- /cardapio/{{$nacao->id}} -->
+                                                <a href="/cardapio/{{ $nacao->id }}">{{$nacao->nome}}</a> <!-- /cardapio/{{$nacao->id}} -->
                                             </li>
                                             @endforeach
                                         </ul>
