@@ -119,7 +119,7 @@
                                         <a href="{{ url('cadastrar') }}"> <i class="fa fa-plus-circle"></i> Cadastre-se</a>
                                     @else
                                         <span>Seja bem-vindo <span style="color:red"><strong>{{ Auth::user()->name }}</strong></span></span>
-                                        <span class="pull-right"><a href="{{ url('/auth/logout') }}">( Sair )</a></span>
+                                        <span class="pull-right"><a href="{{ url('/auth/logout') }}">( Sair )</a><span>
                                     @endif
                                 </span>
                             </div><!-- fim da div conteúdo superior direito -->
@@ -430,7 +430,7 @@
             </div><!-- Fim do .modal-dialog -->
         </form> <!-- fim form modal login -->
     </div> <!-- fim div modal -->
-
+</body>
 <footer>
     <!-- Importar facebook organizador -->
     <script>(function (d, s, id) {
@@ -527,5 +527,4 @@
     </script>
 
 </footer>
-</body>
 </html>
