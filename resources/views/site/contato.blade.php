@@ -103,29 +103,25 @@
                                 <li>
                                     <span class="contact-icon contact-icon-phone"></span>
                                     <ul>
-                                        <li>69 3441 5237</li>
-                                        <li>69 3441 1111</li>
+                                        <li>(69) 3441-5237</li>
                                     </ul>
                                 </li>
                                 <li>
                                     <span class="contact-icon contact-icon-mobile"></span>
                                     <ul>
-                                        <li>69 8448 2693</li>
-                                        <li>69 8484 8484</li>
+                                        <li>(69) 8467-8083</li>
                                     </ul>
                                 </li>
                                 <li>
                                     <span class="contact-icon contact-icon-email"></span>
                                     <ul>
-                                        <li>futprdiego@gmail.com</li>
-                                        <li>bugao7@gmail.com</li>
+                                        <li>sergiopeluzzi@gmail.com</li>
                                     </ul>
                                 </li>
                                 <li>
                                     <span class="contact-icon contact-icon-skype"></span>
                                     <ul>
-                                        <li>diego.iel.cacoal</li>
-                                        <li>bugao7.cacoal</li>
+                                        <li>peluzzi85</li>
                                     </ul>
                                 </li>
                             </ul>
