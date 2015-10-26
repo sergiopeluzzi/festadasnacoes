@@ -229,7 +229,7 @@
                                     <li><a href="{{ url('contato') }}">Contato</a></li>
 
                                     <!--menu carrinho -->
-                                    <li><a href="meucarrinho"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
+                                    <li><a href="/meucarrinho"><i class="fa fa-shopping-cart fa-lg"></i></a></li>
                                 </ul> <!-- fim div elementos -->
                             </nav> <!-- fim div menu principal -->
 
@@ -288,7 +288,7 @@
                                             <!-- botões do carrinho total -->
                                             <div class="dropdown-cart-action">
                                                 <p>
-                                                    <a href="meucarrinho" class="btn btn-custom-2 btn-block">Carrinho</a>
+                                                    <a href="/meucarrinho" class="btn btn-custom-2 btn-block">Carrinho</a>
                                                 </p>
                                                 <p>
                                                     <a href="finalizar" class="btn btn-custom btn-block">Finalizar</a>
