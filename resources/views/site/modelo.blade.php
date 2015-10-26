@@ -430,7 +430,7 @@
             </div><!-- Fim do .modal-dialog -->
         </form> <!-- fim form modal login -->
     </div> <!-- fim div modal -->
-</body>
+
 <footer>
     <!-- Importar facebook organizador -->
     <script>(function (d, s, id) {
@@ -527,5 +527,5 @@
     </script>
 
 </footer>
-
+</body>
 </html>
