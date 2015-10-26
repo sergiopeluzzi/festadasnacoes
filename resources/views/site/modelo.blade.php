@@ -119,7 +119,7 @@
                                         <a href="{{ url('cadastrar') }}"> <i class="fa fa-plus-circle"></i> Cadastre-se</a>
                                     @else
                                         <span>Seja bem-vindo <span style="color:red"><strong>{{ Auth::user()->name }}</strong></span></span>
-                                        <span class="pull-right"><a href="{{ url('/auth/logout') }}">( Sair )</a><span>
+                                        <span class="pull-right"><a href="{{ url('/auth/logout') }}">( Sair )</a></span>
                                     @endif
                                 </span>
                             </div><!-- fim da div conteúdo superior direito -->
@@ -304,10 +304,10 @@
             </div><!-- fim div container nav -->
         </div><!-- fim div inner header-->
     </header> <!-- fim da div header -->
-    </div>
+
 
     @yield('body')
-
+    </div>
     <footer id="footer">
         <!-- Acessar informações gerais -->
         <div id="inner-footer">
