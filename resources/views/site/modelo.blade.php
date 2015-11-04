@@ -339,12 +339,11 @@
                     <div class="col-md-3 col-sm-4 col-xs-12 widget">
                         <h3> ORGANIZAÇÃO </h3>
                         <ul class="contact-list">
-                            <li><strong>IGREJA EVANGÉLICA SHEKINA</strong>
-                            </li>
+                            <li><strong>IGREJA EVANGÉLICA SHEKINA</strong></li>
                             <li>Brasil</li>
                             <li>Rondônia</li>
                             <li>Cacoal</li>
-                            <li>Rua da Igreja 546 - Princesa Izabel</li>
+                            <li>Tv. Valter Nunes de Almeida - Princesa Izabel</li>
                             <li>Aberto de: Seg. - Sex.</li>
                             <li>Nos horários: 8.00AM - 18.00PM</li>
                         </ul>
