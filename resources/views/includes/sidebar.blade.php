@@ -47,8 +47,13 @@
                     <li><a href="/admin/cardapios"><i class="fa"></i> Cardápio</a></li>
                 </ul>
             </li>
+
+            <li class="header">GERENCIAMENTO</li>
+            <li><a href="/admin/producao"><i class="fa fa-bar-chart-o"></i> Gerenciar Produção</a></li>
+            <li><a href="/admin/vendas"><i class="fa fa-money"></i> Gerenciar Vendas</a></li>
             @endis
-            @is(['administrador', 'funcionario'])
+
+            @is('funcionario')
             <li class="header">GERENCIAMENTO</li>
             <li><a href="/admin/producao"><i class="fa fa-bar-chart-o"></i> Gerenciar Produção</a></li>
             <li><a href="/admin/vendas"><i class="fa fa-money"></i> Gerenciar Vendas</a></li>
