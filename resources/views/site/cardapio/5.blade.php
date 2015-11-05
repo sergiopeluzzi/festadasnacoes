@@ -56,7 +56,7 @@
                                 <div class="tab-container left product-detail-tab clearfix">
                                     <ul class="nav-tabs">
                                         <li class="active">
-                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  BRASIL - GOIÁS</a>
+                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  {{ $nacao->find($id)->nome }}</a>
                                         </li>
                                         <li>
                                             <a href="#description" data-toggle="tab"><i class="fa fa-cutlery fa-lg"></i> MODO DE PREPARO</a>
@@ -66,22 +66,30 @@
                                     <div class="tab-content clearfix">
                                         <div class="tab-pane active" id="overview">
                                             <p align="justify">
-                                                México (pronunciado em português: [ˈmɛʃiku];
-                                                pronunciado em castelhano: [ˈmexiko],
-                                                oficialmente Estados Unidos Mexicanos
-                                                (Loudspeaker.svg igual em castelhano (ajuda·info)),
-                                                é uma república constitucional federal localizada na América do Norte.
-                                                O país é limitado a norte pelos Estados Unidos; ao sul e oeste pelo Oceano Pacífico;
-                                                a sudeste pela Guatemala, Belize e Mar do Caribe; a leste pelo Golfo do México.
-                                                Com um território que abrange quase 2 milhões de quilômetros quadrados, o México
-                                                é o quinto maior país das Américas por área total e o 14.º maior país independente do mundo.
-                                                Com uma população estimada em 118 milhões de habitantes, é o 11.º país mais populoso do mundo
-                                                e o mais populoso país da hispanofonia.
+                                                A Turquia (em turco: Türkiye, pronunciado: [ˈtyrcije]), cujo nome oficial é República da Turquia
+                                                (Türkiye Cumhuriyeti, pronunciado: [ˈtyrcije d͡ʒumˈhurijeti]), é um país euro-asiático que ocupa
+                                                toda a península da Anatólia, no extremo ocidental da Ásia, e se estende pela Trácia Oriental
+                                                (também conhecida como Rumélia), no sudeste da Europa. É um dos seis estados independentes cuja
+                                                população é maioritariamente turca. Faz fronteira com oito países: a noroeste com a Bulgária, a
+                                                oeste com a Grécia, a nordeste com a Geórgia, a Arménia e o enclave de Nakichevan do Azerbaijão,
+                                                a leste com o Irão e a sudeste com o Iraque e a Síria. O mar Mediterrâneo e o Chipre situam-se a sul,
+                                                o mar Egeu a sudoeste-oeste e o mar Negro a norte. O mar de Mármara, o Bósforo e o Dardanelos (que
+                                                juntos formam os Estreitos Turcos) demarcam a fronteira entre a Trácia e a Anatólia e separam a
+                                                Europa da Ásia.
                                             </p>
                                             <p align="justify">
-                                                O México é uma federação composta por trinta e um estados e um distrito federal (Distrito Federal).
-                                                O México figura também como o segundo país mais populoso e PIB da América Latina, em ambos
-                                                os casos superado apenas pelo Brasil.
+                                                Os turcos começaram a migrar para a área que é atualmente a Turquia ("terra dos turcos") no século XI.
+                                                O processo foi acelerado pela vitória do Império Seljúcida sobre o Império Bizantino, na Batalha
+                                                de Manziquerta. Os turcos seljúcidas constituíram um poderoso reino na Anatólia nos 150 anos seguintes,
+                                                o Sultanato de Rum, que governou grande parte da Anatólia até às invasões mongóis, em meados do século
+                                                XIII. A decadência do sultanato seljúcida deu origem à independência e expansão política e militar de
+                                                uma série de beilhiques (principados muçulmanos), entre eles o dos otomanos, que viriam a absorver os
+                                                restantes beilhiques e a criar o Império Otomano, que no seu auge, nos séculos XVI e XVII, se estendia
+                                                desde o Sudeste da Europa ao Sudoeste da Ásia e Norte da África. Após o Império Otomano ter entrado em
+                                                colapso, na sequência da derrota na Primeira Guerra Mundial, os seus territórios foram ocupados pelos
+                                                aliados vitoriosos. Um grupo de jovens oficiais militares, liderados por Mustafa Kemal, organizou uma
+                                                resistência contra os Aliados, e em 1923 estabeleceu a moderna República da Turquia, com Kemal Atatürk
+                                                como seu primeiro presidente.
                                             </p>
 
                                         </div>
@@ -91,10 +99,7 @@
                                             </div>
                                             <br>
                                             <ul class="product-details-list">
-                                                <p align="justify">A massa da tortilha é preparada com farinha, depois de muito bem amassada
-                                                    é cozinha para ficar uma massa bem flexível. O recheio é levado carne, queijo, cebola,
-                                                    pimenta de cheiro e muito pimenta para dar um gosto especial.
-                                                    <br>
+                                                <p align="justify">
                                                 </p>
 
                                             </ul>

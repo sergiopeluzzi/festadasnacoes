@@ -56,7 +56,7 @@
                                 <div class="tab-container left product-detail-tab clearfix">
                                     <ul class="nav-tabs">
                                         <li class="active">
-                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  BRASIL - GOIÁS</a>
+                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  {{ $nacao->find($id)->nome }}</a>
                                         </li>
                                         <li>
                                             <a href="#description" data-toggle="tab"><i class="fa fa-cutlery fa-lg"></i> MODO DE PREPARO</a>
@@ -65,17 +65,24 @@
                                     <!-- Informar sobre a nação do produto -->
                                     <div class="tab-content clearfix">
                                         <div class="tab-pane active" id="overview">
-                                            <p align="justify">Estados Unidos da América (em inglês: United States of America, ou simplesmente Estados Unidos
-                                                , são uma república constitucional federal composta por 50 estados e um distrito federal.
-                                                A maior parte do país situa-se na região central da América do Norte,
-                                                formada por 48 estados e Washington, D.C., o distrito federal da capital.
-                                                Localiza-se entre os oceanos Pacífico e Atlântico, fazendo fronteira com o Canadá
-                                                ao norte e com o México ao sul. O estado do Alasca está no noroeste do continente,
-                                                fazendo fronteira com o Canadá no leste e com a Rússia a oeste, através do estreito de Bering.
+                                            <p align="justify">
+                                                Dinamarca (em Inglês e dinamarquês: Danmark, [ˈd̥ɛnmɑɡ̊]), oficialmente Reino da Dinamarca, é um país nórdico
+                                                da Europa setentrional e membro sênior do Reino da Dinamarca. É o mais meridional dos países nórdicos, a sudoeste
+                                                da Suécia e ao sul da Noruega, delimitado no sul pela Alemanha. As fronteiras da Dinamarca estão no Mar Báltico e
+                                                no Mar do Norte. O país é composto por uma grande península, a Jutlândia, e 443 ilhas, das quais 78 habitadas, com
+                                                destaque para a Zelândia (Sjælland), Funen (Fyn), Vendsyssel-Thy, Lolland, Falster e Bornholm, assim como centenas
+                                                de ilhas menores, muitas vezes referidas como o Arquipélago Dinamarquês. A Dinamarca há muito tempo controla a
+                                                entrada e a saída do mar Báltico, já que isso só pode acontecer através de três canais, que também são conhecidos
+                                                como os "Estreitos Dinamarqueses".
                                             </p>
-                                            <p align="justify">O estado do Havaí é um arquipélago no Pacífico Central. O país também possui vários outros territórios
-                                                no Caribe e no Oceano Pacífico. Com 9,37 milhões de km² de área e cerca de 309 milhões de habitantes,
-                                                o país é o quarto maior em área total, o quinto maior em área contígua e o terceiro em população.
+                                            <p align="justify">
+                                                A língua nacional, o dinamarquês, é próxima do sueco e do norueguês. A Dinamarca compartilha fortes laços históricos
+                                                e culturais com a Suécia e com a Noruega. 82,0% dos habitantes da Dinamarca e 90,3% da etnia dinamarquesa são membros
+                                                da Igreja Estatal Luterana. Cerca de 9% da população tem nacionalidade estrangeira, sendo que uma grande parte deles
+                                                são provenientes de outros países escandinavos.
+                                                O país é uma monarquia constitucional com um sistema parlamentar de governo. Possui um governo central e outros locais
+                                                em 98 municípios. O país é membro da União Europeia desde 1973, embora não tenha aderido ao euro, e um dos membros
+                                                fundadores da Organização do Tratado do Atlântico Norte e da Organização para a Cooperação e Desenvolvimento Económico.
                                             </p>
 
                                         </div>
@@ -86,10 +93,6 @@
                                             <br>
                                             <ul class="product-details-list">
                                                 <p align="justify">
-                                                    Primeiro são tostadas as fatias do pão, após é colocado em uma frigideira com manteiga, é acrescentado o ovo, fritado e temperado com pouco sal.
-                                                    Na mesma frigidera é adicionado as fatias de presunto, sendo cobertas com as fatias de queijo. A frigideira é tampada para o queijo derreter.
-                                                    Logo após é retirada a tampa e colocado dentro do pão o ovo, queijo, presunto, e realizar o corte em diagonal.
-                                                <br>
                                                 </p>
 
                                             </ul>

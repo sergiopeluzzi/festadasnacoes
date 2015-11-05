@@ -56,7 +56,7 @@
                                 <div class="tab-container left product-detail-tab clearfix">
                                     <ul class="nav-tabs">
                                         <li class="active">
-                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  BRASIL - GOIÁS</a>
+                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  {{ $nacao->find($id)->nome }}</a>
                                         </li>
                                         <li>
                                             <a href="#description" data-toggle="tab"><i class="fa fa-cutlery fa-lg"></i> MODO DE PREPARO</a>
@@ -65,21 +65,21 @@
                                     <!-- Informar sobre a nação do produto -->
                                     <div class="tab-content clearfix">
                                         <div class="tab-pane active" id="overview">
-                                            <p align="justify">Itália (em italiano: Italia [iˈtaːlja]),
-                                                oficialmente República Italiana (em italiano: Repubblica Italiana),
-                                                é uma república parlamentar unitária localizada no centro-sul da Europa (Europa meridional).
-                                                Ao norte, faz fronteira com França, Suíça, Áustria e Eslovênia ao longo dos Alpes. Ao sul,
-                                                que consiste na totalidade da península Itálica, Sicília, Sardenha, as duas maiores ilhas no Mar Mediterrâneo,
-                                                e muitas outras ilhas menores ficam no entorno do território italiano. Os Estados independentes
-                                                de San Marino e do Vaticano são enclaves no interior de Itália, enquanto Campione d'Italia é um enclave italiano na Suíça.
-                                                O território do país abrange cerca de 301 338 km² e é influenciado por um clima temperado sazonal.
-                                                Com 60,6 milhões de habitantes, é a quinta nação mais populosa da Europa e a 23ª do mundo.
+                                            <p align="justify">
+                                                Espanha (em castelhano: España [esˈpaɲa]), oficialmente Reino da/de Espanha (em castelhano: Reino de España),
+                                                é um país situado na Europa meridional, na Península Ibérica. Seu território principal é delimitado a sul e a
+                                                leste pelo Mar Mediterrâneo, com exceção a uma pequena fronteira com o território britânico ultramarino de Gibraltar;
+                                                ao norte pela França, Andorra e pelo Golfo da Biscaia e ao noroeste e oeste pelo Oceano Atlântico e por Portugal.
+                                                O território espanhol inclui ainda as Ilhas Baleares, no Mediterrâneo, as Ilhas Canárias, no Oceano Atlântico,
+                                                próximas da costa Africana e duas cidades autônomas no norte de África, Ceuta e Melilla, que fazem fronteira com o
+                                                Marrocos. Com uma área de 504 030 km², a Espanha é, depois da França, o segundo maior país da Europa Ocidental e da
+                                                União Europeia.
                                             </p>
                                             <p align="justify">
-                                                Roma, a capital italiana, foi durante séculos o centro político e religioso
-                                                da civilização ocidental como a capital do Império Romano e como sede da Santa
-                                                Sé. Após o declínio dos romanos, a Itália sofreu inúmeras invasões de povos estrangeiros,
-                                                desde tribos germânicas, como os lombardos e ostrogodos, aos bizantinos e, mais tarde, os normandos, entre outros.
+                                                Devido à sua localização, o território da Espanha foi sujeito a muitas influências externas, muitas vezes
+                                                simultaneamente, desde os tempos pré-históricos até quando a Espanha se tornou um país. Por outro lado, o próprio
+                                                país foi uma importante fonte de influência para outras regiões, principalmente durante a Era Moderna, quando se
+                                                tornou um império mundial que deixou como legado mais de 400 milhões de falantes do espanhol espalhados pelo mundo.
                                             </p>
 
                                         </div>
@@ -89,10 +89,7 @@
                                             </div>
                                             <br>
                                             <ul class="product-details-list">
-                                                <p align="justify">O macarrão é levado para cozinhar,
-                                                    na agua que está cozinhada é adicionado sal a gosto, óleo vegetal.
-                                                    Após o cozimento do macarrão, é adicionado um super molho de carne moida com manjericão, uma delícia!!!
-                                                    <br>
+                                                <p align="justify">
                                                 </p>
 
                                             </ul>

@@ -56,7 +56,7 @@
                                 <div class="tab-container left product-detail-tab clearfix">
                                     <ul class="nav-tabs">
                                         <li class="active">
-                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  BRASIL - GOIÁS</a>
+                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>  {{ $nacao->find($id)->nome }}</a>
                                         </li>
                                         <li>
                                             <a href="#description" data-toggle="tab"><i class="fa fa-cutlery fa-lg"></i> MODO DE PREPARO</a>
@@ -65,21 +65,27 @@
                                     <!-- Informar sobre a nação do produto -->
                                     <div class="tab-content clearfix">
                                         <div class="tab-pane active" id="overview">
-                                            <p align="justify">A Irlanda (em irlandês: Éire,
-                                                por vezes chamada (de maneira não oficial, para diferenciá-la da ilha de mesmo nome,
-                                                que divide com a Irlanda do Norte) República da Irlanda (em irlandês: Poblacht na hÉireann e
-                                                em inglês: Republic of Ireland),4 é um Estado soberano da Europa que ocupa cerca de cinco sextos da
-                                                ilha homônima. É uma república constitucional governada como uma democracia parlamentar, com um presidente eleito
-                                                servir como chefe de Estado.
+                                            <p align="justify">
+                                                Suécia (em sueco: Sverige, pronunciado: [ˈsværjɛ]), oficialmente Reino da Suécia (em sueco: Loudspeaker.svg?
+                                                Konungariket Sverige), é um país nórdico, localizado na península Escandinava na Europa Setentrional.
+                                                A Suécia divide fronteiras terrestres com a Noruega, a oeste, e com a Finlândia, a nordeste, além de
+                                                estar ligada à Dinamarca através da Ponte do Øresund, no sul.
+                                                Com 450 295 km², a Suécia é o terceiro maior país da União Europeia em termos de área e possui uma população
+                                                total de cerca de 9,2 milhões de habitantes. A Suécia tem uma baixa densidade populacional, com cerca de 21
+                                                habitantes por quilômetro quadrado, mas com uma densidade consideravelmente maior na metade sul do país.
+                                                Cerca de 85% da população vive em áreas urbanas. A capital e maior cidade da Suécia é Estocolmo (com uma
+                                                população de 1,3 milhões na área urbana e de 2 milhões na área metropolitana), centro do poder político e
+                                                econômico do país. A Suécia é membro fundador da Organização das Nações Unidas, da União Europeia desde 1º
+                                                de janeiro de 1995, e da OCDE.
                                             </p>
-                                            <p align="justify">Considerada um país desenvolvido, a Irlanda tem o décimo primeiro maior Índice de
-                                                Desenvolvimento Humano (IDH) do mundo,
-                                                 além de ótimas classificações em índices que medem o grau de democracia e
-                                                liberdades como a de imprensa, econômica e política.
-                                                Além da União Europeia (UE), a Irlanda também é membro do Conselho da Europa,
-                                                da Organização para a Cooperação e Desenvolvimento Econômico (OCDE),
-                                                da Organização Mundial do Comércio (OMC) e da Organização das Nações Unidas (ONU).
-                                                Sua capital é Dublin e sua população é estimada em 4,58 milhões de habitantes.
+                                            <p align="justify">
+                                                A Suécia é uma monarquia constitucional com um sistema parlamentar de governo, com uma economia altamente
+                                                desenvolvida e diversificada. O país ocupa o quarto lugar do mundo no Índice de democracia, depois da Islândia,
+                                                da Dinamarca e da Noruega, segundo a prestigiada revista inglesa The Economist. O país ainda é considerado um
+                                                dos mais socialmente justos da atualidade, apresentando um dos mais baixos níveis de desigualdade de renda do
+                                                mundo. Isso se reflete no fato da Suécia estar, desde que a ONU começou a calcular o IDH (Índice de
+                                                Desenvolvimento Humano) de seus membros na década de 1980, entre os mais bem colocados países do mundo de
+                                                acordo com o indicador.
                                             </p>
 
                                         </div>
@@ -89,10 +95,7 @@
                                             </div>
                                             <br>
                                             <ul class="product-details-list">
-                                                <p align="justify">O frape é um prato delicioso, adicione leite moça,
-                                                    com algumas colheres de nescafé, após adicionar sorvete de creme,
-                                                    e por cima uma bela camada de chantilly, é para deixar qualquer um com água na boca.
-                                                    <br>
+                                                <p align="justify">
                                                 </p>
 
                                             </ul>
