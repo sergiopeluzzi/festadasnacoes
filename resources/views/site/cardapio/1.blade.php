@@ -56,7 +56,7 @@
                                 <div class="tab-container left product-detail-tab clearfix">
                                     <ul class="nav-tabs">
                                         <li class="active">
-                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i>{{ $nacao->find($id)->nome }}</a>
+                                            <a href="#overview" data-toggle="tab"><i class="fa fa-globe fa-2x"></i> {{ $nacao->find($id)->nome }}</a>
                                         </li>
                                         <li>
                                             <a href="#description" data-toggle="tab"><i class="fa fa-cutlery fa-lg"></i> MODO DE PREPARO</a>
