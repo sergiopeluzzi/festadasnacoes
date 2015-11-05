@@ -65,16 +65,23 @@
                                     <!-- Informar sobre a nação do produto -->
                                     <div class="tab-content clearfix">
                                         <div class="tab-pane active" id="overview">
-                                            <p>Goiás é uma das 27 unidades federativas do Brasil.
-                                                Situa-se a leste da Região Centro-Oeste,no Planalto Central brasileiro. O seu território é de 340.086 km²,
-                                                sendo delimitado pelos estados do Mato Grosso do Sul a sudoeste, Mato Grosso a oeste, Tocantins a norte,
-                                                Bahia a nordeste, Minas Gerais a leste, sudeste e sul e pelo Distrito Federal a leste.
+                                            <p align="justify">O Rio de Janeiro é uma das 27 unidades federativas do Brasil. Situa-se na porção leste da região
+                                                Sudeste, tendo como limites os estados de Minas Gerais (norte e noroeste), Espírito Santo (nordeste)
+                                                e São Paulo (sudoeste), e também o Oceano Atlântico (leste e sul). Ocupa uma área de 43 780,172 km²,
+                                                sendo pouco maior que a Dinamarca. Apesar de ser, efetivamente, o quarto menor estado do Brasil
+                                                (ficando à frente apenas dos estados de Alagoas e Sergipe e do Distrito Federal, respectivamente, em
+                                                terceiro, segundo e primeiro lugar), concentra 8,4% da população do país, figurando, consequentemente,
+                                                como o estado com maior densidade demográfica do Brasil. É também o terceiro maior litoral do Brasil,
+                                                ficando atrás apenas da Bahia e Maranhão respectivamente
                                             </p>
-                                            <p>Goiânia é a capital e maior cidade do estado, assim como sede da Região Metropolitana de Goiânia,
-                                                a única no estado. Outras cidades importantes, fora da região metropolitana de Goiânia, são:
-                                                Anápolis, Rio Verde, Itumbiara, Catalão, Luziânia, Formosa, Jataí, Porangatu, Caldas Novas,
-                                                Quirinópolis e Niquelândia, que também são as maiores cidades em população do interior do estado,
-                                                além das cidades que compõem o Entorno do Distrito Federal. Ao todo são 246 municípios .
+                                            <p>A maior cidade do estado é a sua capital homônima, que também é a segunda cidade mais populosa do
+                                                Brasil. Os naturais do estado do Rio de Janeiro são chamados de fluminenses (do latim flumen,
+                                                literalmente "rio"). Carioca é o gentílico da cidade do Rio de Janeiro. Segundo dados do Censo 2010,
+                                                o Rio de Janeiro é o terceiro estado mais populoso do Brasil, atrás de São Paulo e Minas Gerais. Os 20
+                                                municípios mais populosos são: Rio de Janeiro, São Gonçalo, Duque de Caxias, Nova Iguaçu, Niterói,
+                                                Campos dos Goytacazes, Belford Roxo, São João de Meriti, Petrópolis, Volta Redonda, Magé, Macaé, Itaboraí,
+                                                Cabo Frio, Angra dos Reis, Nova Friburgo, Barra Mansa, Teresópolis, Mesquita e Nilópolis, todos estes com
+                                                populações acima de 150 mil habitantes.
                                             </p>
 
                                         </div>
@@ -84,13 +91,8 @@
                                             </div>
                                             <br>
                                             <ul class="product-details-list">
-                                                <p align="justify">Após fritar o alho e a cebola com um pouquinho de oléo, é adicionado também um caldo de galinha.
-                                                    Acrescentando a massa de milho ralada, e levado sal a gosto, pimenta de cheiro e a incrível pimenta de bode.
-                                                    Após dar uma boa mexida até engrossar é retirado do fogo. Para o recheio do prato é adicionado mussarela, presunto,
-                                                    azeitona e cheiro verde.
-                                                    <br>
+                                                <p>
                                                 </p>
-
                                             </ul>
                                         </div>
                                     </div>
