@@ -51,61 +51,59 @@
 
                                     <div align="center">
                                         <h1 class="sub-title"><font color="#32cd32"><i class="fa fa-check fa-3x"></i>
-                                                Recebemos o seu pedido</font></h1>
+                                                Recebemos o seu pedido</font>
+                                        </h1>
                                     </div>
-
-                                    <p>Estamos muito felizes, <font color="#ff0000"><b>{{$cliente->nome}}</b></font>
-                                        pela sua compra.</p>
-
-                                    <p>
-                                        Lembre-se o evento irá ocorrer no dia <font color="#ff0000"><b>16 de Outubro de
-                                                2015</b></font>
-                                        as <font color="#ff0000"><b>19:00h</b></font> na Casa de shows
-                                        <a href="https://www.facebook.com/pages/Millenium/558733344212135"
-                                           title="Millenium" target="_blank"><u>Millenium</u></a>
-                                        na cidade de Cacoal.
-                                    </p>
+                                    <div align="center">
+                                        <p>
+                                            Estamos muito felizes, <font color="#ff0000"><b>{{$cliente->nome}}</b></font>
+                                            pelo seu pedido.
+                                        </p>
+                                        <p>
+                                            Lembre-se o evento irá ocorrer no dia <font color="#ff0000"><b>21 de Novembro de 2015</b></font>
+                                            a partir das <font color="#ff0000"><b>19:00h</b></font> na Casa de shows
+                                            <a href="https://www.facebook.com/pages/Millenium/558733344212135"
+                                               title="Millenium" target="_blank"><u>Millenium</u></a>
+                                            na cidade de Cacoal.
+                                        </p>
+                                    </div>
 
                                     <br>
                                     <br>
 
                                     <div align="center">
                                         <div><h1 class="sub-title">Número do seu Voucher é:</h1>
-
                                             <h1><font color="#ff0000">{{$pedido->id . $pedido->created_at->format('i') . $pedido->created_at->format('s')}}</font></h1>
+                                            <p>A validade deste pedido está condicionada à aprovação da transação pelo PagSeguro</p>
                                         </div>
                                     </div>
 
                                     <br>
                                     <!-- Informações ao usuário -->
-                                    <div>
+                                    <div align="center">
                                         <h1 class="sub-title"><font color="#ff0000"><i
-                                                        class="fa fa-hand-o-right fa-2x"></i> PONTO DE TROCAS</font></h1>
-
+                                                        class="fa fa-hand-o-right fa-2x"></i> PONTO DE TROCAS</font>
+                                        </h1>
                                         <hr>
-
                                         <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
                                             No evento diriga-se ao Guiche de trocas Voucher.
                                         </h6>
-
                                         <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
                                             Ao atendente do guiche será necessário informar: O número do(s) Voucher(s)
                                             ou o CPF do comprador.
                                         </h6>
-
                                         <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
                                             PRONTO! O atendente irá entregar as Fichas que poderão ser consumidas nas
                                             respectivas barracas.
                                         </h6>
                                     </div>
-
                                     <br>
                                     <!-- Informações ao usuário -->
-                                    <div>
+                                    <div align="center">
                                         <h1 class="sub-title"><font color="#ff0000"><i
                                                         class="fa fa-shopping-cart fa-2x"></i> DETALHES DO SEU PEDIDO</font></h1>
 
-                                        <p><a href="http://localhost:8000/meuspedidos" target="_blank">Clique aqui para visualizar seus pedidos</a></p>
+                                        <p><a href="http://www.igrejashekina.com.br/meuspedidos" target="_blank">Clique aqui para visualizar seus pedidos</a></p>
 
                                             <br>
                                             <br>
@@ -143,7 +141,7 @@
                                                 </h6>
 
                                                 <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
-                                                    Caso tenha alguma dúvida, entre em <a href="http://localhost:8000/contato" target="_blank" ><u>contato</u></a>
+                                                    Caso tenha alguma dúvida, entre em <a href="http://www.igrejashekina.com.br/contato" target="_blank" ><u>contato</u></a>
                                                 </h6>
                                             </div>
 
@@ -159,7 +157,7 @@
                                                 <p>Cacoal-RO</p>
                                                 <p>Aberto de Seg. - Sex</p>
                                                 <p>Nos Horários: 8:00 as 18:00</p>
-                                                <p>Telefones: 3441-5237, 8448-2693</p>
+                                                <p>Telefones: 3441-5237</p>
 
                                             </div>
 
@@ -183,7 +181,6 @@
 
     </section>
     <!-- End #content -->
-
 
 </div>
 <!-- End #wrapper -->
