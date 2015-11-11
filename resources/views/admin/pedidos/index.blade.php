@@ -48,7 +48,7 @@
                                     <td width="100px" class="text-right">R$ {{ number_format($pedido->valor,2) }}</td>
                                     <td width="100px" class="text-center">{{ $pedido->id . $pedido->created_at->format('i') . $pedido->created_at->format('s') }}</td>
                                     <td width="130px" class="text-center">{{ $cliente->find($pedido->id_cliente)->cpf }}</td>
-                                    <td width="50px" class="text-center">Aguardando COnfirmação</td>
+                                    <td width="50px" class="text-center">{{ $pedido->status }}</td>
                                     @if($pedido->baixado == 1)
                                         <td class="text-center"><span data-toggle="tooltip" data-original-title="Baixado" class="badge bg-green">|</span></td>
                                     @else

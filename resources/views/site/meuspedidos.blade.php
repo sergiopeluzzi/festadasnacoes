@@ -70,7 +70,7 @@
                             </td>
 
                             <td class="red text-center">
-                                Aguardando Confirmação
+                                {{ $pedido->status }}
                             </td>
 
                             <td class="item-price-col">

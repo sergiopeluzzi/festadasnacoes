@@ -116,7 +116,7 @@ class FinalizarController extends SiteController  {
             $m->to($cliente->email, $cliente->nome)->subject('Festa das Nações - PEDIDO');
         });
 
-        return view('site.sucesso', compact('cart', 'carrinho', 'nacoes', 'retorno'));
+        return view('site.sucesso', compact('cart', 'carrinho', 'nacoes', 'transacao'));
 
     }
 
