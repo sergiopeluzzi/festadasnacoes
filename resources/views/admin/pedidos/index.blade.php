@@ -43,7 +43,7 @@
                             <tbody>
                             @foreach($pedidos as $pedido)
                                 <tr>
-                                    <td width="100px" class="text-center">{{ $pedido->id }}</td>
+                                    <td width="50px" class="text-center">{{ $pedido->id }}</td>
                                     <td>{{ $cliente->find($pedido->id_cliente)->nome }}</td>
                                     <td width="100px" class="text-right">R$ {{ number_format($pedido->valor,2) }}</td>
                                     <td width="100px" class="text-center">{{ $pedido->id . $pedido->created_at->format('i') . $pedido->created_at->format('s') }}</td>
