@@ -102,7 +102,7 @@ class FinalizarController extends SiteController  {
             'total' => $this->cart->total()
         ];
 
-        $retorno = $request->get('retorno');
+        $transacao = $request->get('transaction_id');
 
         $nacoes = Nacao::all();
 
@@ -112,7 +112,7 @@ class FinalizarController extends SiteController  {
 
         $cliente = Cliente::find($ultiPedido->id_cliente);
 
-        Mail::send('emails.email', ['cliente' => $cliente, 'pedido' => $ultiPedido], function ($m) use ($cliente) {
+        Mail::send('emails.email', ['cliente' => $cliente, 'pedido' => $ultiPedido, 'transacao' => $transacao], function ($m) use ($cliente) {
             $m->to($cliente->email, $cliente->nome)->subject('Festa das Nações - PEDIDO');
         });
 

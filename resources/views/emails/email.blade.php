@@ -66,9 +66,12 @@
                                     <br>
 
                                     <div align="center">
-                                        <div><h1 class="sub-title">Número do seu Voucher é:</h1>
+                                        <div>
+                                            <h1 class="sub-title">Número do seu Voucher é:</h1>
                                             <h1><font color="#ff0000">{{$pedido->id . $pedido->created_at->format('i') . $pedido->created_at->format('s')}}</font></h1>
                                             <p>A validade deste pedido está condicionada à aprovação da transação pelo PagSeguro</p>
+                                            <h1 class="sub-title">Código da transação do PagSeguro é:</h1>
+                                            <h1><font color="#ff0000">{{$transacao}}</font></h1>
                                         </div>
                                     </div>
 
