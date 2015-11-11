@@ -22,22 +22,16 @@
 
 <div id="wrapper">
     <header id="header">
-
         <div id="inner-header">
-
 
         </div>
         <!-- End #inner-header -->
     </header>
     <!-- End #header -->
-
     <section id="content">
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
-
                     <!-- E-mail Confirmação pedido -->
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -103,64 +97,66 @@
                                         <h1 class="sub-title"><font color="#ff0000"><i
                                                         class="fa fa-shopping-cart fa-2x"></i> DETALHES DO SEU PEDIDO</font></h1>
 
-                                        <p><a href="http://www.igrejashekina.com.br/meuspedidos" target="_blank">Clique aqui para visualizar seus pedidos</a></p>
+                                        <p>
+                                            <a href="http://www.igrejashekina.com.br/meuspedidos" target="_blank">Clique aqui para visualizar seus pedidos</a>
+                                        </p>
 
-                                            <br>
-                                            <br>
-                                            <div>
-                                                <h1 class="sub-title"><font color="#ff0000"><i
-                                                                class="fa fa-credit-card fa-2x"></i> FORMA DE PAGAMENTO</font>
-                                                </h1>
+                                        <br>
+                                        <br>
 
-                                                <hr>
-                                                <img src="{{asset('/site/images/pagseguro.png')}}">
-
-                                                <br>
-                                                <br>
-                                                <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
-                                                    Caso tenha alguma dúvida sobre as suas operações financeiras, confira no
-                                                    <a title="Pagseguro" href="https://pagseguro.uol.com.br/atendimento/perguntas_frequentes/categoria/comprador.jhtml" target="_blank"> <u>PagSeguro</u></a>.
-                                                </h6>
-                                            </div>
-
-                                            <br>
-                                            <br>
-                                            <div>
-                                                <h1 class="sub-title"><font color="#ff0000"><i
-                                                                class="fa fa-exclamation-circle fa-2x"></i> INFORMAÇÕES IMPORTANTES</font>
-                                                </h1>
-
-                                                <hr>
-
-                                                <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
-                                                    A partir deste momento, não é possivel incluir ou excluir itens do pedido.
-                                                </h6>
-
-                                                <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
-                                                    Não verificamos esta caixa de correio, portanto, não responda a esta mensagem.
-                                                </h6>
-
-                                                <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
-                                                    Caso tenha alguma dúvida, entre em <a href="http://www.igrejashekina.com.br/contato" target="_blank" ><u>contato</u></a>
-                                                </h6>
-                                            </div>
+                                        <div>
+                                            <h1 class="sub-title"><font color="#ff0000"><i
+                                                            class="fa fa-credit-card fa-2x"></i> FORMA DE PAGAMENTO</font>
+                                            </h1>
 
                                             <hr>
-                                            <div align="center">
+                                            <img src="{{asset('/site/images/pagseguro.png')}}">
 
-                                                <p>
-                                                    <a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835" target="_blank">
-                                                        Igreja Evangélica Shekina
-                                                    </a>
-                                                </p>
-                                                <p>Rua da Igreja, 546 - Princesa Izabel</p>
-                                                <p>Cacoal-RO</p>
-                                                <p>Aberto de Seg. - Sex</p>
-                                                <p>Nos Horários: 8:00 as 18:00</p>
-                                                <p>Telefones: 3441-5237</p>
+                                            <br>
+                                            <br>
+                                            <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
+                                                Caso tenha alguma dúvida sobre as suas operações financeiras, confira no
+                                                <a title="Pagseguro" href="https://pagseguro.uol.com.br/atendimento/perguntas_frequentes/categoria/comprador.jhtml" target="_blank"> <u>PagSeguro</u></a>.
+                                            </h6>
+                                        </div>
 
-                                            </div>
+                                        <br>
+                                        <br>
 
+                                        <div>
+                                            <h1 class="sub-title"><font color="#ff0000"><i
+                                                            class="fa fa-exclamation-circle fa-2x"></i> INFORMAÇÕES IMPORTANTES</font>
+                                            </h1>
+
+                                            <hr>
+
+                                            <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
+                                                A partir deste momento, não é possivel incluir ou excluir itens do pedido.
+                                            </h6>
+
+                                            <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
+                                                Não verificamos esta caixa de correio, portanto, não responda a esta mensagem.
+                                            </h6>
+
+                                            <h6><font color="#ff0000"><i class="fa fa-chevron-right fa-1x"></i></font>
+                                                Caso tenha alguma dúvida, entre em <a href="http://www.igrejashekina.com.br/contato" target="_blank" ><u>contato</u></a>
+                                            </h6>
+                                        </div>
+
+                                        <hr>
+
+                                        <div align="center">
+                                            <p>
+                                                <a href="https://www.facebook.com/pages/Igreja-Evang%C3%A9lica-Shekina/422667231144835" target="_blank">
+                                                    Igreja Evangélica Shekina
+                                                </a>
+                                            </p>
+                                            <p>Rua da Igreja, 546 - Princesa Izabel</p>
+                                            <p>Cacoal-RO</p>
+                                            <p>Aberto de Seg. - Sex</p>
+                                            <p>Nos Horários: 8:00 as 18:00</p>
+                                            <p>Telefones: 3441-5237</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- End .tab-content -->
@@ -170,20 +166,15 @@
                         <!-- End .col-md-6 -->
                     </div>
                     <!-- Fim div confirmação pedido -->
-
-
                 </div>
                 <!-- End .col-md-12 -->
             </div>
             <!-- End .row -->
         </div>
         <!-- End .container -->
-
     </section>
     <!-- End #content -->
-
 </div>
 <!-- End #wrapper -->
-
 </body>
 </html>
