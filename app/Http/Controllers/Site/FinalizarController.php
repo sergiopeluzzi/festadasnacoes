@@ -61,6 +61,8 @@ class FinalizarController extends SiteController  {
 
         $carrinho = $cart['items'];
 
+        dd('foi');
+
         $checkout = $checkoutService->createCheckoutBuilder();
 
         foreach($carrinho as $itens)
