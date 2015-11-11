@@ -55,7 +55,7 @@ class ClientesController extends SiteController {
 
         User::create($usuario);
 
-        $dados['id_user'] = User::orderby('created_at', 'desc')->first()->id;
+        $dados['id_user'] = User::latest()->id;
 
         $permissao = User::orderby('created_at', 'desc')->first();
         $permissao->attachRole(3);

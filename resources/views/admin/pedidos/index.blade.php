@@ -35,6 +35,7 @@
                                 <th class="text-center no-padding">Valor</th>
                                 <th class="text-center no-padding">Voucher</th>
                                 <th class="text-center no-padding">CPF</th>
+                                <th class="text-center no-padding">Status</th>
                                 <th class="text-center no-padding">Baixado</th>
                                 <th class="text-center no-padding">Ações</th>
                             </tr>
@@ -47,6 +48,7 @@
                                     <td width="100px" class="text-right">R$ {{ number_format($pedido->valor,2) }}</td>
                                     <td width="100px" class="text-center">{{ $pedido->id . $pedido->created_at->format('i') . $pedido->created_at->format('s') }}</td>
                                     <td width="150px" class="text-center">{{ $cliente->find($pedido->id_cliente)->cpf }}</td>
+                                    <td width="100px" class="text-center">Pago</td>
                                     @if($pedido->baixado == 1)
                                         <td class="text-center"><span data-toggle="tooltip" data-original-title="Baixado" class="badge bg-green">|</span></td>
                                     @else
