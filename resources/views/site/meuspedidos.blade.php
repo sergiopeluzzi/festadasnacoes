@@ -70,7 +70,15 @@
                             </td>
 
                             <td class="red text-center">
-                                {{ $pedido->status }}
+                                @if($pedido->status == 1)
+                                    Aguardando Confirmação
+                                @elseif($pedido->status == 2)
+                                    Em Análise
+                                @elseif($pedido->status == 3)
+                                    Pago
+                                @elseif($pedido->status == 4)
+                                    Cancelado
+                                @endif
                             </td>
 
                             <td class="item-price-col">
