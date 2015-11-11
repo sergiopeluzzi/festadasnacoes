@@ -94,7 +94,7 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <td class="checkout-total-title" colspan="4">
+                            <td class="checkout-total-title" colspan="5">
                                 <strong>
                                     TOTAL:
                                 </strong>
