@@ -94,13 +94,15 @@ class FinalizarController extends SiteController  {
 
     }
 
-    public function sucesso()
+    public function sucesso(Request $request)
     {
         $cart = [
             'items' => $this->cart->all(),
             'count' => $this->cart->totalItems(),
             'total' => $this->cart->total()
         ];
+
+        $retorno = $request->get('retorno');
 
         $nacoes = Nacao::all();
 
@@ -114,7 +116,7 @@ class FinalizarController extends SiteController  {
             $m->to($cliente->email, $cliente->nome)->subject('Festa das Nações - PEDIDO');
         });
 
-        return view('site.sucesso', compact('cart', 'carrinho', 'nacoes'));
+        return view('site.sucesso', compact('cart', 'carrinho', 'nacoes', 'retorno'));
 
     }
 
