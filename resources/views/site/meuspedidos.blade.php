@@ -70,7 +70,7 @@
                             </td>
 
                             <td class="red text-center">
-                                Pendente
+                                Aguardando Confirmação
                             </td>
 
                             <td class="item-price-col">
