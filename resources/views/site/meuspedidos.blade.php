@@ -36,6 +36,7 @@
                         <tr>
                             <th class="table-title">Nome produto</th>
                             <th class="table-title">Código produto</th>
+                            <th class="table-title">Status</th>
                             <th class="table-title">Preço un</th>
                             <th class="table-title">Quantidade</th>
                             <th class="table-title">Total</th>
@@ -66,6 +67,10 @@
                             </td>
                             <td class="item-code">
                                 {{ $pratoPedido->id_prato }}
+                            </td>
+
+                            <td class="red text-center">
+                                Pendente
                             </td>
 
                             <td class="item-price-col">
