@@ -83,7 +83,7 @@
                             <!-- Informar a quantidade -->
                             <td>
                                 <div class="custom-quantity-input">
-                                    <input type="text" name="quantidade{{ $item['sku'] }}" id="quantidade{{ $item['sku'] }}"  value="{{ $item['quantity'] }}">
+                                    <input type="text" name="quantidade{{ $item['sku'] }}" id="quantidade{{ $item['sku'] }}"  value="{{ $item['quantity'] }}" data-toggle="popover" data-placement="top" data-content="Content">
                                     <a class="quantity-btn quantity-input-up" href="meucarrinho/add2/{{ $item['sku'] }}" onclick="mais('quantidade{{ $item['sku'] }}' )">
                                         <i class="fa fa-angle-up"></i></a>
                                     <a class="quantity-btn quantity-input-down" href="meucarrinho/diminuir/{{ $item['id'] }}" onclick="menos('quantidade{{ $item['sku'] }}' )">
@@ -129,5 +129,10 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
 </section>
 @stop
