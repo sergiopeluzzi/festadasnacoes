@@ -204,7 +204,15 @@
                         </div>
 
                         <div class="item">
-                            <img src="{{ asset('/site/images/blog/post1-large.jpg') }}" class="img-responsive" alt="Slider post 2">
+                            <img src="{{ asset('/site/images/blog/1.png') }}" class="img-responsive" alt="Slider post 2">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ asset('/site/images/blog/2.png') }}" class="img-responsive" alt="Slider post 2">
+                        </div>
+
+                        <div class="item">
+                            <img src="{{ asset('/site/images/blog/3.png') }}" class="img-responsive" alt="Slider post 2">
                         </div>
                     </div>
 
