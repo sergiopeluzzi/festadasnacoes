@@ -19,8 +19,8 @@
                          data-start="400" data-endspeed="200">
                         <font color="red">21.11.2015 à partir das 19:00hs</font>
                     </div>
-                    <div class="tp-caption rev-text2 lfr ltr" data-x="795" data-y="130" data-speed="1600"
-                         data-start="1050" data-endspeed="550">
+                    <div class="tp-caption rev-text2 lfr ltr" data-x="795" data-y="140" data-speed="1600"
+                         data-start="500" data-endspeed="550">
                         <font color="red">Millenium - Cacoal/RO</font>
                     </div>
                     <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="200" data-speed="1600"
