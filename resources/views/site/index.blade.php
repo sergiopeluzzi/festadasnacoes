@@ -17,7 +17,11 @@
                          data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="100" data-speed="1200"
                          data-start="400" data-endspeed="200">
-                        <font color="red">21.11.2015 à partir das 19:00hs <br> Millenium - Cacoal/RO</font>
+                        <font color="red">21.11.2015 à partir das 19:00hs</font>
+                    </div>
+                    <div class="tp-caption rev-text2 lfr ltr" data-x="755" data-y="160" data-speed="1600"
+                         data-start="1050" data-endspeed="550">
+                        Millenium - Cacoal/RO
                     </div>
                     <div class="tp-caption rev-title lfr ltr" data-x="695" data-y="200" data-speed="1600"
                          data-start="300" data-endspeed="300">
