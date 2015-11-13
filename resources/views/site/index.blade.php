@@ -15,7 +15,7 @@
                     <img src="{{ asset('/site/images/revslider/dummy.png') }}" alt="slidebg1"
                          data-lazyload="{{ asset('/site/images/homeslider/faca_pedido.jpg') }}"
                          data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
-                    <div class="tp-caption rev-title lfr ltr" data-x="895" data-y="180" data-speed="1200"
+                    <div class="tp-caption rev-title lfr ltr" data-x="1095" data-y="180" data-speed="1200"
                          data-start="400" data-endspeed="200">
                         21/11/2015 à partir das 19:00hs
                     </div>
