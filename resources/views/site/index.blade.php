@@ -171,8 +171,8 @@
                     <div class="item-meta-container">
                         <h3 class="item-name"><a href="cardapio/{{ $prato->id_nacao }}">{{ $prato->descricao }}</a></h3>
 
-                        <div class="item-action"><a href="meucarrinho/add/{{ $prato->id }}" class="item-add-btn"> <!-- meucarrinho/add/{{ $prato->id }} -->
-                                <span class="icon-cart-text">Adicionar carrinho</span></a> <!-- Adicionar carrinho -->
+                        <div class="item-action"><a href="finalizar/falha" class="item-add-btn"> <!-- meucarrinho/add/{{ $prato->id }} -->
+                                <span class="icon-cart-text">Indisponivel</span></a> <!-- Adicionar carrinho -->
                         </div>
                     </div>
                 </div>
