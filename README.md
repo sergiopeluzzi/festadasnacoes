@@ -1,19 +1,19 @@
-#Projeto de TCC - Festa das Nações
+# Projeto de TCC - Festa das Nações
 
-###UNESC - Faculdades Integradas de Cacoal - Curso de Análise e Desenvolvimento de Sistemas
+### UNESC - Faculdades Integradas de Cacoal - Curso de Análise e Desenvolvimento de Sistemas
 Acadêmicos: Sergio Peluzzi e Diego Noronha
 
-##Objetivo
+## Objetivo
 Desenvolver uma aplicação que gerencie um evento regional chamado Festa das Nações, vendendo vouchers de produtos alimentícios online e controlando as vendas e produção dos pratos para o dia da festa.
 
-##Requerimentos
+## Requerimentos
 <li> [Git] (http://git-scm.com/downloads) 
 <li> [Composer] (https://getcomposer.org/)
 <li> [PHP 5.4+] (http://php.net/downloads.php)
 <li> [Laravel 5 Framework] (https://github.com/laravel/laravel)
 <li> [MySql Server] (https://www.mysql.com/)
 
-##Modo de Instalação
+## Modo de Instalação
 <p><li>Clone o repositorio [festadasnacoes] (https://github.com/sergiopeluzzi/festadasnacoes) no github em uma pasta qualquer.
 <p>git clone https://github.com/sergiopeluzzi/festadasnacoes.git
 <p>
